@@ -33,6 +33,7 @@ Partial Class Welcome
         PictureBox1 = New PictureBox()
         Label2 = New Label()
         PictureBox2 = New PictureBox()
+        Button1 = New Button()
         GroupBox1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
@@ -51,7 +52,7 @@ Partial Class Welcome
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Font = New Font("Lucida Bright", 15.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label3.Font = New Font("Lucida Bright", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label3.Location = New Point(58, 462)
         Label3.Name = "Label3"
         Label3.Size = New Size(84, 29)
@@ -61,7 +62,7 @@ Partial Class Welcome
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Font = New Font("Lucida Bright", 15.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label4.Font = New Font("Lucida Bright", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label4.Location = New Point(58, 518)
         Label4.Name = "Label4"
         Label4.Size = New Size(73, 29)
@@ -87,7 +88,7 @@ Partial Class Welcome
         ' Label5
         ' 
         Label5.AutoSize = True
-        Label5.Font = New Font("Lucida Bright", 15.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label5.Font = New Font("Lucida Bright", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label5.Location = New Point(146, 462)
         Label5.Name = "Label5"
         Label5.Size = New Size(19, 29)
@@ -97,7 +98,7 @@ Partial Class Welcome
         ' Label6
         ' 
         Label6.AutoSize = True
-        Label6.Font = New Font("Lucida Bright", 15.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label6.Font = New Font("Lucida Bright", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label6.Location = New Point(146, 518)
         Label6.Name = "Label6"
         Label6.Size = New Size(19, 29)
@@ -153,12 +154,22 @@ Partial Class Welcome
         PictureBox2.TabIndex = 10
         PictureBox2.TabStop = False
         ' 
+        ' Button1
+        ' 
+        Button1.Location = New Point(1044, 86)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(94, 29)
+        Button1.TabIndex = 11
+        Button1.Text = "Button1"
+        Button1.UseVisualStyleBackColor = True
+        ' 
         ' Welcome
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(227), CByte(242), CByte(253))
         ClientSize = New Size(1262, 841)
+        Controls.Add(Button1)
         Controls.Add(PictureBox2)
         Controls.Add(Label2)
         Controls.Add(GroupBox1)
@@ -185,4 +196,5 @@ Partial Class Welcome
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Label2 As Label
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents Button1 As Button
 End Class
