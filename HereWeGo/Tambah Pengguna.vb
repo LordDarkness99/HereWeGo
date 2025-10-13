@@ -4,10 +4,8 @@
         Dim password = TextBox2.Text.Trim()
         Dim ulangi = TextBox4.Text.Trim()
         Dim role = ComboBox1.Text
-        Dim status = ComboBox2.Text
 
-        ' ✅ Perbaikan validasi
-        If email = "" Or password = "" Or ulangi = "" Or role = "" Or status = "" Then
+        If email = "" Or password = "" Or ulangi = "" Or role = "" Then
             MessageBox.Show("Semua field wajib diisi!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Exit Sub
         End If
@@ -17,14 +15,13 @@
             Exit Sub
         End If
 
-        ' Kirim data ke Supabase
-        Dim sukses = Await Akun.TambahAsync(email, password, role, status)
+        Dim sukses = Await Akun.TambahAsync(email, password, role)
 
         If sukses Then
             MessageBox.Show("Akun berhasil ditambahkan!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Me.Close()
 
-            ' 🔄 Refresh form Pengguna
+            ' 🔧 Pastikan pengambilan form Pengguna seperti ini:
             Dim penggunaForm = Application.OpenForms().OfType(Of Pengguna)().FirstOrDefault()
             If penggunaForm IsNot Nothing Then
                 Await penggunaForm.LoadData()
@@ -34,5 +31,9 @@
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Me.Close()
+    End Sub
+
+    Private Sub ComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs)
+
     End Sub
 End Class

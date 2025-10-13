@@ -8,20 +8,16 @@ Public Class Akun
     Public Property role As String
     Public Property status As String
 
-    ' Fungsi untuk menambah data akun ke Supabase
-    Public Shared Async Function TambahAsync(email As String, password As String, role As String, status As String) As Task(Of Boolean)
-        ' ✅ Sertakan semua field yang ingin dikirim
+    Public Shared Async Function TambahAsync(email As String, password As String, role As String) As Task(Of Boolean)
         Dim data = New Dictionary(Of String, Object) From {
             {"email", email},
             {"password", password},
-            {"role", role},
-            {"status", status}
+            {"role", role}
         }
 
         Dim jsonData = JsonConvert.SerializeObject(data)
 
         Try
-            ' ✅ Kirim ke Supabase melalui fungsi PostAsync di SupabaseClient
             Dim result = Await SupabaseClient.PostAsync("akun", jsonData)
             Return True
         Catch ex As Exception

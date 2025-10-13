@@ -27,8 +27,6 @@ Partial Class Tambah_Pengguna
         Label4 = New Label()
         Label3 = New Label()
         GroupBox1 = New GroupBox()
-        ComboBox2 = New ComboBox()
-        Label6 = New Label()
         ComboBox1 = New ComboBox()
         TextBox4 = New TextBox()
         TextBox3 = New TextBox()
@@ -81,8 +79,6 @@ Partial Class Tambah_Pengguna
         ' 
         ' GroupBox1
         ' 
-        GroupBox1.Controls.Add(ComboBox2)
-        GroupBox1.Controls.Add(Label6)
         GroupBox1.Controls.Add(ComboBox1)
         GroupBox1.Controls.Add(TextBox4)
         GroupBox1.Controls.Add(TextBox3)
@@ -95,30 +91,9 @@ Partial Class Tambah_Pengguna
         GroupBox1.Margin = New Padding(3, 4, 3, 4)
         GroupBox1.Name = "GroupBox1"
         GroupBox1.Padding = New Padding(3, 4, 3, 4)
-        GroupBox1.Size = New Size(624, 279)
+        GroupBox1.Size = New Size(624, 225)
         GroupBox1.TabIndex = 15
         GroupBox1.TabStop = False
-        ' 
-        ' ComboBox2
-        ' 
-        ComboBox2.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        ComboBox2.FormattingEnabled = True
-        ComboBox2.Items.AddRange(New Object() {"Aktif", "Tidal"})
-        ComboBox2.Location = New Point(203, 221)
-        ComboBox2.Margin = New Padding(3, 4, 3, 4)
-        ComboBox2.Name = "ComboBox2"
-        ComboBox2.Size = New Size(399, 33)
-        ComboBox2.TabIndex = 18
-        ' 
-        ' Label6
-        ' 
-        Label6.AutoSize = True
-        Label6.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label6.Location = New Point(6, 224)
-        Label6.Name = "Label6"
-        Label6.Size = New Size(68, 25)
-        Label6.TabIndex = 17
-        Label6.Text = "Status"
         ' 
         ' ComboBox1
         ' 
@@ -171,7 +146,7 @@ Partial Class Tambah_Pengguna
         ' Button2
         ' 
         Button2.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Button2.Location = New Point(708, 570)
+        Button2.Location = New Point(708, 541)
         Button2.Margin = New Padding(3, 4, 3, 4)
         Button2.Name = "Button2"
         Button2.Size = New Size(112, 52)
@@ -182,7 +157,7 @@ Partial Class Tambah_Pengguna
         ' Button1
         ' 
         Button1.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Button1.Location = New Point(590, 570)
+        Button1.Location = New Point(590, 541)
         Button1.Margin = New Padding(3, 4, 3, 4)
         Button1.Name = "Button1"
         Button1.Size = New Size(112, 52)
@@ -222,6 +197,4 @@ Partial Class Tambah_Pengguna
     Friend WithEvents Label5 As Label
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
-    Friend WithEvents Label6 As Label
-    Friend WithEvents ComboBox2 As ComboBox
 End Class
