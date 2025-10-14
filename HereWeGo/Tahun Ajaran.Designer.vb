@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Murid
+Partial Class Tahun_Ajaran
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -30,10 +30,10 @@ Partial Class Murid
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.NIS = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.nama_siswa = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.id_kelas = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Alamat = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.id_tahun = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ajaran = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Semester = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.status_aktif = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -43,7 +43,7 @@ Partial Class Murid
         Me.Button4.Location = New System.Drawing.Point(304, 572)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(136, 42)
-        Me.Button4.TabIndex = 42
+        Me.Button4.TabIndex = 50
         Me.Button4.Text = "Hapus"
         Me.Button4.UseVisualStyleBackColor = True
         '
@@ -53,7 +53,7 @@ Partial Class Murid
         Me.Button3.Location = New System.Drawing.Point(162, 572)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(136, 42)
-        Me.Button3.TabIndex = 41
+        Me.Button3.TabIndex = 49
         Me.Button3.Text = "Ubah"
         Me.Button3.UseVisualStyleBackColor = True
         '
@@ -63,7 +63,7 @@ Partial Class Murid
         Me.Button2.Location = New System.Drawing.Point(20, 572)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(136, 42)
-        Me.Button2.TabIndex = 40
+        Me.Button2.TabIndex = 48
         Me.Button2.Text = "Tambah"
         Me.Button2.UseVisualStyleBackColor = True
         '
@@ -73,7 +73,7 @@ Partial Class Murid
         Me.Button1.Location = New System.Drawing.Point(672, 572)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(136, 42)
-        Me.Button1.TabIndex = 39
+        Me.Button1.TabIndex = 47
         Me.Button1.Text = "Sebelum"
         Me.Button1.UseVisualStyleBackColor = True
         '
@@ -83,7 +83,7 @@ Partial Class Murid
         Me.Lanjut.Location = New System.Drawing.Point(814, 572)
         Me.Lanjut.Name = "Lanjut"
         Me.Lanjut.Size = New System.Drawing.Size(136, 42)
-        Me.Lanjut.TabIndex = 38
+        Me.Lanjut.TabIndex = 46
         Me.Lanjut.Text = "Lanjut"
         Me.Lanjut.UseVisualStyleBackColor = True
         '
@@ -93,14 +93,14 @@ Partial Class Murid
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NIS, Me.nama_siswa, Me.id_kelas, Me.Alamat})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id_tahun, Me.ajaran, Me.Semester, Me.status_aktif})
         Me.DataGridView1.Location = New System.Drawing.Point(20, 58)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
         Me.DataGridView1.Size = New System.Drawing.Size(930, 508)
-        Me.DataGridView1.TabIndex = 35
+        Me.DataGridView1.TabIndex = 43
         '
         'TextBox2
         '
@@ -109,7 +109,7 @@ Partial Class Murid
         Me.TextBox2.Location = New System.Drawing.Point(752, 13)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(198, 36)
-        Me.TextBox2.TabIndex = 37
+        Me.TextBox2.TabIndex = 45
         '
         'Label3
         '
@@ -118,42 +118,42 @@ Partial Class Murid
         Me.Label3.Location = New System.Drawing.Point(698, 19)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(48, 25)
-        Me.Label3.TabIndex = 36
+        Me.Label3.TabIndex = 44
         Me.Label3.Text = "Cari"
         '
-        'NIS
+        'id_tahun
         '
-        Me.NIS.HeaderText = "NIS"
-        Me.NIS.MinimumWidth = 6
-        Me.NIS.Name = "NIS"
-        Me.NIS.ReadOnly = True
-        Me.NIS.Width = 232
+        Me.id_tahun.HeaderText = "Id Tahun"
+        Me.id_tahun.MinimumWidth = 6
+        Me.id_tahun.Name = "id_tahun"
+        Me.id_tahun.ReadOnly = True
+        Me.id_tahun.Width = 232
         '
-        'nama_siswa
+        'ajaran
         '
-        Me.nama_siswa.HeaderText = "Nama Siswa"
-        Me.nama_siswa.MinimumWidth = 6
-        Me.nama_siswa.Name = "nama_siswa"
-        Me.nama_siswa.ReadOnly = True
-        Me.nama_siswa.Width = 232
+        Me.ajaran.HeaderText = "Tahun Ajaran"
+        Me.ajaran.MinimumWidth = 6
+        Me.ajaran.Name = "ajaran"
+        Me.ajaran.ReadOnly = True
+        Me.ajaran.Width = 232
         '
-        'id_kelas
+        'Semester
         '
-        Me.id_kelas.HeaderText = "Id Kelas"
-        Me.id_kelas.MinimumWidth = 6
-        Me.id_kelas.Name = "id_kelas"
-        Me.id_kelas.ReadOnly = True
-        Me.id_kelas.Width = 232
+        Me.Semester.HeaderText = "Semester"
+        Me.Semester.MinimumWidth = 6
+        Me.Semester.Name = "Semester"
+        Me.Semester.ReadOnly = True
+        Me.Semester.Width = 232
         '
-        'Alamat
+        'status_aktif
         '
-        Me.Alamat.HeaderText = "Alamat"
-        Me.Alamat.MinimumWidth = 6
-        Me.Alamat.Name = "Alamat"
-        Me.Alamat.ReadOnly = True
-        Me.Alamat.Width = 232
+        Me.status_aktif.HeaderText = "Status Aktif"
+        Me.status_aktif.MinimumWidth = 6
+        Me.status_aktif.Name = "status_aktif"
+        Me.status_aktif.ReadOnly = True
+        Me.status_aktif.Width = 232
         '
-        'Murid
+        'Tahun_Ajaran
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -167,8 +167,8 @@ Partial Class Murid
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.Label3)
-        Me.Name = "Murid"
-        Me.Text = "Murid"
+        Me.Name = "Tahun_Ajaran"
+        Me.Text = "Tahun_Ajaran"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -183,8 +183,8 @@ Partial Class Murid
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents NIS As DataGridViewTextBoxColumn
-    Friend WithEvents nama_siswa As DataGridViewTextBoxColumn
-    Friend WithEvents id_kelas As DataGridViewTextBoxColumn
-    Friend WithEvents Alamat As DataGridViewTextBoxColumn
+    Friend WithEvents id_tahun As DataGridViewTextBoxColumn
+    Friend WithEvents ajaran As DataGridViewTextBoxColumn
+    Friend WithEvents Semester As DataGridViewTextBoxColumn
+    Friend WithEvents status_aktif As DataGridViewTextBoxColumn
 End Class

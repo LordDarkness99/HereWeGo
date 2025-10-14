@@ -134,6 +134,8 @@ Partial Class Login
         Me.GroupBox1.TabStop = False
         '
         'PictureBox1
+        '
+        'Me.PictureBox1.Image = Global.Project_Absensi.My.Resources.Resources.HerWeGo4
         Me.PictureBox1.Location = New System.Drawing.Point(63, 111)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(254, 254)
