@@ -22,156 +22,164 @@ Partial Class Murid
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Lanjut = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.NIS = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.nama_siswa = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.id_kelas = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Alamat = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SuspendLayout()
-        '
-        'Button4
-        '
-        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(304, 572)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(136, 42)
-        Me.Button4.TabIndex = 42
-        Me.Button4.Text = "Hapus"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(162, 572)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(136, 42)
-        Me.Button3.TabIndex = 41
-        Me.Button3.Text = "Ubah"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(20, 572)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(136, 42)
-        Me.Button2.TabIndex = 40
-        Me.Button2.Text = "Tambah"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(672, 572)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(136, 42)
-        Me.Button1.TabIndex = 39
-        Me.Button1.Text = "Sebelum"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Lanjut
-        '
-        Me.Lanjut.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lanjut.Location = New System.Drawing.Point(814, 572)
-        Me.Lanjut.Name = "Lanjut"
-        Me.Lanjut.Size = New System.Drawing.Size(136, 42)
-        Me.Lanjut.TabIndex = 38
-        Me.Lanjut.Text = "Lanjut"
-        Me.Lanjut.UseVisualStyleBackColor = True
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AllowUserToDeleteRows = False
-        Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NIS, Me.nama_siswa, Me.id_kelas, Me.Alamat})
-        Me.DataGridView1.Location = New System.Drawing.Point(20, 58)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(930, 508)
-        Me.DataGridView1.TabIndex = 35
-        '
-        'TextBox2
-        '
-        Me.TextBox2.BackColor = System.Drawing.Color.LightGray
-        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(752, 13)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(198, 36)
-        Me.TextBox2.TabIndex = 37
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(698, 19)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(48, 25)
-        Me.Label3.TabIndex = 36
-        Me.Label3.Text = "Cari"
-        '
-        'NIS
-        '
-        Me.NIS.HeaderText = "NIS"
-        Me.NIS.MinimumWidth = 6
-        Me.NIS.Name = "NIS"
-        Me.NIS.ReadOnly = True
-        Me.NIS.Width = 232
-        '
-        'nama_siswa
-        '
-        Me.nama_siswa.HeaderText = "Nama Siswa"
-        Me.nama_siswa.MinimumWidth = 6
-        Me.nama_siswa.Name = "nama_siswa"
-        Me.nama_siswa.ReadOnly = True
-        Me.nama_siswa.Width = 232
-        '
-        'id_kelas
-        '
-        Me.id_kelas.HeaderText = "Id Kelas"
-        Me.id_kelas.MinimumWidth = 6
-        Me.id_kelas.Name = "id_kelas"
-        Me.id_kelas.ReadOnly = True
-        Me.id_kelas.Width = 232
-        '
-        'Alamat
-        '
-        Me.Alamat.HeaderText = "Alamat"
-        Me.Alamat.MinimumWidth = 6
-        Me.Alamat.Name = "Alamat"
-        Me.Alamat.ReadOnly = True
-        Me.Alamat.Width = 232
-        '
-        'Murid
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(227, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(253, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(971, 626)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.Lanjut)
-        Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.Label3)
-        Me.Name = "Murid"
-        Me.Text = "Murid"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
+        Button4 = New Button()
+        Button3 = New Button()
+        Button2 = New Button()
+        Button1 = New Button()
+        Lanjut = New Button()
+        DataGridView1 = New DataGridView()
+        NIS = New DataGridViewTextBoxColumn()
+        nama_siswa = New DataGridViewTextBoxColumn()
+        id_kelas = New DataGridViewTextBoxColumn()
+        Alamat = New DataGridViewTextBoxColumn()
+        TextBox2 = New TextBox()
+        Label3 = New Label()
+        CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
+        SuspendLayout()
+        ' 
+        ' Button4
+        ' 
+        Button4.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button4.Location = New Point(304, 560)
+        Button4.Margin = New Padding(3, 4, 3, 4)
+        Button4.Name = "Button4"
+        Button4.Size = New Size(136, 52)
+        Button4.TabIndex = 50
+        Button4.Text = "Hapus"
+        Button4.UseVisualStyleBackColor = True
+        ' 
+        ' Button3
+        ' 
+        Button3.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button3.Location = New Point(162, 560)
+        Button3.Margin = New Padding(3, 4, 3, 4)
+        Button3.Name = "Button3"
+        Button3.Size = New Size(136, 52)
+        Button3.TabIndex = 49
+        Button3.Text = "Ubah"
+        Button3.UseVisualStyleBackColor = True
+        ' 
+        ' Button2
+        ' 
+        Button2.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button2.Location = New Point(20, 560)
+        Button2.Margin = New Padding(3, 4, 3, 4)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(136, 52)
+        Button2.TabIndex = 48
+        Button2.Text = "Tambah"
+        Button2.UseVisualStyleBackColor = True
+        ' 
+        ' Button1
+        ' 
+        Button1.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button1.Location = New Point(672, 560)
+        Button1.Margin = New Padding(3, 4, 3, 4)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(136, 52)
+        Button1.TabIndex = 47
+        Button1.Text = "Sebelum"
+        Button1.UseVisualStyleBackColor = True
+        ' 
+        ' Lanjut
+        ' 
+        Lanjut.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Lanjut.Location = New Point(814, 560)
+        Lanjut.Margin = New Padding(3, 4, 3, 4)
+        Lanjut.Name = "Lanjut"
+        Lanjut.Size = New Size(136, 52)
+        Lanjut.TabIndex = 46
+        Lanjut.Text = "Lanjut"
+        Lanjut.UseVisualStyleBackColor = True
+        ' 
+        ' DataGridView1
+        ' 
+        DataGridView1.AllowUserToAddRows = False
+        DataGridView1.AllowUserToDeleteRows = False
+        DataGridView1.BackgroundColor = Color.White
+        DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridView1.Columns.AddRange(New DataGridViewColumn() {NIS, nama_siswa, id_kelas, Alamat})
+        DataGridView1.Location = New Point(20, 71)
+        DataGridView1.Margin = New Padding(3, 4, 3, 4)
+        DataGridView1.Name = "DataGridView1"
+        DataGridView1.ReadOnly = True
+        DataGridView1.RowHeadersWidth = 51
+        DataGridView1.RowTemplate.Height = 24
+        DataGridView1.Size = New Size(930, 481)
+        DataGridView1.TabIndex = 43
+        ' 
+        ' NIS
+        ' 
+        NIS.HeaderText = "NIS"
+        NIS.MinimumWidth = 6
+        NIS.Name = "NIS"
+        NIS.ReadOnly = True
+        NIS.Width = 232
+        ' 
+        ' nama_siswa
+        ' 
+        nama_siswa.HeaderText = "Nama Siswa"
+        nama_siswa.MinimumWidth = 6
+        nama_siswa.Name = "nama_siswa"
+        nama_siswa.ReadOnly = True
+        nama_siswa.Width = 232
+        ' 
+        ' id_kelas
+        ' 
+        id_kelas.HeaderText = "Id Kelas"
+        id_kelas.MinimumWidth = 6
+        id_kelas.Name = "id_kelas"
+        id_kelas.ReadOnly = True
+        id_kelas.Width = 232
+        ' 
+        ' Alamat
+        ' 
+        Alamat.HeaderText = "Alamat"
+        Alamat.MinimumWidth = 6
+        Alamat.Name = "Alamat"
+        Alamat.ReadOnly = True
+        Alamat.Width = 232
+        ' 
+        ' TextBox2
+        ' 
+        TextBox2.BackColor = Color.LightGray
+        TextBox2.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        TextBox2.Location = New Point(752, 15)
+        TextBox2.Margin = New Padding(3, 4, 3, 4)
+        TextBox2.Name = "TextBox2"
+        TextBox2.Size = New Size(198, 36)
+        TextBox2.TabIndex = 45
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label3.Location = New Point(698, 23)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(48, 25)
+        Label3.TabIndex = 44
+        Label3.Text = "Cari"
+        ' 
+        ' Murid
+        ' 
+        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleMode = AutoScaleMode.Font
+        BackColor = Color.FromArgb(CByte(227), CByte(242), CByte(253))
+        ClientSize = New Size(971, 626)
+        Controls.Add(Button4)
+        Controls.Add(Button3)
+        Controls.Add(Button2)
+        Controls.Add(Button1)
+        Controls.Add(Lanjut)
+        Controls.Add(DataGridView1)
+        Controls.Add(TextBox2)
+        Controls.Add(Label3)
+        Margin = New Padding(3, 4, 3, 4)
+        Name = "Murid"
+        Text = "Murid"
+        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
+        ResumeLayout(False)
+        PerformLayout()
 
     End Sub
 
@@ -181,10 +189,10 @@ Partial Class Murid
     Friend WithEvents Button1 As Button
     Friend WithEvents Lanjut As Button
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents Label3 As Label
     Friend WithEvents NIS As DataGridViewTextBoxColumn
     Friend WithEvents nama_siswa As DataGridViewTextBoxColumn
     Friend WithEvents id_kelas As DataGridViewTextBoxColumn
     Friend WithEvents Alamat As DataGridViewTextBoxColumn
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Label3 As Label
 End Class

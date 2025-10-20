@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Admin
+Partial Class GuruAsOperator
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,12 +22,8 @@ Partial Class Admin
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Admin))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(GuruAsOperator))
         Panel1 = New Panel()
-        Button6 = New Button()
-        Button5 = New Button()
-        Button4 = New Button()
-        Button3 = New Button()
         Button1 = New Button()
         Button2 = New Button()
         PictureBox1 = New PictureBox()
@@ -39,10 +35,6 @@ Partial Class Admin
         ' Panel1
         ' 
         Panel1.BackColor = Color.MidnightBlue
-        Panel1.Controls.Add(Button6)
-        Panel1.Controls.Add(Button5)
-        Panel1.Controls.Add(Button4)
-        Panel1.Controls.Add(Button3)
         Panel1.Controls.Add(Button1)
         Panel1.Controls.Add(Button2)
         Panel1.Controls.Add(PictureBox1)
@@ -51,46 +43,7 @@ Partial Class Admin
         Panel1.Margin = New Padding(3, 4, 3, 4)
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(273, 673)
-        Panel1.TabIndex = 1
-        ' 
-        ' Button6
-        ' 
-        Button6.Location = New Point(7, 518)
-        Button6.Name = "Button6"
-        Button6.Size = New Size(258, 55)
-        Button6.TabIndex = 7
-        Button6.Text = "Tahun Ajaran"
-        Button6.UseVisualStyleBackColor = True
-        ' 
-        ' Button5
-        ' 
-        Button5.Location = New Point(7, 461)
-        Button5.Margin = New Padding(3, 4, 3, 4)
-        Button5.Name = "Button5"
-        Button5.Size = New Size(258, 50)
-        Button5.TabIndex = 6
-        Button5.Text = "Murid"
-        Button5.UseVisualStyleBackColor = True
-        ' 
-        ' Button4
-        ' 
-        Button4.Location = New Point(7, 404)
-        Button4.Margin = New Padding(3, 4, 3, 4)
-        Button4.Name = "Button4"
-        Button4.Size = New Size(258, 50)
-        Button4.TabIndex = 5
-        Button4.Text = "Mata Pelajaran"
-        Button4.UseVisualStyleBackColor = True
-        ' 
-        ' Button3
-        ' 
-        Button3.Location = New Point(7, 346)
-        Button3.Margin = New Padding(3, 4, 3, 4)
-        Button3.Name = "Button3"
-        Button3.Size = New Size(258, 50)
-        Button3.TabIndex = 4
-        Button3.Text = "Kelas"
-        Button3.UseVisualStyleBackColor = True
+        Panel1.TabIndex = 3
         ' 
         ' Button1
         ' 
@@ -99,7 +52,7 @@ Partial Class Admin
         Button1.Name = "Button1"
         Button1.Size = New Size(258, 50)
         Button1.TabIndex = 3
-        Button1.Text = "Guru"
+        Button1.Text = "Laporan"
         Button1.UseVisualStyleBackColor = True
         ' 
         ' Button2
@@ -109,7 +62,7 @@ Partial Class Admin
         Button2.Name = "Button2"
         Button2.Size = New Size(258, 50)
         Button2.TabIndex = 1
-        Button2.Text = "Pengguna"
+        Button2.Text = "Presensi"
         Button2.UseVisualStyleBackColor = True
         ' 
         ' PictureBox1
@@ -126,36 +79,30 @@ Partial Class Admin
         ' Panel2
         ' 
         Panel2.Dock = DockStyle.Fill
-        Panel2.Location = New Point(273, 0)
+        Panel2.Location = New Point(0, 0)
         Panel2.Margin = New Padding(3, 4, 3, 4)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(989, 673)
-        Panel2.TabIndex = 2
+        Panel2.Size = New Size(1262, 673)
+        Panel2.TabIndex = 4
         ' 
-        ' Admin
+        ' guruAsOperator
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(227), CByte(242), CByte(253))
         ClientSize = New Size(1262, 673)
-        Controls.Add(Panel2)
         Controls.Add(Panel1)
-        Margin = New Padding(3, 4, 3, 4)
-        Name = "Admin"
-        Text = "Admin"
+        Controls.Add(Panel2)
+        Name = "guruAsOperator"
+        Text = "GuruAsOperator"
         Panel1.ResumeLayout(False)
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
-
     End Sub
 
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button1 As Button
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents Button6 As Button
 End Class

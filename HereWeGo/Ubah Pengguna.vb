@@ -9,7 +9,7 @@ Public Class Ubah_Pengguna
         userId = id
     End Sub
 
-    Private Async Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click 'Simpan
+    Private Async Sub Button1_Click(sender As Object, e As EventArgs) 'Simpan
         Dim data As New PenggunaModel With {
             .email = TextBox3.Text,
             .password = TextBox2.Text,
@@ -19,10 +19,10 @@ Public Class Ubah_Pengguna
 
         Await repo.UpdateAsync(userId, data)
         MessageBox.Show("Data pengguna berhasil diubah!", "Sukses")
-        Me.Close()
+        Close
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click 'Batal
-        Me.Close()
+    Private Sub Button2_Click(sender As Object, e As EventArgs) 'Batal
+        Close
     End Sub
 End Class

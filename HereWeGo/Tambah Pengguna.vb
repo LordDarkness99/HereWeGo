@@ -3,7 +3,7 @@
 Public Class Tambah_Pengguna
     Private repo As New PenggunaRepository()
 
-    Private Async Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click 'Simpan
+    Private Async Sub Button1_Click(sender As Object, e As EventArgs) 'Simpan
         Dim data As New PenggunaModel With {
             .email = TextBox3.Text,
             .password = TextBox2.Text,
@@ -13,14 +13,14 @@ Public Class Tambah_Pengguna
 
         Await repo.AddAsync(data)
         MessageBox.Show("Pengguna berhasil ditambahkan!", "Sukses")
-        Me.Close()
+        Close
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click 'Batal
-        Me.Close()
+    Private Sub Button2_Click(sender As Object, e As EventArgs) 'Batal
+        Close
     End Sub
 
-    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
+    Private Sub Label4_Click(sender As Object, e As EventArgs)
 
     End Sub
 End Class

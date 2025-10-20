@@ -22,161 +22,140 @@ Partial Class Welcome
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.GroupBox1.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SuspendLayout()
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Rockwell", 40.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(16, 43)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(413, 82)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "WELCOME"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Lucida Bright", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(58, 370)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(84, 29)
-        Me.Label3.TabIndex = 3
-        Me.Label3.Text = "Nama"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Lucida Bright", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(58, 414)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(73, 29)
-        Me.Label4.TabIndex = 4
-        Me.Label4.Text = "NISN"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(171, 373)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(204, 22)
-        Me.TextBox1.TabIndex = 5
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(171, 417)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(204, 22)
-        Me.TextBox2.TabIndex = 6
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Lucida Bright", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(146, 370)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(19, 29)
-        Me.Label5.TabIndex = 7
-        Me.Label5.Text = ":"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Lucida Bright", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(146, 414)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(19, 29)
-        Me.Label6.TabIndex = 8
-        Me.Label6.Text = ":"
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.PictureBox1)
-        Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.Label5)
-        Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.TextBox2)
-        Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
-        Me.GroupBox1.Location = New System.Drawing.Point(381, 151)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(461, 468)
-        Me.GroupBox1.TabIndex = 9
-        Me.GroupBox1.TabStop = False
-        '
-        'PictureBox1
-        '
-        'Me.PictureBox1.Image = Global.Project_Absensi.My.Resources.Resources.formal_biru
-        Me.PictureBox1.Location = New System.Drawing.Point(145, 128)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(155, 230)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 1
-        Me.PictureBox1.TabStop = False
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Magneto", 34.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(886, 9)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(373, 72)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "HereWeGo"
-        '
-        'PictureBox2
-        '
-        'Me.PictureBox2.Image = Global.Project_Absensi.My.Resources.Resources.HerWeGo6
-        Me.PictureBox2.Location = New System.Drawing.Point(-1, -39)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(176, 187)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 10
-        Me.PictureBox2.TabStop = False
-        '
-        'Welcome
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(227, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(253, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1262, 673)
-        Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.GroupBox1)
-        Me.Name = "Welcome"
-        Me.Text = "Welcome"
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
+        GroupBox1 = New GroupBox()
+        PictureBox1 = New PictureBox()
+        Label6 = New Label()
+        Label5 = New Label()
+        Label3 = New Label()
+        TextBox2 = New TextBox()
+        Label4 = New Label()
+        TextBox1 = New TextBox()
+        Label1 = New Label()
+        GroupBox1.SuspendLayout()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        SuspendLayout()
+        ' 
+        ' GroupBox1
+        ' 
+        GroupBox1.Controls.Add(PictureBox1)
+        GroupBox1.Controls.Add(Label6)
+        GroupBox1.Controls.Add(Label5)
+        GroupBox1.Controls.Add(Label3)
+        GroupBox1.Controls.Add(TextBox2)
+        GroupBox1.Controls.Add(Label4)
+        GroupBox1.Controls.Add(TextBox1)
+        GroupBox1.Location = New Point(431, 147)
+        GroupBox1.Margin = New Padding(3, 4, 3, 4)
+        GroupBox1.Name = "GroupBox1"
+        GroupBox1.Padding = New Padding(3, 4, 3, 4)
+        GroupBox1.Size = New Size(368, 505)
+        GroupBox1.TabIndex = 11
+        GroupBox1.TabStop = False
+        ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Location = New Point(85, 23)
+        PictureBox1.Margin = New Padding(3, 4, 3, 4)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(236, 354)
+        PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox1.TabIndex = 9
+        PictureBox1.TabStop = False
+        ' 
+        ' Label6
+        ' 
+        Label6.AutoSize = True
+        Label6.Font = New Font("Lucida Bright", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label6.Location = New Point(114, 453)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(19, 29)
+        Label6.TabIndex = 15
+        Label6.Text = ":"
+        ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.Font = New Font("Lucida Bright", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label5.Location = New Point(114, 397)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(19, 29)
+        Label5.TabIndex = 14
+        Label5.Text = ":"
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.Font = New Font("Lucida Bright", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label3.Location = New Point(26, 397)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(84, 29)
+        Label3.TabIndex = 10
+        Label3.Text = "Nama"
+        ' 
+        ' TextBox2
+        ' 
+        TextBox2.Location = New Point(139, 453)
+        TextBox2.Margin = New Padding(3, 4, 3, 4)
+        TextBox2.Name = "TextBox2"
+        TextBox2.Size = New Size(204, 27)
+        TextBox2.TabIndex = 13
+        ' 
+        ' Label4
+        ' 
+        Label4.AutoSize = True
+        Label4.Font = New Font("Lucida Bright", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label4.Location = New Point(26, 453)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(73, 29)
+        Label4.TabIndex = 11
+        Label4.Text = "NISN"
+        ' 
+        ' TextBox1
+        ' 
+        TextBox1.Location = New Point(139, 397)
+        TextBox1.Margin = New Padding(3, 4, 3, 4)
+        TextBox1.Name = "TextBox1"
+        TextBox1.Size = New Size(204, 27)
+        TextBox1.TabIndex = 12
+        ' 
+        ' Label1
+        ' 
+        Label1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        Label1.AutoSize = True
+        Label1.Font = New Font("Rockwell", 60F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Location = New Point(323, 21)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(617, 122)
+        Label1.TabIndex = 10
+        Label1.Text = "WELCOME"
+        Label1.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' Welcome
+        ' 
+        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleMode = AutoScaleMode.Font
+        BackColor = Color.FromArgb(CByte(227), CByte(242), CByte(253))
+        ClientSize = New Size(1262, 673)
+        Controls.Add(GroupBox1)
+        Controls.Add(Label1)
+        Margin = New Padding(3, 4, 3, 4)
+        Name = "Welcome"
+        Text = "Welcome"
+        GroupBox1.ResumeLayout(False)
+        GroupBox1.PerformLayout()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        ResumeLayout(False)
+        PerformLayout()
 
     End Sub
 
-    Friend WithEvents Label1 As Label
+    Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label5 As Label
     Friend WithEvents Label3 As Label
+    Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents Label2 As Label
-    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents Label1 As Label
 End Class

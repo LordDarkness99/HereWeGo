@@ -22,133 +22,141 @@ Partial Class Tambah_Guru
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.GroupBox1.SuspendLayout()
-        Me.SuspendLayout()
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(267, 15)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(399, 30)
-        Me.TextBox3.TabIndex = 7
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(6, 90)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(74, 25)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Id User"
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
-        Me.GroupBox1.Controls.Add(Me.TextBox3)
-        Me.GroupBox1.Controls.Add(Me.TextBox2)
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Location = New System.Drawing.Point(166, 238)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(684, 135)
-        Me.GroupBox1.TabIndex = 31
-        Me.GroupBox1.TabStop = False
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(267, 87)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(399, 30)
-        Me.TextBox1.TabIndex = 8
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(267, 51)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(399, 30)
-        Me.TextBox2.TabIndex = 6
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(6, 54)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(64, 25)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Nama"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(6, 18)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(44, 25)
-        Me.Label4.TabIndex = 3
-        Me.Label4.Text = "NIP"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(120, 206)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(291, 29)
-        Me.Label1.TabIndex = 30
-        Me.Label1.Text = "Tambah Identitas Guru"
-        '
-        'Button2
-        '
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(714, 379)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(136, 42)
-        Me.Button2.TabIndex = 29
-        Me.Button2.Text = "Batal"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(572, 379)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(136, 42)
-        Me.Button1.TabIndex = 28
-        Me.Button1.Text = "Simpan"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Tambah_Guru
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(227, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(253, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(971, 626)
-        Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Name = "Tambah_Guru"
-        Me.Text = "Tambah_Guru"
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
+        TextBox3 = New TextBox()
+        Label3 = New Label()
+        GroupBox1 = New GroupBox()
+        TextBox1 = New TextBox()
+        TextBox2 = New TextBox()
+        Label2 = New Label()
+        Label4 = New Label()
+        Label1 = New Label()
+        Button2 = New Button()
+        Button1 = New Button()
+        GroupBox1.SuspendLayout()
+        SuspendLayout()
+        ' 
+        ' TextBox3
+        ' 
+        TextBox3.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        TextBox3.Location = New Point(267, 19)
+        TextBox3.Margin = New Padding(3, 4, 3, 4)
+        TextBox3.Name = "TextBox3"
+        TextBox3.Size = New Size(399, 30)
+        TextBox3.TabIndex = 7
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label3.Location = New Point(6, 113)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(74, 25)
+        Label3.TabIndex = 2
+        Label3.Text = "Id User"
+        ' 
+        ' GroupBox1
+        ' 
+        GroupBox1.Controls.Add(TextBox1)
+        GroupBox1.Controls.Add(TextBox3)
+        GroupBox1.Controls.Add(TextBox2)
+        GroupBox1.Controls.Add(Label2)
+        GroupBox1.Controls.Add(Label4)
+        GroupBox1.Controls.Add(Label3)
+        GroupBox1.Location = New Point(166, 219)
+        GroupBox1.Margin = New Padding(3, 4, 3, 4)
+        GroupBox1.Name = "GroupBox1"
+        GroupBox1.Padding = New Padding(3, 4, 3, 4)
+        GroupBox1.Size = New Size(684, 169)
+        GroupBox1.TabIndex = 35
+        GroupBox1.TabStop = False
+        ' 
+        ' TextBox1
+        ' 
+        TextBox1.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        TextBox1.Location = New Point(267, 109)
+        TextBox1.Margin = New Padding(3, 4, 3, 4)
+        TextBox1.Name = "TextBox1"
+        TextBox1.Size = New Size(399, 30)
+        TextBox1.TabIndex = 8
+        ' 
+        ' TextBox2
+        ' 
+        TextBox2.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        TextBox2.Location = New Point(267, 64)
+        TextBox2.Margin = New Padding(3, 4, 3, 4)
+        TextBox2.Name = "TextBox2"
+        TextBox2.Size = New Size(399, 30)
+        TextBox2.TabIndex = 6
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label2.Location = New Point(6, 69)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(64, 25)
+        Label2.TabIndex = 1
+        Label2.Text = "Nama"
+        ' 
+        ' Label4
+        ' 
+        Label4.AutoSize = True
+        Label4.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label4.Location = New Point(6, 23)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(44, 25)
+        Label4.TabIndex = 3
+        Label4.Text = "NIP"
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Location = New Point(120, 179)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(291, 29)
+        Label1.TabIndex = 34
+        Label1.Text = "Tambah Identitas Guru"
+        ' 
+        ' Button2
+        ' 
+        Button2.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button2.Location = New Point(714, 395)
+        Button2.Margin = New Padding(3, 4, 3, 4)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(136, 52)
+        Button2.TabIndex = 33
+        Button2.Text = "Batal"
+        Button2.UseVisualStyleBackColor = True
+        ' 
+        ' Button1
+        ' 
+        Button1.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button1.Location = New Point(572, 395)
+        Button1.Margin = New Padding(3, 4, 3, 4)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(136, 52)
+        Button1.TabIndex = 32
+        Button1.Text = "Simpan"
+        Button1.UseVisualStyleBackColor = True
+        ' 
+        ' Tambah_Guru
+        ' 
+        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleMode = AutoScaleMode.Font
+        BackColor = Color.FromArgb(CByte(227), CByte(242), CByte(253))
+        ClientSize = New Size(971, 626)
+        Controls.Add(GroupBox1)
+        Controls.Add(Label1)
+        Controls.Add(Button2)
+        Controls.Add(Button1)
+        Margin = New Padding(3, 4, 3, 4)
+        Name = "Tambah_Guru"
+        Text = "Tambah_Guru"
+        GroupBox1.ResumeLayout(False)
+        GroupBox1.PerformLayout()
+        ResumeLayout(False)
+        PerformLayout()
 
     End Sub
 

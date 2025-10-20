@@ -25,41 +25,41 @@ Public Class Pengguna
         Next
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click 'sebelumnya
+    Private Sub Button1_Click(sender As Object, e As EventArgs) 'sebelumnya
         If currentPage > 0 Then
             currentPage -= 1
             ShowPage(currentPage)
         End If
     End Sub
 
-    Private Sub Lanjut_Click(sender As Object, e As EventArgs) Handles Lanjut.Click 'selanjutnya
+    Private Sub Lanjut_Click(sender As Object, e As EventArgs) 'selanjutnya
         If (currentPage + 1) * pageSize < dataList.Count Then
             currentPage += 1
             ShowPage(currentPage)
         End If
     End Sub
 
-    Private Async Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click 'Tambah
-        Dim f As New Tambah_Pengguna()
-        f.ShowDialog()
-        Await LoadDataAsync()
+    Private Async Sub Button2_Click(sender As Object, e As EventArgs) 'Tambah
+        Dim f As New Tambah_Pengguna
+        f.ShowDialog
+        Await LoadDataAsync
     End Sub
 
 
-    Private Async Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click 'Ubah
+    Private Async Sub Button3_Click(sender As Object, e As EventArgs) 'Ubah
         If DataGridView1.CurrentRow Is Nothing Then Exit Sub
         Dim id = Convert.ToInt32(DataGridView1.CurrentRow.Cells(0).Value)
         Dim f As New Ubah_Pengguna(id)
-        f.ShowDialog()
-        Await LoadDataAsync()
+        f.ShowDialog
+        Await LoadDataAsync
     End Sub
 
-    Private Async Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click 'Hapus
+    Private Async Sub Button4_Click(sender As Object, e As EventArgs) 'Hapus
         If DataGridView1.CurrentRow Is Nothing Then Exit Sub
         Dim id = Convert.ToInt32(DataGridView1.CurrentRow.Cells(0).Value)
         If MessageBox.Show("Hapus pengguna ini?", "Konfirmasi", MessageBoxButtons.YesNo) = DialogResult.Yes Then
             Await repo.DeleteAsync(id)
-            Await LoadDataAsync()
+            Await LoadDataAsync
         End If
     End Sub
 End Class
