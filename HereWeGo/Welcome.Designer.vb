@@ -68,30 +68,30 @@ Partial Class Welcome
         ' Label6
         ' 
         Label6.AutoSize = True
-        Label6.Font = New Font("Lucida Bright", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label6.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label6.Location = New Point(114, 453)
         Label6.Name = "Label6"
-        Label6.Size = New Size(19, 29)
+        Label6.Size = New Size(20, 29)
         Label6.TabIndex = 15
         Label6.Text = ":"
         ' 
         ' Label5
         ' 
         Label5.AutoSize = True
-        Label5.Font = New Font("Lucida Bright", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label5.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label5.Location = New Point(114, 397)
         Label5.Name = "Label5"
-        Label5.Size = New Size(19, 29)
+        Label5.Size = New Size(20, 29)
         Label5.TabIndex = 14
         Label5.Text = ":"
         ' 
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Font = New Font("Lucida Bright", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label3.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label3.Location = New Point(26, 397)
         Label3.Name = "Label3"
-        Label3.Size = New Size(84, 29)
+        Label3.Size = New Size(81, 29)
         Label3.TabIndex = 10
         Label3.Text = "Nama"
         ' 
@@ -100,16 +100,17 @@ Partial Class Welcome
         TextBox2.Location = New Point(139, 453)
         TextBox2.Margin = New Padding(3, 4, 3, 4)
         TextBox2.Name = "TextBox2"
+        TextBox2.ReadOnly = True
         TextBox2.Size = New Size(204, 27)
         TextBox2.TabIndex = 13
         ' 
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Font = New Font("Lucida Bright", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label4.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label4.Location = New Point(26, 453)
         Label4.Name = "Label4"
-        Label4.Size = New Size(73, 29)
+        Label4.Size = New Size(72, 29)
         Label4.TabIndex = 11
         Label4.Text = "NISN"
         ' 
@@ -118,6 +119,7 @@ Partial Class Welcome
         TextBox1.Location = New Point(139, 397)
         TextBox1.Margin = New Padding(3, 4, 3, 4)
         TextBox1.Name = "TextBox1"
+        TextBox1.ReadOnly = True
         TextBox1.Size = New Size(204, 27)
         TextBox1.TabIndex = 12
         ' 
@@ -125,10 +127,10 @@ Partial Class Welcome
         ' 
         Label1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Label1.AutoSize = True
-        Label1.Font = New Font("Rockwell", 60F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Microsoft Sans Serif", 60F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.Location = New Point(323, 21)
         Label1.Name = "Label1"
-        Label1.Size = New Size(617, 122)
+        Label1.Size = New Size(572, 113)
         Label1.TabIndex = 10
         Label1.Text = "WELCOME"
         Label1.TextAlign = ContentAlignment.MiddleCenter
