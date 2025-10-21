@@ -153,8 +153,7 @@ Partial Class Mata_Pelajaran
         ' 
         ' Mata_Pelajaran
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         BackColor = Color.FromArgb(CByte(227), CByte(242), CByte(253))
         ClientSize = New Size(971, 626)
         Controls.Add(DataGridView1)
@@ -165,6 +164,7 @@ Partial Class Mata_Pelajaran
         Controls.Add(Lanjut)
         Controls.Add(TextBox2)
         Controls.Add(Label3)
+        FormBorderStyle = FormBorderStyle.FixedSingle
         Margin = New Padding(3, 4, 3, 4)
         Name = "Mata_Pelajaran"
         Text = "Mata_Pelajaran"

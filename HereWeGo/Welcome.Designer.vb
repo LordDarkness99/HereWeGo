@@ -22,6 +22,7 @@ Partial Class Welcome
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Welcome))
         GroupBox1 = New GroupBox()
         PictureBox1 = New PictureBox()
         Label6 = New Label()
@@ -31,6 +32,7 @@ Partial Class Welcome
         Label4 = New Label()
         TextBox1 = New TextBox()
         Label1 = New Label()
+        Button1 = New Button()
         GroupBox1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -54,7 +56,7 @@ Partial Class Welcome
         ' 
         ' PictureBox1
         ' 
-        PictureBox1.Image = My.Resources.Resources.formal_biru
+        PictureBox1.Image = My.Resources.Resources.Twibbon_Peserta_Cabang_Lomba_BPC
         PictureBox1.Location = New Point(85, 23)
         PictureBox1.Margin = New Padding(3, 4, 3, 4)
         PictureBox1.Name = "PictureBox1"
@@ -131,14 +133,26 @@ Partial Class Welcome
         Label1.Text = "WELCOME"
         Label1.TextAlign = ContentAlignment.MiddleCenter
         ' 
+        ' Button1
+        ' 
+        Button1.BackColor = Color.Transparent
+        Button1.BackgroundImage = CType(resources.GetObject("Button1.BackgroundImage"), Image)
+        Button1.BackgroundImageLayout = ImageLayout.Zoom
+        Button1.Location = New Point(1163, 21)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(84, 85)
+        Button1.TabIndex = 12
+        Button1.UseVisualStyleBackColor = False
+        ' 
         ' Welcome
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         BackColor = Color.FromArgb(CByte(227), CByte(242), CByte(253))
         ClientSize = New Size(1262, 673)
+        Controls.Add(Button1)
         Controls.Add(GroupBox1)
         Controls.Add(Label1)
+        FormBorderStyle = FormBorderStyle.FixedSingle
         Margin = New Padding(3, 4, 3, 4)
         Name = "Welcome"
         Text = "Welcome"
@@ -159,4 +173,5 @@ Partial Class Welcome
     Friend WithEvents Label4 As Label
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents Button1 As Button
 End Class

@@ -26,10 +26,10 @@ Partial Class Laporan_Operator
         ' 
         ' Laporan_Operator
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         BackColor = Color.FromArgb(CByte(227), CByte(242), CByte(253))
         ClientSize = New Size(971, 626)
+        FormBorderStyle = FormBorderStyle.FixedSingle
         Name = "Laporan_Operator"
         Text = "Laporan_Operator"
         ResumeLayout(False)

@@ -142,14 +142,14 @@ Partial Class Tambah_Guru
         ' 
         ' Tambah_Guru
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         BackColor = Color.FromArgb(CByte(227), CByte(242), CByte(253))
         ClientSize = New Size(971, 626)
         Controls.Add(GroupBox1)
         Controls.Add(Label1)
         Controls.Add(Button2)
         Controls.Add(Button1)
+        FormBorderStyle = FormBorderStyle.FixedSingle
         Margin = New Padding(3, 4, 3, 4)
         Name = "Tambah_Guru"
         Text = "Tambah_Guru"

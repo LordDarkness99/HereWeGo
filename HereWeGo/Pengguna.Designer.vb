@@ -171,8 +171,7 @@ Partial Class Pengguna
         ' 
         ' Pengguna
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         BackColor = Color.FromArgb(CByte(227), CByte(242), CByte(253))
         ClientSize = New Size(971, 626)
         Controls.Add(Button4)
@@ -183,6 +182,7 @@ Partial Class Pengguna
         Controls.Add(DataGridView1)
         Controls.Add(TextBox2)
         Controls.Add(Label3)
+        FormBorderStyle = FormBorderStyle.FixedSingle
         Margin = New Padding(3, 4, 3, 4)
         Name = "Pengguna"
         Text = "Pengguna"

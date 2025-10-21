@@ -85,15 +85,15 @@ Partial Class GuruAsOperator
         Panel2.Size = New Size(1262, 673)
         Panel2.TabIndex = 4
         ' 
-        ' guruAsOperator
+        ' GuruAsOperator
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         BackColor = Color.FromArgb(CByte(227), CByte(242), CByte(253))
         ClientSize = New Size(1262, 673)
         Controls.Add(Panel1)
         Controls.Add(Panel2)
-        Name = "guruAsOperator"
+        FormBorderStyle = FormBorderStyle.FixedSingle
+        Name = "GuruAsOperator"
         Text = "GuruAsOperator"
         Panel1.ResumeLayout(False)
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()

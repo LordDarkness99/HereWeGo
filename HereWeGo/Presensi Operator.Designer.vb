@@ -162,8 +162,7 @@ Partial Class Presensi_Operator
         ' 
         ' Presensi_Operator
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.None
         BackColor = Color.FromArgb(CByte(227), CByte(242), CByte(253))
         ClientSize = New Size(971, 626)
         Controls.Add(Button2)
@@ -173,6 +172,7 @@ Partial Class Presensi_Operator
         Controls.Add(Label2)
         Controls.Add(Label4)
         Controls.Add(Button1)
+        FormBorderStyle = FormBorderStyle.FixedSingle
         Name = "Presensi_Operator"
         Text = "Presensi Operator"
         CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
