@@ -54,6 +54,7 @@ Partial Class Welcome
         ' 
         ' PictureBox1
         ' 
+        PictureBox1.Image = My.Resources.Resources.formal_biru
         PictureBox1.Location = New Point(85, 23)
         PictureBox1.Margin = New Padding(3, 4, 3, 4)
         PictureBox1.Name = "PictureBox1"
