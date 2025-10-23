@@ -27,8 +27,6 @@ Partial Class Ubah_Pengguna
         Label4 = New Label()
         Label3 = New Label()
         GroupBox1 = New GroupBox()
-        ComboBox2 = New ComboBox()
-        Label7 = New Label()
         Label6 = New Label()
         ComboBox1 = New ComboBox()
         TextBox4 = New TextBox()
@@ -82,8 +80,6 @@ Partial Class Ubah_Pengguna
         ' 
         ' GroupBox1
         ' 
-        GroupBox1.Controls.Add(ComboBox2)
-        GroupBox1.Controls.Add(Label7)
         GroupBox1.Controls.Add(Label6)
         GroupBox1.Controls.Add(ComboBox1)
         GroupBox1.Controls.Add(TextBox4)
@@ -97,30 +93,9 @@ Partial Class Ubah_Pengguna
         GroupBox1.Margin = New Padding(3, 4, 3, 4)
         GroupBox1.Name = "GroupBox1"
         GroupBox1.Padding = New Padding(3, 4, 3, 4)
-        GroupBox1.Size = New Size(624, 232)
+        GroupBox1.Size = New Size(624, 196)
         GroupBox1.TabIndex = 27
         GroupBox1.TabStop = False
-        ' 
-        ' ComboBox2
-        ' 
-        ComboBox2.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        ComboBox2.FormattingEnabled = True
-        ComboBox2.Items.AddRange(New Object() {"Aktif", "Tidak Aktif"})
-        ComboBox2.Location = New Point(203, 182)
-        ComboBox2.Margin = New Padding(3, 4, 3, 4)
-        ComboBox2.Name = "ComboBox2"
-        ComboBox2.Size = New Size(399, 33)
-        ComboBox2.TabIndex = 19
-        ' 
-        ' Label7
-        ' 
-        Label7.AutoSize = True
-        Label7.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label7.Location = New Point(6, 186)
-        Label7.Name = "Label7"
-        Label7.Size = New Size(68, 25)
-        Label7.TabIndex = 18
-        Label7.Text = "Status"
         ' 
         ' Label6
         ' 
@@ -226,8 +201,6 @@ Partial Class Ubah_Pengguna
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents TextBox4 As TextBox
