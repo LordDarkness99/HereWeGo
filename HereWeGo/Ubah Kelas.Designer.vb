@@ -25,10 +25,8 @@ Partial Class Ubah_Kelas
         Label1 = New Label()
         Label2 = New Label()
         Label4 = New Label()
-        Label3 = New Label()
         GroupBox1 = New GroupBox()
         TextBox1 = New TextBox()
-        TextBox3 = New TextBox()
         TextBox2 = New TextBox()
         Button2 = New Button()
         Button1 = New Button()
@@ -65,29 +63,17 @@ Partial Class Ubah_Kelas
         Label4.TabIndex = 3
         Label4.Text = "Id Kelas"
         ' 
-        ' Label3
-        ' 
-        Label3.AutoSize = True
-        Label3.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label3.Location = New Point(6, 113)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(106, 25)
-        Label3.TabIndex = 2
-        Label3.Text = "Wali Kelas"
-        ' 
         ' GroupBox1
         ' 
         GroupBox1.Controls.Add(TextBox1)
-        GroupBox1.Controls.Add(TextBox3)
         GroupBox1.Controls.Add(TextBox2)
         GroupBox1.Controls.Add(Label2)
         GroupBox1.Controls.Add(Label4)
-        GroupBox1.Controls.Add(Label3)
-        GroupBox1.Location = New Point(196, 219)
+        GroupBox1.Location = New Point(196, 212)
         GroupBox1.Margin = New Padding(3, 4, 3, 4)
         GroupBox1.Name = "GroupBox1"
         GroupBox1.Padding = New Padding(3, 4, 3, 4)
-        GroupBox1.Size = New Size(624, 169)
+        GroupBox1.Size = New Size(624, 109)
         GroupBox1.TabIndex = 37
         GroupBox1.TabStop = False
         ' 
@@ -99,15 +85,6 @@ Partial Class Ubah_Kelas
         TextBox1.Name = "TextBox1"
         TextBox1.Size = New Size(399, 30)
         TextBox1.TabIndex = 9
-        ' 
-        ' TextBox3
-        ' 
-        TextBox3.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox3.Location = New Point(203, 109)
-        TextBox3.Margin = New Padding(3, 4, 3, 4)
-        TextBox3.Name = "TextBox3"
-        TextBox3.Size = New Size(399, 30)
-        TextBox3.TabIndex = 7
         ' 
         ' TextBox2
         ' 
@@ -163,10 +140,8 @@ Partial Class Ubah_Kelas
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents Label3 As Label
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox3 As TextBox
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button

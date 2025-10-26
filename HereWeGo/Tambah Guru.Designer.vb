@@ -22,33 +22,22 @@ Partial Class Tambah_Guru
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        TextBox3 = New TextBox()
         Label3 = New Label()
         GroupBox1 = New GroupBox()
         TextBox1 = New TextBox()
-        TextBox2 = New TextBox()
+        ComboBox1 = New ComboBox()
         Label2 = New Label()
-        Label4 = New Label()
         Label1 = New Label()
         Button2 = New Button()
         Button1 = New Button()
         GroupBox1.SuspendLayout()
         SuspendLayout()
         ' 
-        ' TextBox3
-        ' 
-        TextBox3.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox3.Location = New Point(267, 19)
-        TextBox3.Margin = New Padding(3, 4, 3, 4)
-        TextBox3.Name = "TextBox3"
-        TextBox3.Size = New Size(399, 30)
-        TextBox3.TabIndex = 7
-        ' 
         ' Label3
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label3.Location = New Point(6, 113)
+        Label3.Location = New Point(18, 70)
         Label3.Name = "Label3"
         Label3.Size = New Size(74, 25)
         Label3.TabIndex = 2
@@ -57,56 +46,41 @@ Partial Class Tambah_Guru
         ' GroupBox1
         ' 
         GroupBox1.Controls.Add(TextBox1)
-        GroupBox1.Controls.Add(TextBox3)
-        GroupBox1.Controls.Add(TextBox2)
+        GroupBox1.Controls.Add(ComboBox1)
         GroupBox1.Controls.Add(Label2)
-        GroupBox1.Controls.Add(Label4)
         GroupBox1.Controls.Add(Label3)
         GroupBox1.Location = New Point(166, 219)
         GroupBox1.Margin = New Padding(3, 4, 3, 4)
         GroupBox1.Name = "GroupBox1"
         GroupBox1.Padding = New Padding(3, 4, 3, 4)
-        GroupBox1.Size = New Size(684, 169)
+        GroupBox1.Size = New Size(684, 128)
         GroupBox1.TabIndex = 35
         GroupBox1.TabStop = False
         ' 
         ' TextBox1
         ' 
-        TextBox1.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox1.Location = New Point(267, 109)
-        TextBox1.Margin = New Padding(3, 4, 3, 4)
+        TextBox1.Location = New Point(279, 27)
         TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(399, 30)
-        TextBox1.TabIndex = 8
+        TextBox1.Size = New Size(399, 27)
+        TextBox1.TabIndex = 37
         ' 
-        ' TextBox2
+        ' ComboBox1
         ' 
-        TextBox2.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox2.Location = New Point(267, 64)
-        TextBox2.Margin = New Padding(3, 4, 3, 4)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(399, 30)
-        TextBox2.TabIndex = 6
+        ComboBox1.FormattingEnabled = True
+        ComboBox1.Location = New Point(279, 70)
+        ComboBox1.Name = "ComboBox1"
+        ComboBox1.Size = New Size(399, 28)
+        ComboBox1.TabIndex = 36
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label2.Location = New Point(6, 69)
+        Label2.Location = New Point(18, 26)
         Label2.Name = "Label2"
         Label2.Size = New Size(64, 25)
         Label2.TabIndex = 1
         Label2.Text = "Nama"
-        ' 
-        ' Label4
-        ' 
-        Label4.AutoSize = True
-        Label4.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label4.Location = New Point(6, 23)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(44, 25)
-        Label4.TabIndex = 3
-        Label4.Text = "NIP"
         ' 
         ' Label1
         ' 
@@ -159,15 +133,12 @@ Partial Class Tambah_Guru
         PerformLayout()
 
     End Sub
-
-    Friend WithEvents TextBox3 As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents Label4 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents TextBox1 As TextBox
 End Class

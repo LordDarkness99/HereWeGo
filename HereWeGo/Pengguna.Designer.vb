@@ -24,10 +24,10 @@ Partial Class Pengguna
     Private Sub InitializeComponent()
         DataGridView1 = New DataGridView()
         id_user = New DataGridViewTextBoxColumn()
-        Email = New DataGridViewTextBoxColumn()
-        Pasword = New DataGridViewTextBoxColumn()
-        Role = New DataGridViewTextBoxColumn()
-        Status = New DataGridViewTextBoxColumn()
+        email = New DataGridViewTextBoxColumn()
+        password = New DataGridViewTextBoxColumn()
+        role = New DataGridViewTextBoxColumn()
+        status = New DataGridViewTextBoxColumn()
         TextBox2 = New TextBox()
         Label3 = New Label()
         Button4 = New Button()
@@ -44,7 +44,7 @@ Partial Class Pengguna
         DataGridView1.AllowUserToDeleteRows = False
         DataGridView1.BackgroundColor = Color.White
         DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Columns.AddRange(New DataGridViewColumn() {id_user, Email, Pasword, Role, Status})
+        DataGridView1.Columns.AddRange(New DataGridViewColumn() {id_user, email, password, role, status})
         DataGridView1.Location = New Point(20, 71)
         DataGridView1.Margin = New Padding(3, 4, 3, 4)
         DataGridView1.Name = "DataGridView1"
@@ -60,39 +60,39 @@ Partial Class Pengguna
         id_user.MinimumWidth = 6
         id_user.Name = "id_user"
         id_user.ReadOnly = True
-        id_user.Width = 232
+        id_user.Width = 165
         ' 
-        ' Email
+        ' email
         ' 
-        Email.HeaderText = "Email"
-        Email.MinimumWidth = 6
-        Email.Name = "Email"
-        Email.ReadOnly = True
-        Email.Width = 232
+        email.HeaderText = "Email"
+        email.MinimumWidth = 6
+        email.Name = "email"
+        email.ReadOnly = True
+        email.Width = 205
         ' 
-        ' Pasword
+        ' password
         ' 
-        Pasword.HeaderText = "Pasword"
-        Pasword.MinimumWidth = 6
-        Pasword.Name = "Pasword"
-        Pasword.ReadOnly = True
-        Pasword.Width = 232
+        password.HeaderText = "Password"
+        password.MinimumWidth = 6
+        password.Name = "password"
+        password.ReadOnly = True
+        password.Width = 165
         ' 
-        ' Role
+        ' role
         ' 
-        Role.HeaderText = "Role"
-        Role.MinimumWidth = 6
-        Role.Name = "Role"
-        Role.ReadOnly = True
-        Role.Width = 232
+        role.HeaderText = "Role"
+        role.MinimumWidth = 6
+        role.Name = "role"
+        role.ReadOnly = True
+        role.Width = 165
         ' 
-        ' Status
+        ' status
         ' 
-        Status.HeaderText = "Status"
-        Status.MinimumWidth = 6
-        Status.Name = "Status"
-        Status.ReadOnly = True
-        Status.Width = 232
+        status.HeaderText = "Status"
+        status.MinimumWidth = 6
+        status.Name = "status"
+        status.ReadOnly = True
+        status.Width = 165
         ' 
         ' TextBox2
         ' 
@@ -193,11 +193,6 @@ Partial Class Pengguna
     End Sub
 
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents id_user As DataGridViewTextBoxColumn
-    Friend WithEvents Email As DataGridViewTextBoxColumn
-    Friend WithEvents Pasword As DataGridViewTextBoxColumn
-    Friend WithEvents Role As DataGridViewTextBoxColumn
-    Friend WithEvents Status As DataGridViewTextBoxColumn
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Button4 As Button
@@ -205,4 +200,9 @@ Partial Class Pengguna
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents Lanjut As Button
+    Friend WithEvents id_user As DataGridViewTextBoxColumn
+    Friend WithEvents email As DataGridViewTextBoxColumn
+    Friend WithEvents password As DataGridViewTextBoxColumn
+    Friend WithEvents role As DataGridViewTextBoxColumn
+    Friend WithEvents status As DataGridViewTextBoxColumn
 End Class

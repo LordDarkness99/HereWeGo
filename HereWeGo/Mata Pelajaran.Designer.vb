@@ -23,9 +23,6 @@ Partial Class Mata_Pelajaran
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         DataGridView1 = New DataGridView()
-        id_mapel = New DataGridViewTextBoxColumn()
-        nama_mapel = New DataGridViewTextBoxColumn()
-        id_guru = New DataGridViewTextBoxColumn()
         Button4 = New Button()
         Button3 = New Button()
         Button2 = New Button()
@@ -33,6 +30,10 @@ Partial Class Mata_Pelajaran
         Lanjut = New Button()
         TextBox2 = New TextBox()
         Label3 = New Label()
+        id_mapel = New DataGridViewTextBoxColumn()
+        nama_mapel = New DataGridViewTextBoxColumn()
+        id_guru = New DataGridViewTextBoxColumn()
+        status = New DataGridViewTextBoxColumn()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -42,7 +43,7 @@ Partial Class Mata_Pelajaran
         DataGridView1.AllowUserToDeleteRows = False
         DataGridView1.BackgroundColor = Color.White
         DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Columns.AddRange(New DataGridViewColumn() {id_mapel, nama_mapel, id_guru})
+        DataGridView1.Columns.AddRange(New DataGridViewColumn() {id_mapel, nama_mapel, id_guru, status})
         DataGridView1.Location = New Point(20, 71)
         DataGridView1.Margin = New Padding(3, 4, 3, 4)
         DataGridView1.Name = "DataGridView1"
@@ -51,30 +52,6 @@ Partial Class Mata_Pelajaran
         DataGridView1.RowTemplate.Height = 24
         DataGridView1.Size = New Size(930, 481)
         DataGridView1.TabIndex = 35
-        ' 
-        ' id_mapel
-        ' 
-        id_mapel.HeaderText = "Id Mapel"
-        id_mapel.MinimumWidth = 6
-        id_mapel.Name = "id_mapel"
-        id_mapel.ReadOnly = True
-        id_mapel.Width = 310
-        ' 
-        ' nama_mapel
-        ' 
-        nama_mapel.HeaderText = "Nama Mapel"
-        nama_mapel.MinimumWidth = 6
-        nama_mapel.Name = "nama_mapel"
-        nama_mapel.ReadOnly = True
-        nama_mapel.Width = 310
-        ' 
-        ' id_guru
-        ' 
-        id_guru.HeaderText = "Id Guru"
-        id_guru.MinimumWidth = 6
-        id_guru.Name = "id_guru"
-        id_guru.ReadOnly = True
-        id_guru.Width = 310
         ' 
         ' Button4
         ' 
@@ -151,6 +128,38 @@ Partial Class Mata_Pelajaran
         Label3.TabIndex = 36
         Label3.Text = "Cari"
         ' 
+        ' id_mapel
+        ' 
+        id_mapel.HeaderText = "Id Mapel"
+        id_mapel.MinimumWidth = 6
+        id_mapel.Name = "id_mapel"
+        id_mapel.ReadOnly = True
+        id_mapel.Width = 210
+        ' 
+        ' nama_mapel
+        ' 
+        nama_mapel.HeaderText = "Nama Mapel"
+        nama_mapel.MinimumWidth = 6
+        nama_mapel.Name = "nama_mapel"
+        nama_mapel.ReadOnly = True
+        nama_mapel.Width = 260
+        ' 
+        ' id_guru
+        ' 
+        id_guru.HeaderText = "Id Guru"
+        id_guru.MinimumWidth = 6
+        id_guru.Name = "id_guru"
+        id_guru.ReadOnly = True
+        id_guru.Width = 260
+        ' 
+        ' status
+        ' 
+        status.HeaderText = "Status"
+        status.MinimumWidth = 6
+        status.Name = "status"
+        status.ReadOnly = True
+        status.Width = 135
+        ' 
         ' Mata_Pelajaran
         ' 
         AutoScaleMode = AutoScaleMode.None
@@ -175,9 +184,6 @@ Partial Class Mata_Pelajaran
     End Sub
 
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents id_mapel As DataGridViewTextBoxColumn
-    Friend WithEvents nama_mapel As DataGridViewTextBoxColumn
-    Friend WithEvents id_guru As DataGridViewTextBoxColumn
     Friend WithEvents Button4 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents Button2 As Button
@@ -185,4 +191,8 @@ Partial Class Mata_Pelajaran
     Friend WithEvents Lanjut As Button
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label3 As Label
+    Friend WithEvents id_mapel As DataGridViewTextBoxColumn
+    Friend WithEvents nama_mapel As DataGridViewTextBoxColumn
+    Friend WithEvents id_guru As DataGridViewTextBoxColumn
+    Friend WithEvents status As DataGridViewTextBoxColumn
 End Class

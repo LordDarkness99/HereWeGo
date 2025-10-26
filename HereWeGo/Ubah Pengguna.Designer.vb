@@ -35,6 +35,8 @@ Partial Class Ubah_Pengguna
         Label5 = New Label()
         Button2 = New Button()
         Button1 = New Button()
+        Label7 = New Label()
+        TextBox1 = New TextBox()
         GroupBox1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -42,7 +44,7 @@ Partial Class Ubah_Pengguna
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(150, 147)
+        Label1.Location = New Point(152, 103)
         Label1.Name = "Label1"
         Label1.Size = New Size(208, 29)
         Label1.TabIndex = 26
@@ -52,7 +54,7 @@ Partial Class Ubah_Pengguna
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label2.Location = New Point(6, 69)
+        Label2.Location = New Point(9, 103)
         Label2.Name = "Label2"
         Label2.Size = New Size(51, 25)
         Label2.TabIndex = 1
@@ -62,7 +64,7 @@ Partial Class Ubah_Pengguna
         ' 
         Label4.AutoSize = True
         Label4.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label4.Location = New Point(6, 25)
+        Label4.Location = New Point(9, 59)
         Label4.Name = "Label4"
         Label4.Size = New Size(60, 25)
         Label4.TabIndex = 3
@@ -72,7 +74,7 @@ Partial Class Ubah_Pengguna
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label3.Location = New Point(6, 110)
+        Label3.Location = New Point(9, 144)
         Label3.Name = "Label3"
         Label3.Size = New Size(88, 25)
         Label3.TabIndex = 2
@@ -80,6 +82,8 @@ Partial Class Ubah_Pengguna
         ' 
         ' GroupBox1
         ' 
+        GroupBox1.Controls.Add(TextBox1)
+        GroupBox1.Controls.Add(Label7)
         GroupBox1.Controls.Add(Label6)
         GroupBox1.Controls.Add(ComboBox1)
         GroupBox1.Controls.Add(TextBox4)
@@ -89,11 +93,11 @@ Partial Class Ubah_Pengguna
         GroupBox1.Controls.Add(Label2)
         GroupBox1.Controls.Add(Label4)
         GroupBox1.Controls.Add(Label3)
-        GroupBox1.Location = New Point(196, 187)
+        GroupBox1.Location = New Point(196, 151)
         GroupBox1.Margin = New Padding(3, 4, 3, 4)
         GroupBox1.Name = "GroupBox1"
         GroupBox1.Padding = New Padding(3, 4, 3, 4)
-        GroupBox1.Size = New Size(624, 196)
+        GroupBox1.Size = New Size(624, 232)
         GroupBox1.TabIndex = 27
         GroupBox1.TabStop = False
         ' 
@@ -111,7 +115,7 @@ Partial Class Ubah_Pengguna
         ComboBox1.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         ComboBox1.FormattingEnabled = True
         ComboBox1.Items.AddRange(New Object() {"Admin", "Guru"})
-        ComboBox1.Location = New Point(203, 65)
+        ComboBox1.Location = New Point(206, 99)
         ComboBox1.Margin = New Padding(3, 4, 3, 4)
         ComboBox1.Name = "ComboBox1"
         ComboBox1.Size = New Size(399, 33)
@@ -120,7 +124,7 @@ Partial Class Ubah_Pengguna
         ' TextBox4
         ' 
         TextBox4.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox4.Location = New Point(203, 144)
+        TextBox4.Location = New Point(206, 178)
         TextBox4.Margin = New Padding(3, 4, 3, 4)
         TextBox4.Name = "TextBox4"
         TextBox4.Size = New Size(399, 30)
@@ -129,7 +133,7 @@ Partial Class Ubah_Pengguna
         ' TextBox3
         ' 
         TextBox3.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox3.Location = New Point(203, 27)
+        TextBox3.Location = New Point(206, 61)
         TextBox3.Margin = New Padding(3, 4, 3, 4)
         TextBox3.Name = "TextBox3"
         TextBox3.Size = New Size(399, 30)
@@ -138,7 +142,7 @@ Partial Class Ubah_Pengguna
         ' TextBox2
         ' 
         TextBox2.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox2.Location = New Point(203, 106)
+        TextBox2.Location = New Point(206, 140)
         TextBox2.Margin = New Padding(3, 4, 3, 4)
         TextBox2.Name = "TextBox2"
         TextBox2.Size = New Size(399, 30)
@@ -148,7 +152,7 @@ Partial Class Ubah_Pengguna
         ' 
         Label5.AutoSize = True
         Label5.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label5.Location = New Point(6, 148)
+        Label5.Location = New Point(9, 182)
         Label5.Name = "Label5"
         Label5.Size = New Size(148, 25)
         Label5.TabIndex = 5
@@ -175,6 +179,25 @@ Partial Class Ubah_Pengguna
         Button1.TabIndex = 28
         Button1.Text = "Simpan"
         Button1.UseVisualStyleBackColor = True
+        ' 
+        ' Label7
+        ' 
+        Label7.AutoSize = True
+        Label7.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label7.Location = New Point(9, 24)
+        Label7.Name = "Label7"
+        Label7.Size = New Size(77, 25)
+        Label7.TabIndex = 17
+        Label7.Text = "ID User"
+        ' 
+        ' TextBox1
+        ' 
+        TextBox1.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        TextBox1.Location = New Point(206, 19)
+        TextBox1.Margin = New Padding(3, 4, 3, 4)
+        TextBox1.Name = "TextBox1"
+        TextBox1.Size = New Size(399, 30)
+        TextBox1.TabIndex = 18
         ' 
         ' Ubah_Pengguna
         ' 
@@ -209,4 +232,6 @@ Partial Class Ubah_Pengguna
     Friend WithEvents Label5 As Label
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Label7 As Label
 End Class

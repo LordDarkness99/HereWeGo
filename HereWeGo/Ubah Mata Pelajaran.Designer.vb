@@ -27,8 +27,8 @@ Partial Class Ubah_Mata_Pelajaran
         Label4 = New Label()
         Label3 = New Label()
         GroupBox1 = New GroupBox()
+        ComboBox1 = New ComboBox()
         TextBox1 = New TextBox()
-        TextBox3 = New TextBox()
         TextBox2 = New TextBox()
         Button2 = New Button()
         Button1 = New Button()
@@ -77,8 +77,8 @@ Partial Class Ubah_Mata_Pelajaran
         ' 
         ' GroupBox1
         ' 
+        GroupBox1.Controls.Add(ComboBox1)
         GroupBox1.Controls.Add(TextBox1)
-        GroupBox1.Controls.Add(TextBox3)
         GroupBox1.Controls.Add(TextBox2)
         GroupBox1.Controls.Add(Label2)
         GroupBox1.Controls.Add(Label4)
@@ -91,6 +91,14 @@ Partial Class Ubah_Mata_Pelajaran
         GroupBox1.TabIndex = 41
         GroupBox1.TabStop = False
         ' 
+        ' ComboBox1
+        ' 
+        ComboBox1.FormattingEnabled = True
+        ComboBox1.Location = New Point(203, 114)
+        ComboBox1.Name = "ComboBox1"
+        ComboBox1.Size = New Size(399, 28)
+        ComboBox1.TabIndex = 10
+        ' 
         ' TextBox1
         ' 
         TextBox1.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
@@ -99,15 +107,6 @@ Partial Class Ubah_Mata_Pelajaran
         TextBox1.Name = "TextBox1"
         TextBox1.Size = New Size(399, 30)
         TextBox1.TabIndex = 9
-        ' 
-        ' TextBox3
-        ' 
-        TextBox3.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox3.Location = New Point(203, 109)
-        TextBox3.Margin = New Padding(3, 4, 3, 4)
-        TextBox3.Name = "TextBox3"
-        TextBox3.Size = New Size(399, 30)
-        TextBox3.TabIndex = 7
         ' 
         ' TextBox2
         ' 
@@ -166,8 +165,8 @@ Partial Class Ubah_Mata_Pelajaran
     Friend WithEvents Label3 As Label
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox3 As TextBox
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
+    Friend WithEvents ComboBox1 As ComboBox
 End Class

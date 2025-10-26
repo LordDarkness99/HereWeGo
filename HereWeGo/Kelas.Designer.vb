@@ -23,9 +23,6 @@ Partial Class Kelas
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         DataGridView1 = New DataGridView()
-        id_kelas = New DataGridViewTextBoxColumn()
-        nama_kelas = New DataGridViewTextBoxColumn()
-        Wali_Kelas = New DataGridViewTextBoxColumn()
         Button4 = New Button()
         Button3 = New Button()
         Button2 = New Button()
@@ -33,6 +30,9 @@ Partial Class Kelas
         Lanjut = New Button()
         TextBox2 = New TextBox()
         Label3 = New Label()
+        id_kelas = New DataGridViewTextBoxColumn()
+        nama_kelas = New DataGridViewTextBoxColumn()
+        status = New DataGridViewTextBoxColumn()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -42,7 +42,7 @@ Partial Class Kelas
         DataGridView1.AllowUserToDeleteRows = False
         DataGridView1.BackgroundColor = Color.White
         DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Columns.AddRange(New DataGridViewColumn() {id_kelas, nama_kelas, Wali_Kelas})
+        DataGridView1.Columns.AddRange(New DataGridViewColumn() {id_kelas, nama_kelas, status})
         DataGridView1.Location = New Point(20, 71)
         DataGridView1.Margin = New Padding(3, 4, 3, 4)
         DataGridView1.Name = "DataGridView1"
@@ -51,30 +51,6 @@ Partial Class Kelas
         DataGridView1.RowTemplate.Height = 24
         DataGridView1.Size = New Size(930, 481)
         DataGridView1.TabIndex = 35
-        ' 
-        ' id_kelas
-        ' 
-        id_kelas.HeaderText = "Id Kelas"
-        id_kelas.MinimumWidth = 6
-        id_kelas.Name = "id_kelas"
-        id_kelas.ReadOnly = True
-        id_kelas.Width = 310
-        ' 
-        ' nama_kelas
-        ' 
-        nama_kelas.HeaderText = "Nama Kelas"
-        nama_kelas.MinimumWidth = 6
-        nama_kelas.Name = "nama_kelas"
-        nama_kelas.ReadOnly = True
-        nama_kelas.Width = 310
-        ' 
-        ' Wali_Kelas
-        ' 
-        Wali_Kelas.HeaderText = "Wali Kelas"
-        Wali_Kelas.MinimumWidth = 6
-        Wali_Kelas.Name = "Wali_Kelas"
-        Wali_Kelas.ReadOnly = True
-        Wali_Kelas.Width = 310
         ' 
         ' Button4
         ' 
@@ -151,6 +127,30 @@ Partial Class Kelas
         Label3.TabIndex = 36
         Label3.Text = "Cari"
         ' 
+        ' id_kelas
+        ' 
+        id_kelas.HeaderText = "Id Kelas"
+        id_kelas.MinimumWidth = 6
+        id_kelas.Name = "id_kelas"
+        id_kelas.ReadOnly = True
+        id_kelas.Width = 325
+        ' 
+        ' nama_kelas
+        ' 
+        nama_kelas.HeaderText = "Nama Kelas"
+        nama_kelas.MinimumWidth = 6
+        nama_kelas.Name = "nama_kelas"
+        nama_kelas.ReadOnly = True
+        nama_kelas.Width = 325
+        ' 
+        ' status
+        ' 
+        status.HeaderText = "Status"
+        status.MinimumWidth = 6
+        status.Name = "status"
+        status.ReadOnly = True
+        status.Width = 190
+        ' 
         ' Kelas
         ' 
         AutoScaleMode = AutoScaleMode.None
@@ -175,9 +175,6 @@ Partial Class Kelas
     End Sub
 
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents id_kelas As DataGridViewTextBoxColumn
-    Friend WithEvents nama_kelas As DataGridViewTextBoxColumn
-    Friend WithEvents Wali_Kelas As DataGridViewTextBoxColumn
     Friend WithEvents Button4 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents Button2 As Button
@@ -185,4 +182,7 @@ Partial Class Kelas
     Friend WithEvents Lanjut As Button
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label3 As Label
+    Friend WithEvents id_kelas As DataGridViewTextBoxColumn
+    Friend WithEvents nama_kelas As DataGridViewTextBoxColumn
+    Friend WithEvents status As DataGridViewTextBoxColumn
 End Class

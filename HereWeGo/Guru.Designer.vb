@@ -23,9 +23,6 @@ Partial Class Guru
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         DataGridView1 = New DataGridView()
-        NIP = New DataGridViewTextBoxColumn()
-        Nama = New DataGridViewTextBoxColumn()
-        id_user = New DataGridViewTextBoxColumn()
         Button4 = New Button()
         Button3 = New Button()
         Button2 = New Button()
@@ -33,6 +30,10 @@ Partial Class Guru
         Lanjut = New Button()
         TextBox2 = New TextBox()
         Label3 = New Label()
+        nip = New DataGridViewTextBoxColumn()
+        nama = New DataGridViewTextBoxColumn()
+        id_user = New DataGridViewTextBoxColumn()
+        status = New DataGridViewTextBoxColumn()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -42,7 +43,7 @@ Partial Class Guru
         DataGridView1.AllowUserToDeleteRows = False
         DataGridView1.BackgroundColor = Color.White
         DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Columns.AddRange(New DataGridViewColumn() {NIP, Nama, id_user})
+        DataGridView1.Columns.AddRange(New DataGridViewColumn() {nip, nama, id_user, status})
         DataGridView1.Location = New Point(20, 75)
         DataGridView1.Margin = New Padding(3, 4, 3, 4)
         DataGridView1.Name = "DataGridView1"
@@ -51,30 +52,6 @@ Partial Class Guru
         DataGridView1.RowTemplate.Height = 24
         DataGridView1.Size = New Size(930, 478)
         DataGridView1.TabIndex = 35
-        ' 
-        ' NIP
-        ' 
-        NIP.HeaderText = "NIP"
-        NIP.MinimumWidth = 6
-        NIP.Name = "NIP"
-        NIP.ReadOnly = True
-        NIP.Width = 310
-        ' 
-        ' Nama
-        ' 
-        Nama.HeaderText = "Nama"
-        Nama.MinimumWidth = 6
-        Nama.Name = "Nama"
-        Nama.ReadOnly = True
-        Nama.Width = 310
-        ' 
-        ' id_user
-        ' 
-        id_user.HeaderText = "Id User"
-        id_user.MinimumWidth = 6
-        id_user.Name = "id_user"
-        id_user.ReadOnly = True
-        id_user.Width = 310
         ' 
         ' Button4
         ' 
@@ -151,6 +128,38 @@ Partial Class Guru
         Label3.TabIndex = 36
         Label3.Text = "Cari"
         ' 
+        ' nip
+        ' 
+        nip.HeaderText = "NIP"
+        nip.MinimumWidth = 6
+        nip.Name = "nip"
+        nip.ReadOnly = True
+        nip.Width = 210
+        ' 
+        ' nama
+        ' 
+        nama.HeaderText = "Nama"
+        nama.MinimumWidth = 6
+        nama.Name = "nama"
+        nama.ReadOnly = True
+        nama.Width = 215
+        ' 
+        ' id_user
+        ' 
+        id_user.HeaderText = "Id User"
+        id_user.MinimumWidth = 6
+        id_user.Name = "id_user"
+        id_user.ReadOnly = True
+        id_user.Width = 210
+        ' 
+        ' status
+        ' 
+        status.HeaderText = "Status"
+        status.MinimumWidth = 6
+        status.Name = "status"
+        status.ReadOnly = True
+        status.Width = 210
+        ' 
         ' Guru
         ' 
         AutoScaleMode = AutoScaleMode.None
@@ -175,9 +184,6 @@ Partial Class Guru
     End Sub
 
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents NIP As DataGridViewTextBoxColumn
-    Friend WithEvents Nama As DataGridViewTextBoxColumn
-    Friend WithEvents id_user As DataGridViewTextBoxColumn
     Friend WithEvents Button4 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents Button2 As Button
@@ -185,4 +191,8 @@ Partial Class Guru
     Friend WithEvents Lanjut As Button
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label3 As Label
+    Friend WithEvents nip As DataGridViewTextBoxColumn
+    Friend WithEvents nama As DataGridViewTextBoxColumn
+    Friend WithEvents id_user As DataGridViewTextBoxColumn
+    Friend WithEvents status As DataGridViewTextBoxColumn
 End Class

@@ -30,7 +30,7 @@ Partial Class Ubah_Guru
         Label2 = New Label()
         Label4 = New Label()
         GroupBox1 = New GroupBox()
-        TextBox3 = New TextBox()
+        ComboBox1 = New ComboBox()
         Label3 = New Label()
         GroupBox1.SuspendLayout()
         SuspendLayout()
@@ -70,7 +70,7 @@ Partial Class Ubah_Guru
         ' TextBox1
         ' 
         TextBox1.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox1.Location = New Point(267, 109)
+        TextBox1.Location = New Point(267, 20)
         TextBox1.Margin = New Padding(3, 4, 3, 4)
         TextBox1.Name = "TextBox1"
         TextBox1.Size = New Size(399, 30)
@@ -107,8 +107,8 @@ Partial Class Ubah_Guru
         ' 
         ' GroupBox1
         ' 
+        GroupBox1.Controls.Add(ComboBox1)
         GroupBox1.Controls.Add(TextBox1)
-        GroupBox1.Controls.Add(TextBox3)
         GroupBox1.Controls.Add(TextBox2)
         GroupBox1.Controls.Add(Label2)
         GroupBox1.Controls.Add(Label4)
@@ -121,14 +121,13 @@ Partial Class Ubah_Guru
         GroupBox1.TabIndex = 35
         GroupBox1.TabStop = False
         ' 
-        ' TextBox3
+        ' ComboBox1
         ' 
-        TextBox3.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox3.Location = New Point(267, 19)
-        TextBox3.Margin = New Padding(3, 4, 3, 4)
-        TextBox3.Name = "TextBox3"
-        TextBox3.Size = New Size(399, 30)
-        TextBox3.TabIndex = 7
+        ComboBox1.FormattingEnabled = True
+        ComboBox1.Location = New Point(267, 110)
+        ComboBox1.Name = "ComboBox1"
+        ComboBox1.Size = New Size(397, 28)
+        ComboBox1.TabIndex = 9
         ' 
         ' Label3
         ' 
@@ -168,6 +167,6 @@ Partial Class Ubah_Guru
     Friend WithEvents Label2 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents TextBox3 As TextBox
     Friend WithEvents Label3 As Label
+    Friend WithEvents ComboBox1 As ComboBox
 End Class

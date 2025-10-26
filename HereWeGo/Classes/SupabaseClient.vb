@@ -3,8 +3,8 @@ Imports System.Text
 Imports System.Threading.Tasks
 
 Public Class SupabaseClient
-    Private ReadOnly _url As String = "https://lcfsixhzrozwedxxtgig.supabase.co"
-    Private ReadOnly _anonKey As String = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxjZnNpeGh6cm96d2VkeHh0Z2lnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTg1ODU0NTMsImV4cCI6MjA3NDE2MTQ1M30.wP6f3qwMg4idomxm_Y-RlJNWy7qoO37bzJs0_fEMb5A"
+    Private ReadOnly _url As String = "https://zlguyrxjkdmmcexyjjxg.supabase.co"
+    Private ReadOnly _anonKey As String = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpsZ3V5cnhqa2RtbWNleHlqanhnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTg2OTUyMTIsImV4cCI6MjA3NDI3MTIxMn0.848TLaIbvHzvIM1Q-cYjsj4fwpl3f5GZ8N_cGHqcJQk"
     Private ReadOnly _client As HttpClient
 
     Public Sub New()
@@ -95,4 +95,5 @@ Public Class SupabaseClient
             Return Nothing
         End Try
     End Function
+
 End Class
