@@ -27,13 +27,15 @@ Partial Class Ubah_Murid
         Label4 = New Label()
         Label3 = New Label()
         GroupBox1 = New GroupBox()
-        TextBox4 = New TextBox()
+        ComboBox1 = New ComboBox()
         TextBox1 = New TextBox()
         Label6 = New Label()
         TextBox3 = New TextBox()
         TextBox2 = New TextBox()
         Button2 = New Button()
         Button1 = New Button()
+        Label5 = New Label()
+        TextBox4 = New TextBox()
         GroupBox1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -41,7 +43,7 @@ Partial Class Ubah_Murid
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(150, 149)
+        Label1.Location = New Point(150, 116)
         Label1.Name = "Label1"
         Label1.Size = New Size(153, 29)
         Label1.TabIndex = 34
@@ -80,6 +82,8 @@ Partial Class Ubah_Murid
         ' GroupBox1
         ' 
         GroupBox1.Controls.Add(TextBox4)
+        GroupBox1.Controls.Add(Label5)
+        GroupBox1.Controls.Add(ComboBox1)
         GroupBox1.Controls.Add(TextBox1)
         GroupBox1.Controls.Add(Label6)
         GroupBox1.Controls.Add(TextBox3)
@@ -87,22 +91,21 @@ Partial Class Ubah_Murid
         GroupBox1.Controls.Add(Label2)
         GroupBox1.Controls.Add(Label4)
         GroupBox1.Controls.Add(Label3)
-        GroupBox1.Location = New Point(196, 189)
+        GroupBox1.Location = New Point(196, 156)
         GroupBox1.Margin = New Padding(3, 4, 3, 4)
         GroupBox1.Name = "GroupBox1"
         GroupBox1.Padding = New Padding(3, 4, 3, 4)
-        GroupBox1.Size = New Size(624, 229)
+        GroupBox1.Size = New Size(624, 247)
         GroupBox1.TabIndex = 35
         GroupBox1.TabStop = False
         ' 
-        ' TextBox4
+        ' ComboBox1
         ' 
-        TextBox4.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox4.Location = New Point(203, 118)
-        TextBox4.Margin = New Padding(3, 4, 3, 4)
-        TextBox4.Name = "TextBox4"
-        TextBox4.Size = New Size(399, 30)
-        TextBox4.TabIndex = 18
+        ComboBox1.FormattingEnabled = True
+        ComboBox1.Location = New Point(203, 119)
+        ComboBox1.Name = "ComboBox1"
+        ComboBox1.Size = New Size(399, 28)
+        ComboBox1.TabIndex = 18
         ' 
         ' TextBox1
         ' 
@@ -110,6 +113,7 @@ Partial Class Ubah_Murid
         TextBox1.Location = New Point(203, 26)
         TextBox1.Margin = New Padding(3, 4, 3, 4)
         TextBox1.Name = "TextBox1"
+        TextBox1.ReadOnly = True
         TextBox1.Size = New Size(399, 30)
         TextBox1.TabIndex = 17
         ' 
@@ -163,6 +167,25 @@ Partial Class Ubah_Murid
         Button1.Text = "Simpan"
         Button1.UseVisualStyleBackColor = True
         ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label5.Location = New Point(6, 206)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(98, 25)
+        Label5.TabIndex = 19
+        Label5.Text = "Link_Foto"
+        ' 
+        ' TextBox4
+        ' 
+        TextBox4.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        TextBox4.Location = New Point(203, 206)
+        TextBox4.Margin = New Padding(3, 4, 3, 4)
+        TextBox4.Name = "TextBox4"
+        TextBox4.Size = New Size(399, 30)
+        TextBox4.TabIndex = 20
+        ' 
         ' Ubah_Murid
         ' 
         AutoScaleMode = AutoScaleMode.None
@@ -188,11 +211,13 @@ Partial Class Ubah_Murid
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents TextBox4 As TextBox
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents Label5 As Label
 End Class

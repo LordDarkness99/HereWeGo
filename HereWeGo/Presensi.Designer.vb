@@ -45,7 +45,7 @@ Partial Class Presensi
         ' Button4
         ' 
         Button4.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Button4.Location = New Point(304, 561)
+        Button4.Location = New Point(20, 561)
         Button4.Margin = New Padding(3, 4, 3, 4)
         Button4.Name = "Button4"
         Button4.Size = New Size(136, 52)
@@ -56,7 +56,7 @@ Partial Class Presensi
         ' Button3
         ' 
         Button3.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Button3.Location = New Point(162, 561)
+        Button3.Location = New Point(171, 561)
         Button3.Margin = New Padding(3, 4, 3, 4)
         Button3.Name = "Button3"
         Button3.Size = New Size(136, 52)
@@ -67,10 +67,10 @@ Partial Class Presensi
         ' Button2
         ' 
         Button2.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Button2.Location = New Point(20, 561)
+        Button2.Location = New Point(271, 11)
         Button2.Margin = New Padding(3, 4, 3, 4)
         Button2.Name = "Button2"
-        Button2.Size = New Size(136, 52)
+        Button2.Size = New Size(126, 41)
         Button2.TabIndex = 56
         Button2.Text = "Tambah"
         Button2.UseVisualStyleBackColor = True

@@ -24,6 +24,7 @@ Partial Class Admin
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Admin))
         Panel1 = New Panel()
+        Button7 = New Button()
         Button6 = New Button()
         Button5 = New Button()
         Button4 = New Button()
@@ -39,6 +40,7 @@ Partial Class Admin
         ' Panel1
         ' 
         Panel1.BackColor = Color.MidnightBlue
+        Panel1.Controls.Add(Button7)
         Panel1.Controls.Add(Button6)
         Panel1.Controls.Add(Button5)
         Panel1.Controls.Add(Button4)
@@ -53,9 +55,18 @@ Partial Class Admin
         Panel1.Size = New Size(273, 673)
         Panel1.TabIndex = 1
         ' 
+        ' Button7
+        ' 
+        Button7.Location = New Point(9, 565)
+        Button7.Name = "Button7"
+        Button7.Size = New Size(258, 55)
+        Button7.TabIndex = 8
+        Button7.Text = "Presensi"
+        Button7.UseVisualStyleBackColor = True
+        ' 
         ' Button6
         ' 
-        Button6.Location = New Point(7, 518)
+        Button6.Location = New Point(9, 504)
         Button6.Name = "Button6"
         Button6.Size = New Size(258, 55)
         Button6.TabIndex = 7
@@ -64,7 +75,7 @@ Partial Class Admin
         ' 
         ' Button5
         ' 
-        Button5.Location = New Point(7, 461)
+        Button5.Location = New Point(9, 447)
         Button5.Margin = New Padding(3, 4, 3, 4)
         Button5.Name = "Button5"
         Button5.Size = New Size(258, 50)
@@ -74,7 +85,7 @@ Partial Class Admin
         ' 
         ' Button4
         ' 
-        Button4.Location = New Point(7, 404)
+        Button4.Location = New Point(9, 390)
         Button4.Margin = New Padding(3, 4, 3, 4)
         Button4.Name = "Button4"
         Button4.Size = New Size(258, 50)
@@ -84,7 +95,7 @@ Partial Class Admin
         ' 
         ' Button3
         ' 
-        Button3.Location = New Point(7, 346)
+        Button3.Location = New Point(9, 332)
         Button3.Margin = New Padding(3, 4, 3, 4)
         Button3.Name = "Button3"
         Button3.Size = New Size(258, 50)
@@ -94,7 +105,7 @@ Partial Class Admin
         ' 
         ' Button1
         ' 
-        Button1.Location = New Point(7, 289)
+        Button1.Location = New Point(9, 275)
         Button1.Margin = New Padding(3, 4, 3, 4)
         Button1.Name = "Button1"
         Button1.Size = New Size(258, 50)
@@ -104,7 +115,7 @@ Partial Class Admin
         ' 
         ' Button2
         ' 
-        Button2.Location = New Point(7, 231)
+        Button2.Location = New Point(9, 217)
         Button2.Margin = New Padding(3, 4, 3, 4)
         Button2.Name = "Button2"
         Button2.Size = New Size(258, 50)
@@ -158,4 +169,5 @@ Partial Class Admin
     Friend WithEvents Button1 As Button
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Button6 As Button
+    Friend WithEvents Button7 As Button
 End Class

@@ -59,7 +59,7 @@ Public Class Tambah_Guru
         parentForm.ShowFormInPanel(New Guru(parentForm))
     End Sub
 
-    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
-        ' Tidak perlu aksi tambahan untuk sekarang
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+
     End Sub
 End Class

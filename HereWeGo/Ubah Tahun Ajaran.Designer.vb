@@ -25,13 +25,11 @@ Partial Class Ubah_Tahun_Ajaran
         Label1 = New Label()
         Label2 = New Label()
         Label4 = New Label()
-        Label3 = New Label()
         GroupBox1 = New GroupBox()
         TextBox4 = New TextBox()
         TextBox1 = New TextBox()
         Label6 = New Label()
         TextBox3 = New TextBox()
-        TextBox2 = New TextBox()
         Button2 = New Button()
         Button1 = New Button()
         GroupBox1.SuspendLayout()
@@ -67,31 +65,19 @@ Partial Class Ubah_Tahun_Ajaran
         Label4.TabIndex = 3
         Label4.Text = "Tahun Ajaran"
         ' 
-        ' Label3
-        ' 
-        Label3.AutoSize = True
-        Label3.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label3.Location = New Point(6, 170)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(111, 25)
-        Label3.TabIndex = 2
-        Label3.Text = "Status Aktif"
-        ' 
         ' GroupBox1
         ' 
         GroupBox1.Controls.Add(TextBox4)
         GroupBox1.Controls.Add(TextBox1)
         GroupBox1.Controls.Add(Label6)
         GroupBox1.Controls.Add(TextBox3)
-        GroupBox1.Controls.Add(TextBox2)
         GroupBox1.Controls.Add(Label2)
         GroupBox1.Controls.Add(Label4)
-        GroupBox1.Controls.Add(Label3)
         GroupBox1.Location = New Point(196, 189)
         GroupBox1.Margin = New Padding(3, 4, 3, 4)
         GroupBox1.Name = "GroupBox1"
         GroupBox1.Padding = New Padding(3, 4, 3, 4)
-        GroupBox1.Size = New Size(624, 229)
+        GroupBox1.Size = New Size(624, 177)
         GroupBox1.TabIndex = 39
         GroupBox1.TabStop = False
         ' 
@@ -110,6 +96,7 @@ Partial Class Ubah_Tahun_Ajaran
         TextBox1.Location = New Point(203, 26)
         TextBox1.Margin = New Padding(3, 4, 3, 4)
         TextBox1.Name = "TextBox1"
+        TextBox1.ReadOnly = True
         TextBox1.Size = New Size(399, 30)
         TextBox1.TabIndex = 17
         ' 
@@ -132,19 +119,10 @@ Partial Class Ubah_Tahun_Ajaran
         TextBox3.Size = New Size(399, 30)
         TextBox3.TabIndex = 7
         ' 
-        ' TextBox2
-        ' 
-        TextBox2.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox2.Location = New Point(203, 165)
-        TextBox2.Margin = New Padding(3, 4, 3, 4)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(399, 30)
-        TextBox2.TabIndex = 6
-        ' 
         ' Button2
         ' 
         Button2.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Button2.Location = New Point(684, 425)
+        Button2.Location = New Point(684, 391)
         Button2.Margin = New Padding(3, 4, 3, 4)
         Button2.Name = "Button2"
         Button2.Size = New Size(136, 52)
@@ -155,7 +133,7 @@ Partial Class Ubah_Tahun_Ajaran
         ' Button1
         ' 
         Button1.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Button1.Location = New Point(542, 425)
+        Button1.Location = New Point(542, 391)
         Button1.Margin = New Padding(3, 4, 3, 4)
         Button1.Name = "Button1"
         Button1.Size = New Size(136, 52)
@@ -186,13 +164,11 @@ Partial Class Ubah_Tahun_Ajaran
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents Label3 As Label
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
 End Class

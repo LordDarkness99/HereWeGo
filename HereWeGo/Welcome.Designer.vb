@@ -89,7 +89,7 @@ Partial Class Welcome
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label3.Location = New Point(26, 397)
+        Label3.Location = New Point(15, 448)
         Label3.Name = "Label3"
         Label3.Size = New Size(81, 29)
         Label3.TabIndex = 10
@@ -108,7 +108,7 @@ Partial Class Welcome
         ' 
         Label4.AutoSize = True
         Label4.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label4.Location = New Point(26, 453)
+        Label4.Location = New Point(15, 397)
         Label4.Name = "Label4"
         Label4.Size = New Size(72, 29)
         Label4.TabIndex = 11

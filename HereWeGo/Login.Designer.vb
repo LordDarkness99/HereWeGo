@@ -56,7 +56,7 @@ Partial Class Login
         Button1.BackColor = Color.MediumBlue
         Button1.Font = New Font("Showcard Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button1.ForeColor = Color.White
-        Button1.Location = New Point(94, 391)
+        Button1.Location = New Point(62, 386)
         Button1.Margin = New Padding(3, 4, 3, 4)
         Button1.Name = "Button1"
         Button1.Size = New Size(95, 50)
@@ -67,26 +67,26 @@ Partial Class Login
         ' TextBox2
         ' 
         TextBox2.BackColor = Color.FromArgb(CByte(189), CByte(189), CByte(189))
-        TextBox2.Location = New Point(94, 344)
+        TextBox2.Location = New Point(62, 339)
         TextBox2.Margin = New Padding(3, 4, 3, 4)
         TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(145, 27)
+        TextBox2.Size = New Size(279, 27)
         TextBox2.TabIndex = 4
         ' 
         ' TextBox1
         ' 
         TextBox1.BackColor = Color.FromArgb(CByte(189), CByte(189), CByte(189))
-        TextBox1.Location = New Point(94, 265)
+        TextBox1.Location = New Point(62, 260)
         TextBox1.Margin = New Padding(3, 4, 3, 4)
         TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(145, 27)
+        TextBox1.Size = New Size(279, 27)
         TextBox1.TabIndex = 3
         ' 
         ' Label3
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label3.Location = New Point(94, 309)
+        Label3.Location = New Point(62, 304)
         Label3.Name = "Label3"
         Label3.Size = New Size(88, 25)
         Label3.TabIndex = 2
@@ -96,7 +96,7 @@ Partial Class Login
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label2.Location = New Point(94, 230)
+        Label2.Location = New Point(62, 225)
         Label2.Name = "Label2"
         Label2.Size = New Size(102, 25)
         Label2.TabIndex = 1
@@ -107,7 +107,7 @@ Partial Class Login
         Label1.AutoSize = True
         Label1.Font = New Font("Palatino Linotype", 28.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.Black
-        Label1.Location = New Point(88, 111)
+        Label1.Location = New Point(56, 106)
         Label1.Name = "Label1"
         Label1.Size = New Size(152, 63)
         Label1.TabIndex = 0

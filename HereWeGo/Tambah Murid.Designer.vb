@@ -27,13 +27,13 @@ Partial Class Tambah_Murid
         Label4 = New Label()
         Label3 = New Label()
         GroupBox1 = New GroupBox()
-        TextBox4 = New TextBox()
-        TextBox1 = New TextBox()
-        Label6 = New Label()
+        ComboBox1 = New ComboBox()
         TextBox3 = New TextBox()
         TextBox2 = New TextBox()
         Button2 = New Button()
         Button1 = New Button()
+        Label5 = New Label()
+        TextBox1 = New TextBox()
         GroupBox1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -51,7 +51,7 @@ Partial Class Tambah_Murid
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label2.Location = New Point(6, 122)
+        Label2.Location = New Point(6, 74)
         Label2.Name = "Label2"
         Label2.Size = New Size(83, 25)
         Label2.TabIndex = 1
@@ -61,7 +61,7 @@ Partial Class Tambah_Murid
         ' 
         Label4.AutoSize = True
         Label4.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label4.Location = New Point(6, 76)
+        Label4.Location = New Point(6, 28)
         Label4.Name = "Label4"
         Label4.Size = New Size(122, 25)
         Label4.TabIndex = 3
@@ -71,7 +71,7 @@ Partial Class Tambah_Murid
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label3.Location = New Point(6, 170)
+        Label3.Location = New Point(6, 122)
         Label3.Name = "Label3"
         Label3.Size = New Size(73, 25)
         Label3.TabIndex = 2
@@ -79,9 +79,9 @@ Partial Class Tambah_Murid
         ' 
         ' GroupBox1
         ' 
-        GroupBox1.Controls.Add(TextBox4)
         GroupBox1.Controls.Add(TextBox1)
-        GroupBox1.Controls.Add(Label6)
+        GroupBox1.Controls.Add(Label5)
+        GroupBox1.Controls.Add(ComboBox1)
         GroupBox1.Controls.Add(TextBox3)
         GroupBox1.Controls.Add(TextBox2)
         GroupBox1.Controls.Add(Label2)
@@ -91,42 +91,22 @@ Partial Class Tambah_Murid
         GroupBox1.Margin = New Padding(3, 4, 3, 4)
         GroupBox1.Name = "GroupBox1"
         GroupBox1.Padding = New Padding(3, 4, 3, 4)
-        GroupBox1.Size = New Size(624, 229)
+        GroupBox1.Size = New Size(624, 201)
         GroupBox1.TabIndex = 31
         GroupBox1.TabStop = False
         ' 
-        ' TextBox4
+        ' ComboBox1
         ' 
-        TextBox4.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox4.Location = New Point(203, 118)
-        TextBox4.Margin = New Padding(3, 4, 3, 4)
-        TextBox4.Name = "TextBox4"
-        TextBox4.Size = New Size(399, 30)
-        TextBox4.TabIndex = 18
-        ' 
-        ' TextBox1
-        ' 
-        TextBox1.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox1.Location = New Point(203, 26)
-        TextBox1.Margin = New Padding(3, 4, 3, 4)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(399, 30)
-        TextBox1.TabIndex = 17
-        ' 
-        ' Label6
-        ' 
-        Label6.AutoSize = True
-        Label6.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label6.Location = New Point(6, 31)
-        Label6.Name = "Label6"
-        Label6.Size = New Size(45, 25)
-        Label6.TabIndex = 16
-        Label6.Text = "NIS"
+        ComboBox1.FormattingEnabled = True
+        ComboBox1.Location = New Point(203, 71)
+        ComboBox1.Name = "ComboBox1"
+        ComboBox1.Size = New Size(399, 28)
+        ComboBox1.TabIndex = 8
         ' 
         ' TextBox3
         ' 
         TextBox3.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox3.Location = New Point(203, 71)
+        TextBox3.Location = New Point(203, 23)
         TextBox3.Margin = New Padding(3, 4, 3, 4)
         TextBox3.Name = "TextBox3"
         TextBox3.Size = New Size(399, 30)
@@ -135,7 +115,7 @@ Partial Class Tambah_Murid
         ' TextBox2
         ' 
         TextBox2.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox2.Location = New Point(203, 165)
+        TextBox2.Location = New Point(203, 117)
         TextBox2.Margin = New Padding(3, 4, 3, 4)
         TextBox2.Name = "TextBox2"
         TextBox2.Size = New Size(399, 30)
@@ -163,6 +143,25 @@ Partial Class Tambah_Murid
         Button1.Text = "Simpan"
         Button1.UseVisualStyleBackColor = True
         ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label5.Location = New Point(6, 163)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(92, 25)
+        Label5.TabIndex = 9
+        Label5.Text = "Link Foto"
+        ' 
+        ' TextBox1
+        ' 
+        TextBox1.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        TextBox1.Location = New Point(203, 155)
+        TextBox1.Margin = New Padding(3, 4, 3, 4)
+        TextBox1.Name = "TextBox1"
+        TextBox1.Size = New Size(399, 30)
+        TextBox1.TabIndex = 10
+        ' 
         ' Tambah_Murid
         ' 
         AutoScaleMode = AutoScaleMode.None
@@ -188,11 +187,11 @@ Partial Class Tambah_Murid
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Label6 As Label
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Label5 As Label
 End Class

@@ -28,12 +28,14 @@ Partial Class Murid
         Button1 = New Button()
         Lanjut = New Button()
         DataGridView1 = New DataGridView()
-        NIS = New DataGridViewTextBoxColumn()
-        nama_siswa = New DataGridViewTextBoxColumn()
-        id_kelas = New DataGridViewTextBoxColumn()
-        Alamat = New DataGridViewTextBoxColumn()
         TextBox2 = New TextBox()
         Label3 = New Label()
+        nis = New DataGridViewTextBoxColumn()
+        nama_siswa = New DataGridViewTextBoxColumn()
+        id_kelas = New DataGridViewTextBoxColumn()
+        alamat = New DataGridViewTextBoxColumn()
+        link_foto = New DataGridViewTextBoxColumn()
+        status = New DataGridViewTextBoxColumn()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -98,7 +100,7 @@ Partial Class Murid
         DataGridView1.AllowUserToDeleteRows = False
         DataGridView1.BackgroundColor = Color.White
         DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Columns.AddRange(New DataGridViewColumn() {NIS, nama_siswa, id_kelas, Alamat})
+        DataGridView1.Columns.AddRange(New DataGridViewColumn() {nis, nama_siswa, id_kelas, alamat, link_foto, status})
         DataGridView1.Location = New Point(20, 71)
         DataGridView1.Margin = New Padding(3, 4, 3, 4)
         DataGridView1.Name = "DataGridView1"
@@ -107,38 +109,6 @@ Partial Class Murid
         DataGridView1.RowTemplate.Height = 24
         DataGridView1.Size = New Size(930, 481)
         DataGridView1.TabIndex = 43
-        ' 
-        ' NIS
-        ' 
-        NIS.HeaderText = "NIS"
-        NIS.MinimumWidth = 6
-        NIS.Name = "NIS"
-        NIS.ReadOnly = True
-        NIS.Width = 232
-        ' 
-        ' nama_siswa
-        ' 
-        nama_siswa.HeaderText = "Nama Siswa"
-        nama_siswa.MinimumWidth = 6
-        nama_siswa.Name = "nama_siswa"
-        nama_siswa.ReadOnly = True
-        nama_siswa.Width = 232
-        ' 
-        ' id_kelas
-        ' 
-        id_kelas.HeaderText = "Id Kelas"
-        id_kelas.MinimumWidth = 6
-        id_kelas.Name = "id_kelas"
-        id_kelas.ReadOnly = True
-        id_kelas.Width = 232
-        ' 
-        ' Alamat
-        ' 
-        Alamat.HeaderText = "Alamat"
-        Alamat.MinimumWidth = 6
-        Alamat.Name = "Alamat"
-        Alamat.ReadOnly = True
-        Alamat.Width = 232
         ' 
         ' TextBox2
         ' 
@@ -159,6 +129,54 @@ Partial Class Murid
         Label3.Size = New Size(48, 25)
         Label3.TabIndex = 44
         Label3.Text = "Cari"
+        ' 
+        ' nis
+        ' 
+        nis.HeaderText = "NIS"
+        nis.MinimumWidth = 6
+        nis.Name = "nis"
+        nis.ReadOnly = True
+        nis.Width = 125
+        ' 
+        ' nama_siswa
+        ' 
+        nama_siswa.HeaderText = "Nama Siswa"
+        nama_siswa.MinimumWidth = 6
+        nama_siswa.Name = "nama_siswa"
+        nama_siswa.ReadOnly = True
+        nama_siswa.Width = 232
+        ' 
+        ' id_kelas
+        ' 
+        id_kelas.HeaderText = "Id Kelas"
+        id_kelas.MinimumWidth = 6
+        id_kelas.Name = "id_kelas"
+        id_kelas.ReadOnly = True
+        id_kelas.Width = 232
+        ' 
+        ' alamat
+        ' 
+        alamat.HeaderText = "Alamat"
+        alamat.MinimumWidth = 6
+        alamat.Name = "alamat"
+        alamat.ReadOnly = True
+        alamat.Width = 125
+        ' 
+        ' link_foto
+        ' 
+        link_foto.HeaderText = "Link Foto"
+        link_foto.MinimumWidth = 6
+        link_foto.Name = "link_foto"
+        link_foto.ReadOnly = True
+        link_foto.Width = 125
+        ' 
+        ' status
+        ' 
+        status.HeaderText = "Status"
+        status.MinimumWidth = 6
+        status.Name = "status"
+        status.ReadOnly = True
+        status.Width = 125
         ' 
         ' Murid
         ' 
@@ -189,10 +207,12 @@ Partial Class Murid
     Friend WithEvents Button1 As Button
     Friend WithEvents Lanjut As Button
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents NIS As DataGridViewTextBoxColumn
-    Friend WithEvents nama_siswa As DataGridViewTextBoxColumn
-    Friend WithEvents id_kelas As DataGridViewTextBoxColumn
-    Friend WithEvents Alamat As DataGridViewTextBoxColumn
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label3 As Label
+    Friend WithEvents nis As DataGridViewTextBoxColumn
+    Friend WithEvents nama_siswa As DataGridViewTextBoxColumn
+    Friend WithEvents id_kelas As DataGridViewTextBoxColumn
+    Friend WithEvents alamat As DataGridViewTextBoxColumn
+    Friend WithEvents link_foto As DataGridViewTextBoxColumn
+    Friend WithEvents status As DataGridViewTextBoxColumn
 End Class

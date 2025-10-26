@@ -25,13 +25,9 @@ Partial Class Tambah_Tahun_Ajaran
         Label1 = New Label()
         Label2 = New Label()
         Label4 = New Label()
-        Label3 = New Label()
         GroupBox1 = New GroupBox()
-        TextBox4 = New TextBox()
-        TextBox1 = New TextBox()
-        Label6 = New Label()
+        ComboBox1 = New ComboBox()
         TextBox3 = New TextBox()
-        TextBox2 = New TextBox()
         Button2 = New Button()
         Button1 = New Button()
         GroupBox1.SuspendLayout()
@@ -67,26 +63,12 @@ Partial Class Tambah_Tahun_Ajaran
         Label4.TabIndex = 3
         Label4.Text = "Tahun Ajaran"
         ' 
-        ' Label3
-        ' 
-        Label3.AutoSize = True
-        Label3.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label3.Location = New Point(6, 170)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(111, 25)
-        Label3.TabIndex = 2
-        Label3.Text = "Status Aktif"
-        ' 
         ' GroupBox1
         ' 
-        GroupBox1.Controls.Add(TextBox4)
-        GroupBox1.Controls.Add(TextBox1)
-        GroupBox1.Controls.Add(Label6)
+        GroupBox1.Controls.Add(ComboBox1)
         GroupBox1.Controls.Add(TextBox3)
-        GroupBox1.Controls.Add(TextBox2)
         GroupBox1.Controls.Add(Label2)
         GroupBox1.Controls.Add(Label4)
-        GroupBox1.Controls.Add(Label3)
         GroupBox1.Location = New Point(196, 189)
         GroupBox1.Margin = New Padding(3, 4, 3, 4)
         GroupBox1.Name = "GroupBox1"
@@ -95,33 +77,14 @@ Partial Class Tambah_Tahun_Ajaran
         GroupBox1.TabIndex = 35
         GroupBox1.TabStop = False
         ' 
-        ' TextBox4
+        ' ComboBox1
         ' 
-        TextBox4.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox4.Location = New Point(203, 118)
-        TextBox4.Margin = New Padding(3, 4, 3, 4)
-        TextBox4.Name = "TextBox4"
-        TextBox4.Size = New Size(399, 30)
-        TextBox4.TabIndex = 18
-        ' 
-        ' TextBox1
-        ' 
-        TextBox1.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox1.Location = New Point(203, 26)
-        TextBox1.Margin = New Padding(3, 4, 3, 4)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(399, 30)
-        TextBox1.TabIndex = 17
-        ' 
-        ' Label6
-        ' 
-        Label6.AutoSize = True
-        Label6.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label6.Location = New Point(6, 31)
-        Label6.Name = "Label6"
-        Label6.Size = New Size(90, 25)
-        Label6.TabIndex = 16
-        Label6.Text = "Id Tahun"
+        ComboBox1.FormattingEnabled = True
+        ComboBox1.Items.AddRange(New Object() {"Ganjil", "Genap"})
+        ComboBox1.Location = New Point(207, 125)
+        ComboBox1.Name = "ComboBox1"
+        ComboBox1.Size = New Size(395, 28)
+        ComboBox1.TabIndex = 8
         ' 
         ' TextBox3
         ' 
@@ -131,15 +94,6 @@ Partial Class Tambah_Tahun_Ajaran
         TextBox3.Name = "TextBox3"
         TextBox3.Size = New Size(399, 30)
         TextBox3.TabIndex = 7
-        ' 
-        ' TextBox2
-        ' 
-        TextBox2.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox2.Location = New Point(203, 165)
-        TextBox2.Margin = New Padding(3, 4, 3, 4)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(399, 30)
-        TextBox2.TabIndex = 6
         ' 
         ' Button2
         ' 
@@ -186,13 +140,9 @@ Partial Class Tambah_Tahun_Ajaran
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents Label3 As Label
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Label6 As Label
     Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
+    Friend WithEvents ComboBox1 As ComboBox
 End Class

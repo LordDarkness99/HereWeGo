@@ -47,4 +47,5 @@ Public Class Tambah_Pengguna
             MessageBox.Show("Gagal menambah pengguna: " & ex.Message)
         End Try
     End Sub
+
 End Class
