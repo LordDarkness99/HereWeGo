@@ -73,4 +73,8 @@ Public Class Ubah_Guru
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
 
     End Sub
+
+    Private Sub Ubah_Guru_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

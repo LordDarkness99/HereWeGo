@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class RFID
+Partial Class Rfid
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,13 +23,11 @@ Partial Class RFID
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         DataGridView1 = New DataGridView()
-        nip = New DataGridViewTextBoxColumn()
-        nama = New DataGridViewTextBoxColumn()
-        id_user = New DataGridViewTextBoxColumn()
+        card_id = New DataGridViewTextBoxColumn()
+        nis = New DataGridViewTextBoxColumn()
         status = New DataGridViewTextBoxColumn()
         Button4 = New Button()
         Button3 = New Button()
-        Button2 = New Button()
         Button1 = New Button()
         Lanjut = New Button()
         TextBox2 = New TextBox()
@@ -43,7 +41,7 @@ Partial Class RFID
         DataGridView1.AllowUserToDeleteRows = False
         DataGridView1.BackgroundColor = Color.White
         DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Columns.AddRange(New DataGridViewColumn() {nip, nama, id_user, status})
+        DataGridView1.Columns.AddRange(New DataGridViewColumn() {card_id, nis, status})
         DataGridView1.Location = New Point(20, 72)
         DataGridView1.Margin = New Padding(3, 4, 3, 4)
         DataGridView1.Name = "DataGridView1"
@@ -53,29 +51,21 @@ Partial Class RFID
         DataGridView1.Size = New Size(930, 478)
         DataGridView1.TabIndex = 43
         ' 
-        ' nip
+        ' card_id
         ' 
-        nip.HeaderText = "NIP"
-        nip.MinimumWidth = 6
-        nip.Name = "nip"
-        nip.ReadOnly = True
-        nip.Width = 210
+        card_id.HeaderText = "Card ID"
+        card_id.MinimumWidth = 6
+        card_id.Name = "card_id"
+        card_id.ReadOnly = True
+        card_id.Width = 210
         ' 
-        ' nama
+        ' nis
         ' 
-        nama.HeaderText = "Nama"
-        nama.MinimumWidth = 6
-        nama.Name = "nama"
-        nama.ReadOnly = True
-        nama.Width = 215
-        ' 
-        ' id_user
-        ' 
-        id_user.HeaderText = "Id User"
-        id_user.MinimumWidth = 6
-        id_user.Name = "id_user"
-        id_user.ReadOnly = True
-        id_user.Width = 210
+        nis.HeaderText = "NIS"
+        nis.MinimumWidth = 6
+        nis.Name = "nis"
+        nis.ReadOnly = True
+        nis.Width = 215
         ' 
         ' status
         ' 
@@ -88,7 +78,7 @@ Partial Class RFID
         ' Button4
         ' 
         Button4.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Button4.Location = New Point(304, 558)
+        Button4.Location = New Point(162, 561)
         Button4.Margin = New Padding(3, 4, 3, 4)
         Button4.Name = "Button4"
         Button4.Size = New Size(136, 52)
@@ -99,24 +89,13 @@ Partial Class RFID
         ' Button3
         ' 
         Button3.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Button3.Location = New Point(162, 558)
+        Button3.Location = New Point(20, 561)
         Button3.Margin = New Padding(3, 4, 3, 4)
         Button3.Name = "Button3"
         Button3.Size = New Size(136, 52)
         Button3.TabIndex = 49
         Button3.Text = "Ubah"
         Button3.UseVisualStyleBackColor = True
-        ' 
-        ' Button2
-        ' 
-        Button2.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Button2.Location = New Point(20, 558)
-        Button2.Margin = New Padding(3, 4, 3, 4)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(136, 52)
-        Button2.TabIndex = 48
-        Button2.Text = "Tambah"
-        Button2.UseVisualStyleBackColor = True
         ' 
         ' Button1
         ' 
@@ -160,7 +139,7 @@ Partial Class RFID
         Label3.TabIndex = 44
         Label3.Text = "Cari"
         ' 
-        ' RFID
+        ' Rfid
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
@@ -168,28 +147,25 @@ Partial Class RFID
         Controls.Add(DataGridView1)
         Controls.Add(Button4)
         Controls.Add(Button3)
-        Controls.Add(Button2)
         Controls.Add(Button1)
         Controls.Add(Lanjut)
         Controls.Add(TextBox2)
         Controls.Add(Label3)
-        Name = "RFID"
-        Text = "RFID"
+        Name = "Rfid"
+        Text = "Rfid"
         CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
 
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents nip As DataGridViewTextBoxColumn
-    Friend WithEvents nama As DataGridViewTextBoxColumn
-    Friend WithEvents id_user As DataGridViewTextBoxColumn
-    Friend WithEvents status As DataGridViewTextBoxColumn
     Friend WithEvents Button4 As Button
     Friend WithEvents Button3 As Button
-    Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents Lanjut As Button
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label3 As Label
+    Friend WithEvents card_id As DataGridViewTextBoxColumn
+    Friend WithEvents nis As DataGridViewTextBoxColumn
+    Friend WithEvents status As DataGridViewTextBoxColumn
 End Class

@@ -33,6 +33,7 @@ Partial Class Admin
         Button2 = New Button()
         PictureBox1 = New PictureBox()
         Panel2 = New Panel()
+        Button8 = New Button()
         Panel1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -40,6 +41,7 @@ Partial Class Admin
         ' Panel1
         ' 
         Panel1.BackColor = Color.MidnightBlue
+        Panel1.Controls.Add(Button8)
         Panel1.Controls.Add(Button7)
         Panel1.Controls.Add(Button6)
         Panel1.Controls.Add(Button5)
@@ -61,7 +63,7 @@ Partial Class Admin
         Button7.Name = "Button7"
         Button7.Size = New Size(258, 55)
         Button7.TabIndex = 8
-        Button7.Text = "Presensi"
+        Button7.Text = "Rfid"
         Button7.UseVisualStyleBackColor = True
         ' 
         ' Button6
@@ -143,6 +145,15 @@ Partial Class Admin
         Panel2.Size = New Size(989, 673)
         Panel2.TabIndex = 2
         ' 
+        ' Button8
+        ' 
+        Button8.Location = New Point(9, 138)
+        Button8.Name = "Button8"
+        Button8.Size = New Size(74, 67)
+        Button8.TabIndex = 9
+        Button8.Text = "Aktifkan Presensi"
+        Button8.UseVisualStyleBackColor = True
+        ' 
         ' Admin
         ' 
         AutoScaleMode = AutoScaleMode.None
@@ -170,4 +181,5 @@ Partial Class Admin
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Button6 As Button
     Friend WithEvents Button7 As Button
+    Friend WithEvents Button8 As Button
 End Class

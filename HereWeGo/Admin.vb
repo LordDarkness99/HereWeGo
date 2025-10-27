@@ -35,6 +35,6 @@
     End Sub
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
-        ShowFormInPanel(New Tahun_Ajaran(Me))
+        ShowFormInPanel(New Rfid(Me))
     End Sub
 End Class
