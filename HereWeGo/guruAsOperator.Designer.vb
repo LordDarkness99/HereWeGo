@@ -78,11 +78,11 @@ Partial Class GuruAsOperator
         ' 
         ' Panel2
         ' 
-        Panel2.Dock = DockStyle.Fill
-        Panel2.Location = New Point(0, 0)
+        Panel2.Dock = DockStyle.Right
+        Panel2.Location = New Point(273, 0)
         Panel2.Margin = New Padding(3, 4, 3, 4)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(1262, 673)
+        Panel2.Size = New Size(989, 673)
         Panel2.TabIndex = 4
         ' 
         ' GuruAsOperator
