@@ -24,6 +24,8 @@ Partial Class Admin
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Admin))
         Panel1 = New Panel()
+        Button9 = New Button()
+        Button8 = New Button()
         Button7 = New Button()
         Button6 = New Button()
         Button5 = New Button()
@@ -39,7 +41,10 @@ Partial Class Admin
         ' 
         ' Panel1
         ' 
-        Panel1.BackColor = Color.MidnightBlue
+        Panel1.AutoScroll = True
+        Panel1.BackColor = Color.FromArgb(CByte(30), CByte(42), CByte(56))
+        Panel1.Controls.Add(Button9)
+        Panel1.Controls.Add(Button8)
         Panel1.Controls.Add(Button7)
         Panel1.Controls.Add(Button6)
         Panel1.Controls.Add(Button5)
@@ -55,87 +60,130 @@ Partial Class Admin
         Panel1.Size = New Size(273, 673)
         Panel1.TabIndex = 1
         ' 
+        ' Button9
+        ' 
+        Button9.Font = New Font("Segoe UI", 10F)
+        Button9.Location = New Point(1, 649)
+        Button9.Name = "Button9"
+        Button9.Size = New Size(250, 50)
+        Button9.TabIndex = 10
+        Button9.Text = "LAPORAN"
+        Button9.UseVisualStyleBackColor = True
+        ' 
+        ' Button8
+        ' 
+        Button8.Font = New Font("Segoe UI", 10F)
+        Button8.Location = New Point(1, 588)
+        Button8.Name = "Button8"
+        Button8.Size = New Size(250, 50)
+        Button8.TabIndex = 9
+        Button8.Text = "PRESENSI"
+        Button8.UseVisualStyleBackColor = True
+        ' 
         ' Button7
         ' 
-        Button7.Location = New Point(9, 527)
+        Button7.BackColor = Color.White
+        Button7.Font = New Font("Segoe UI", 10F)
+        Button7.ForeColor = Color.Black
+        Button7.Location = New Point(1, 527)
         Button7.Name = "Button7"
-        Button7.Size = New Size(258, 55)
+        Button7.Size = New Size(250, 50)
         Button7.TabIndex = 8
         Button7.Text = "RFID"
-        Button7.UseVisualStyleBackColor = True
+        Button7.UseVisualStyleBackColor = False
         ' 
         ' Button6
         ' 
-        Button6.Location = New Point(9, 466)
+        Button6.BackColor = Color.White
+        Button6.Font = New Font("Segoe UI", 10F)
+        Button6.ForeColor = Color.Black
+        Button6.Location = New Point(1, 466)
         Button6.Name = "Button6"
-        Button6.Size = New Size(258, 55)
+        Button6.Size = New Size(250, 50)
         Button6.TabIndex = 7
-        Button6.Text = "Tahun Ajaran"
-        Button6.UseVisualStyleBackColor = True
+        Button6.Text = "TAHUN AJARAN"
+        Button6.UseVisualStyleBackColor = False
         ' 
         ' Button5
         ' 
-        Button5.Location = New Point(9, 409)
+        Button5.BackColor = Color.White
+        Button5.Font = New Font("Segoe UI", 10F)
+        Button5.ForeColor = Color.Black
+        Button5.Location = New Point(1, 409)
         Button5.Margin = New Padding(3, 4, 3, 4)
         Button5.Name = "Button5"
-        Button5.Size = New Size(258, 50)
+        Button5.Size = New Size(250, 50)
         Button5.TabIndex = 6
-        Button5.Text = "Murid"
-        Button5.UseVisualStyleBackColor = True
+        Button5.Text = "MURID"
+        Button5.UseVisualStyleBackColor = False
         ' 
         ' Button4
         ' 
-        Button4.Location = New Point(9, 352)
+        Button4.BackColor = Color.White
+        Button4.Font = New Font("Segoe UI", 10F)
+        Button4.ForeColor = Color.Black
+        Button4.Location = New Point(1, 352)
         Button4.Margin = New Padding(3, 4, 3, 4)
         Button4.Name = "Button4"
-        Button4.Size = New Size(258, 50)
+        Button4.Size = New Size(250, 50)
         Button4.TabIndex = 5
-        Button4.Text = "Mata Pelajaran"
-        Button4.UseVisualStyleBackColor = True
+        Button4.Text = "MATA PELAJARAN"
+        Button4.UseVisualStyleBackColor = False
         ' 
         ' Button3
         ' 
-        Button3.Location = New Point(9, 294)
+        Button3.BackColor = Color.White
+        Button3.Font = New Font("Segoe UI", 10F)
+        Button3.ForeColor = Color.Black
+        Button3.Location = New Point(1, 294)
         Button3.Margin = New Padding(3, 4, 3, 4)
         Button3.Name = "Button3"
-        Button3.Size = New Size(258, 50)
+        Button3.Size = New Size(250, 50)
         Button3.TabIndex = 4
-        Button3.Text = "Kelas"
-        Button3.UseVisualStyleBackColor = True
+        Button3.Text = "KELAS"
+        Button3.UseVisualStyleBackColor = False
         ' 
         ' Button1
         ' 
-        Button1.Location = New Point(9, 237)
+        Button1.BackColor = Color.White
+        Button1.Font = New Font("Segoe UI", 10F)
+        Button1.ForeColor = Color.Black
+        Button1.Location = New Point(1, 237)
         Button1.Margin = New Padding(3, 4, 3, 4)
         Button1.Name = "Button1"
-        Button1.Size = New Size(258, 50)
+        Button1.Size = New Size(250, 50)
         Button1.TabIndex = 3
-        Button1.Text = "Guru"
-        Button1.UseVisualStyleBackColor = True
+        Button1.Text = "GURU"
+        Button1.UseVisualStyleBackColor = False
         ' 
         ' Button2
         ' 
-        Button2.Location = New Point(9, 179)
+        Button2.BackColor = Color.White
+        Button2.Font = New Font("Segoe UI", 10F)
+        Button2.ForeColor = Color.Black
+        Button2.Location = New Point(1, 179)
         Button2.Margin = New Padding(3, 4, 3, 4)
         Button2.Name = "Button2"
-        Button2.Size = New Size(258, 50)
+        Button2.Size = New Size(250, 50)
         Button2.TabIndex = 1
-        Button2.Text = "Pengguna"
-        Button2.UseVisualStyleBackColor = True
+        Button2.Text = "PENGGUNA"
+        Button2.UseVisualStyleBackColor = False
         ' 
         ' PictureBox1
         ' 
+        PictureBox1.Dock = DockStyle.Top
         PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(12, 13)
+        PictureBox1.Location = New Point(0, 0)
         PictureBox1.Margin = New Padding(3, 4, 3, 4)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(232, 144)
+        PictureBox1.Size = New Size(252, 144)
         PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
         PictureBox1.TabIndex = 2
         PictureBox1.TabStop = False
         ' 
         ' Panel2
         ' 
+        Panel2.BackColor = Color.FromArgb(CByte(227), CByte(242), CByte(253))
         Panel2.Dock = DockStyle.Fill
         Panel2.Location = New Point(273, 0)
         Panel2.Margin = New Padding(3, 4, 3, 4)
@@ -146,7 +194,7 @@ Partial Class Admin
         ' Admin
         ' 
         AutoScaleMode = AutoScaleMode.None
-        BackColor = Color.FromArgb(CByte(227), CByte(242), CByte(253))
+        BackColor = Color.FromArgb(CByte(248), CByte(250), CByte(252))
         ClientSize = New Size(1262, 673)
         Controls.Add(Panel2)
         Controls.Add(Panel1)
@@ -170,4 +218,6 @@ Partial Class Admin
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Button6 As Button
     Friend WithEvents Button7 As Button
+    Friend WithEvents Button9 As Button
+    Friend WithEvents Button8 As Button
 End Class

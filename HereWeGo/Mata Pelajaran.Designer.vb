@@ -134,7 +134,7 @@ Partial Class Mata_Pelajaran
         id_mapel.MinimumWidth = 6
         id_mapel.Name = "id_mapel"
         id_mapel.ReadOnly = True
-        id_mapel.Width = 210
+        id_mapel.Width = 232
         ' 
         ' nama_mapel
         ' 
@@ -142,7 +142,7 @@ Partial Class Mata_Pelajaran
         nama_mapel.MinimumWidth = 6
         nama_mapel.Name = "nama_mapel"
         nama_mapel.ReadOnly = True
-        nama_mapel.Width = 260
+        nama_mapel.Width = 232
         ' 
         ' id_guru
         ' 
@@ -150,7 +150,7 @@ Partial Class Mata_Pelajaran
         id_guru.MinimumWidth = 6
         id_guru.Name = "id_guru"
         id_guru.ReadOnly = True
-        id_guru.Width = 260
+        id_guru.Width = 232
         ' 
         ' status
         ' 
@@ -158,7 +158,7 @@ Partial Class Mata_Pelajaran
         status.MinimumWidth = 6
         status.Name = "status"
         status.ReadOnly = True
-        status.Width = 135
+        status.Width = 232
         ' 
         ' Mata_Pelajaran
         ' 

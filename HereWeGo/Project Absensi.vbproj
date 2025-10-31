@@ -6,13 +6,52 @@
     <UseWindowsForms>true</UseWindowsForms>
     <MyType>WindowsForms</MyType>
     <RootNamespace>Project_Absensi</RootNamespace>
-    <AssemblyName>Project Absensi</AssemblyName>
+    <AssemblyName>Project_Absensi</AssemblyName>
     <OptionExplicit>On</OptionExplicit>
     <OptionCompare>Binary</OptionCompare>
     <OptionStrict>Off</OptionStrict>
     <OptionInfer>On</OptionInfer>
     <StartupObject>Project_Absensi.My.MyApplication</StartupObject>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="guru.png" />
+    <None Remove="kelas.png" />
+    <None Remove="matapelajaran.png" />
+    <None Remove="murid.png" />
+    <None Remove="pengguna.png" />
+    <None Remove="rfid.png" />
+    <None Remove="tahunajaran.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\guru.png" />
+    <Content Include="Resources\pengguna.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\guru.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\kelas.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\matapelajaran.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\murid.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\pengguna.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\rfid.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\tahunajaran.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
 
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -38,6 +77,11 @@
     <None Update="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Update="My Project\Settings.settings">
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
 
     <Compile Update="My Project\Application.Designer.vb">

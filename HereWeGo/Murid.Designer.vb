@@ -28,14 +28,14 @@ Partial Class Murid
         Button1 = New Button()
         Lanjut = New Button()
         DataGridView1 = New DataGridView()
-        TextBox2 = New TextBox()
-        Label3 = New Label()
         nis = New DataGridViewTextBoxColumn()
         nama_siswa = New DataGridViewTextBoxColumn()
         id_kelas = New DataGridViewTextBoxColumn()
         alamat = New DataGridViewTextBoxColumn()
         link_foto = New DataGridViewTextBoxColumn()
         status = New DataGridViewTextBoxColumn()
+        TextBox2 = New TextBox()
+        Label3 = New Label()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -105,10 +105,60 @@ Partial Class Murid
         DataGridView1.Margin = New Padding(3, 4, 3, 4)
         DataGridView1.Name = "DataGridView1"
         DataGridView1.ReadOnly = True
+        DataGridView1.RowHeadersVisible = False
         DataGridView1.RowHeadersWidth = 51
         DataGridView1.RowTemplate.Height = 24
+        DataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect
         DataGridView1.Size = New Size(930, 481)
         DataGridView1.TabIndex = 43
+        ' 
+        ' nis
+        ' 
+        nis.HeaderText = "NIS"
+        nis.MinimumWidth = 6
+        nis.Name = "nis"
+        nis.ReadOnly = True
+        nis.Width = 155
+        ' 
+        ' nama_siswa
+        ' 
+        nama_siswa.HeaderText = "Nama Siswa"
+        nama_siswa.MinimumWidth = 6
+        nama_siswa.Name = "nama_siswa"
+        nama_siswa.ReadOnly = True
+        nama_siswa.Width = 155
+        ' 
+        ' id_kelas
+        ' 
+        id_kelas.HeaderText = "Id Kelas"
+        id_kelas.MinimumWidth = 6
+        id_kelas.Name = "id_kelas"
+        id_kelas.ReadOnly = True
+        id_kelas.Width = 155
+        ' 
+        ' alamat
+        ' 
+        alamat.HeaderText = "Alamat"
+        alamat.MinimumWidth = 6
+        alamat.Name = "alamat"
+        alamat.ReadOnly = True
+        alamat.Width = 155
+        ' 
+        ' link_foto
+        ' 
+        link_foto.HeaderText = "Link Foto"
+        link_foto.MinimumWidth = 6
+        link_foto.Name = "link_foto"
+        link_foto.ReadOnly = True
+        link_foto.Width = 155
+        ' 
+        ' status
+        ' 
+        status.HeaderText = "Status"
+        status.MinimumWidth = 6
+        status.Name = "status"
+        status.ReadOnly = True
+        status.Width = 155
         ' 
         ' TextBox2
         ' 
@@ -129,54 +179,6 @@ Partial Class Murid
         Label3.Size = New Size(48, 25)
         Label3.TabIndex = 44
         Label3.Text = "Cari"
-        ' 
-        ' nis
-        ' 
-        nis.HeaderText = "NIS"
-        nis.MinimumWidth = 6
-        nis.Name = "nis"
-        nis.ReadOnly = True
-        nis.Width = 125
-        ' 
-        ' nama_siswa
-        ' 
-        nama_siswa.HeaderText = "Nama Siswa"
-        nama_siswa.MinimumWidth = 6
-        nama_siswa.Name = "nama_siswa"
-        nama_siswa.ReadOnly = True
-        nama_siswa.Width = 232
-        ' 
-        ' id_kelas
-        ' 
-        id_kelas.HeaderText = "Id Kelas"
-        id_kelas.MinimumWidth = 6
-        id_kelas.Name = "id_kelas"
-        id_kelas.ReadOnly = True
-        id_kelas.Width = 232
-        ' 
-        ' alamat
-        ' 
-        alamat.HeaderText = "Alamat"
-        alamat.MinimumWidth = 6
-        alamat.Name = "alamat"
-        alamat.ReadOnly = True
-        alamat.Width = 125
-        ' 
-        ' link_foto
-        ' 
-        link_foto.HeaderText = "Link Foto"
-        link_foto.MinimumWidth = 6
-        link_foto.Name = "link_foto"
-        link_foto.ReadOnly = True
-        link_foto.Width = 125
-        ' 
-        ' status
-        ' 
-        status.HeaderText = "Status"
-        status.MinimumWidth = 6
-        status.Name = "status"
-        status.ReadOnly = True
-        status.Width = 125
         ' 
         ' Murid
         ' 

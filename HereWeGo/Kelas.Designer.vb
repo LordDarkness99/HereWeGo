@@ -133,7 +133,7 @@ Partial Class Kelas
         id_kelas.MinimumWidth = 6
         id_kelas.Name = "id_kelas"
         id_kelas.ReadOnly = True
-        id_kelas.Width = 325
+        id_kelas.Width = 310
         ' 
         ' nama_kelas
         ' 
@@ -141,7 +141,7 @@ Partial Class Kelas
         nama_kelas.MinimumWidth = 6
         nama_kelas.Name = "nama_kelas"
         nama_kelas.ReadOnly = True
-        nama_kelas.Width = 325
+        nama_kelas.Width = 310
         ' 
         ' status
         ' 
@@ -149,7 +149,7 @@ Partial Class Kelas
         status.MinimumWidth = 6
         status.Name = "status"
         status.ReadOnly = True
-        status.Width = 190
+        status.Width = 310
         ' 
         ' Kelas
         ' 

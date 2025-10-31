@@ -134,7 +134,7 @@ Partial Class Guru
         nip.MinimumWidth = 6
         nip.Name = "nip"
         nip.ReadOnly = True
-        nip.Width = 210
+        nip.Width = 232
         ' 
         ' nama
         ' 
@@ -142,7 +142,7 @@ Partial Class Guru
         nama.MinimumWidth = 6
         nama.Name = "nama"
         nama.ReadOnly = True
-        nama.Width = 215
+        nama.Width = 232
         ' 
         ' id_user
         ' 
@@ -150,7 +150,7 @@ Partial Class Guru
         id_user.MinimumWidth = 6
         id_user.Name = "id_user"
         id_user.ReadOnly = True
-        id_user.Width = 210
+        id_user.Width = 232
         ' 
         ' status
         ' 
@@ -158,7 +158,7 @@ Partial Class Guru
         status.MinimumWidth = 6
         status.Name = "status"
         status.ReadOnly = True
-        status.Width = 210
+        status.Width = 232
         ' 
         ' Guru
         ' 
