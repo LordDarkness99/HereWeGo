@@ -49,7 +49,6 @@
 
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
         SetActiveButton(Button8)
-        ShowFormInPanel(New Presensi)
     End Sub
     Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
         SetActiveButton(Button9)
