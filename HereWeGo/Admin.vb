@@ -53,6 +53,18 @@
     Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
         SetActiveButton(Button9)
     End Sub
+    Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
+        SetActiveButton(Button10)
+
+        ' Konfirmasi logout
+        Dim result As DialogResult = MessageBox.Show("Apakah Anda yakin ingin logout?", "Konfirmasi Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        If result = DialogResult.Yes Then
+            ' Tampilkan form login dan tutup form admin
+            Dim login As New Login()
+            login.Show()
+            Me.Close()
+        End If
+    End Sub
 
     Sub StyleSidebarButton(btn As Button)
         btn.FlatStyle = FlatStyle.Flat
@@ -77,8 +89,17 @@
         End If
     End Sub
 
-    Private SidebarTextColor As Color = Color.FromArgb(224, 230, 237)
-    Private SidebarTextActiveColor As Color = Color.FromArgb(240, 240, 240)
+    Private Sub ButtonLogout_MouseEnter(sender As Object, e As EventArgs) Handles Button10.MouseEnter
+        If sender IsNot activeButton Then
+            sender.BackColor = Color.FromArgb(255, 82, 82)
+        End If
+    End Sub
+
+    Private Sub ButtonLogout_MouseLeave(sender As Object, e As EventArgs) Handles Button10.MouseLeave
+        If sender IsNot activeButton Then
+            sender.BackColor = Color.FromArgb(30, 42, 56)
+        End If
+    End Sub
 
     Private Sub Admin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         StyleSidebarButton(Button1)
@@ -90,6 +111,7 @@
         StyleSidebarButton(Button7)
         StyleSidebarButton(Button8)
         StyleSidebarButton(Button9)
+        StyleSidebarButton(Button10)
     End Sub
 
     Private Sub SetActiveButton(btn As Button)
@@ -101,9 +123,17 @@
             End If
         Next
 
-        ' Tandai tombol aktif
+        ' Jika tombol logout ditekan, warnanya tetap merah
+        If btn Is Button10 Then
+            btn.BackColor = Color.FromArgb(255, 82, 82) ' merah
+            btn.ForeColor = Color.White
+            activeButton = btn
+            Exit Sub
+        End If
+
+        ' Tombol lain tetap biru saat aktif
         activeButton = btn
-        btn.BackColor = Color.FromArgb(41, 121, 255) ' warna aktif biru terang
+        btn.BackColor = Color.FromArgb(41, 121, 255)
         btn.ForeColor = Color.White
     End Sub
 

@@ -24,6 +24,7 @@ Partial Class Admin
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Admin))
         Panel1 = New Panel()
+        Button10 = New Button()
         Button9 = New Button()
         Button8 = New Button()
         Button7 = New Button()
@@ -33,8 +34,8 @@ Partial Class Admin
         Button3 = New Button()
         Button1 = New Button()
         Button2 = New Button()
-        PictureBox1 = New PictureBox()
         Panel2 = New Panel()
+        PictureBox1 = New PictureBox()
         Panel1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -43,6 +44,7 @@ Partial Class Admin
         ' 
         Panel1.AutoScroll = True
         Panel1.BackColor = Color.FromArgb(CByte(30), CByte(42), CByte(56))
+        Panel1.Controls.Add(Button10)
         Panel1.Controls.Add(Button9)
         Panel1.Controls.Add(Button8)
         Panel1.Controls.Add(Button7)
@@ -59,6 +61,16 @@ Partial Class Admin
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(273, 673)
         Panel1.TabIndex = 1
+        ' 
+        ' Button10
+        ' 
+        Button10.Font = New Font("Segoe UI", 10F)
+        Button10.Location = New Point(1, 705)
+        Button10.Name = "Button10"
+        Button10.Size = New Size(250, 50)
+        Button10.TabIndex = 11
+        Button10.Text = "LOGOUT"
+        Button10.UseVisualStyleBackColor = True
         ' 
         ' Button9
         ' 
@@ -169,6 +181,16 @@ Partial Class Admin
         Button2.Text = "PENGGUNA"
         Button2.UseVisualStyleBackColor = False
         ' 
+        ' Panel2
+        ' 
+        Panel2.BackColor = Color.FromArgb(CByte(227), CByte(242), CByte(253))
+        Panel2.Dock = DockStyle.Fill
+        Panel2.Location = New Point(273, 0)
+        Panel2.Margin = New Padding(3, 4, 3, 4)
+        Panel2.Name = "Panel2"
+        Panel2.Size = New Size(989, 673)
+        Panel2.TabIndex = 2
+        ' 
         ' PictureBox1
         ' 
         PictureBox1.Dock = DockStyle.Top
@@ -180,16 +202,6 @@ Partial Class Admin
         PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
         PictureBox1.TabIndex = 2
         PictureBox1.TabStop = False
-        ' 
-        ' Panel2
-        ' 
-        Panel2.BackColor = Color.FromArgb(CByte(227), CByte(242), CByte(253))
-        Panel2.Dock = DockStyle.Fill
-        Panel2.Location = New Point(273, 0)
-        Panel2.Margin = New Padding(3, 4, 3, 4)
-        Panel2.Name = "Panel2"
-        Panel2.Size = New Size(989, 673)
-        Panel2.TabIndex = 2
         ' 
         ' Admin
         ' 
@@ -210,7 +222,6 @@ Partial Class Admin
 
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Button2 As Button
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Button5 As Button
     Friend WithEvents Button4 As Button
     Friend WithEvents Button3 As Button
@@ -220,4 +231,6 @@ Partial Class Admin
     Friend WithEvents Button7 As Button
     Friend WithEvents Button9 As Button
     Friend WithEvents Button8 As Button
+    Friend WithEvents Button10 As Button
+    Friend WithEvents PictureBox1 As PictureBox
 End Class
