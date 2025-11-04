@@ -7,8 +7,8 @@ Public Class Login
 
     Private Async Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Try
-            Dim email = TextBox1.Text.Trim()
-            Dim password = TextBox2.Text.Trim()
+            Dim email = TextBox1.Text.Trim
+            Dim password = TextBox2.Text.Trim
 
             ' 🔸 Validasi input
             If String.IsNullOrWhiteSpace(email) OrElse String.IsNullOrWhiteSpace(password) Then
@@ -17,7 +17,7 @@ Public Class Login
             End If
 
             ' 🔸 Ambil semua akun dari database
-            Dim semuaAkun = Await repo.GetAllAsync()
+            Dim semuaAkun = Await repo.GetAllAsync
             Dim akun = semuaAkun.FirstOrDefault(Function(a) a.email.Equals(email, StringComparison.OrdinalIgnoreCase))
 
             If akun Is Nothing Then
@@ -41,15 +41,15 @@ Public Class Login
             ' 🔸 Login sukses: arahkan berdasarkan role
             MessageBox.Show($"Login berhasil sebagai {akun.role}!", "Sukses")
 
-            Select Case akun.role.ToLower()
+            Select Case akun.role.ToLower
                 Case "admin"
-                    Dim frmAdmin As New Admin()
-                    frmAdmin.Show()
-                    Me.Hide()
+                    Dim frmAdmin As New Admin
+                    frmAdmin.Show
+                    Hide
                 Case "guru"
-                    Dim frmGuru As New GuruAsOperator()
-                    frmGuru.Show()
-                    Me.Hide()
+                    Dim frmGuru As New GuruAsOperator
+                    frmGuru.Show
+                    Hide
                 Case Else
                     MessageBox.Show("Role tidak dikenali. Hubungi admin sistem.")
             End Select

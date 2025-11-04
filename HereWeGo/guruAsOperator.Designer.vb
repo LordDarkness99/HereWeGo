@@ -24,9 +24,10 @@ Partial Class GuruAsOperator
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(GuruAsOperator))
         Panel1 = New Panel()
+        PictureBox1 = New PictureBox()
+        Button10 = New Button()
         Button1 = New Button()
         Button2 = New Button()
-        PictureBox1 = New PictureBox()
         Panel2 = New Panel()
         Panel1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
@@ -34,10 +35,12 @@ Partial Class GuruAsOperator
         ' 
         ' Panel1
         ' 
+        Panel1.AutoScroll = True
         Panel1.BackColor = Color.MidnightBlue
+        Panel1.Controls.Add(PictureBox1)
+        Panel1.Controls.Add(Button10)
         Panel1.Controls.Add(Button1)
         Panel1.Controls.Add(Button2)
-        Panel1.Controls.Add(PictureBox1)
         Panel1.Dock = DockStyle.Left
         Panel1.Location = New Point(0, 0)
         Panel1.Margin = New Padding(3, 4, 3, 4)
@@ -45,36 +48,49 @@ Partial Class GuruAsOperator
         Panel1.Size = New Size(273, 673)
         Panel1.TabIndex = 3
         ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Dock = DockStyle.Top
+        PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
+        PictureBox1.Location = New Point(0, 0)
+        PictureBox1.Margin = New Padding(3, 4, 3, 4)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(273, 144)
+        PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox1.TabIndex = 13
+        PictureBox1.TabStop = False
+        ' 
+        ' Button10
+        ' 
+        Button10.Font = New Font("Segoe UI", 10F)
+        Button10.Location = New Point(1, 304)
+        Button10.Name = "Button10"
+        Button10.Size = New Size(269, 50)
+        Button10.TabIndex = 12
+        Button10.Text = "LOGOUT"
+        Button10.UseVisualStyleBackColor = True
+        ' 
         ' Button1
         ' 
-        Button1.Location = New Point(7, 289)
+        Button1.Font = New Font("Segoe UI", 10F)
+        Button1.Location = New Point(1, 247)
         Button1.Margin = New Padding(3, 4, 3, 4)
         Button1.Name = "Button1"
-        Button1.Size = New Size(258, 50)
+        Button1.Size = New Size(269, 50)
         Button1.TabIndex = 3
-        Button1.Text = "Laporan"
+        Button1.Text = "LAPORAN"
         Button1.UseVisualStyleBackColor = True
         ' 
         ' Button2
         ' 
-        Button2.Location = New Point(7, 231)
+        Button2.Font = New Font("Segoe UI", 10F)
+        Button2.Location = New Point(1, 189)
         Button2.Margin = New Padding(3, 4, 3, 4)
         Button2.Name = "Button2"
-        Button2.Size = New Size(258, 50)
+        Button2.Size = New Size(269, 50)
         Button2.TabIndex = 1
-        Button2.Text = "Presensi"
+        Button2.Text = "PRESENSI"
         Button2.UseVisualStyleBackColor = True
-        ' 
-        ' PictureBox1
-        ' 
-        PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(-51, -39)
-        PictureBox1.Margin = New Padding(3, 4, 3, 4)
-        PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(374, 244)
-        PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
-        PictureBox1.TabIndex = 2
-        PictureBox1.TabStop = False
         ' 
         ' Panel2
         ' 
@@ -103,6 +119,7 @@ Partial Class GuruAsOperator
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Panel2 As Panel
+    Friend WithEvents Button10 As Button
+    Friend WithEvents PictureBox1 As PictureBox
 End Class
