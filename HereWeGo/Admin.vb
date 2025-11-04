@@ -69,7 +69,7 @@
     Sub StyleSidebarButton(btn As Button)
         btn.FlatStyle = FlatStyle.Flat
         btn.FlatAppearance.BorderSize = 0
-        btn.BackColor = Color.FromArgb(30, 42, 56) ' warna sidebar dasar
+        btn.BackColor = Color.FromArgb(25, 25, 112) ' warna sidebar dasar
         btn.ForeColor = Color.FromArgb(224, 230, 237)
         btn.Font = New Font("Segoe UI", 10, FontStyle.Bold)
         btn.TextAlign = ContentAlignment.MiddleLeft
@@ -85,7 +85,7 @@
     Private Sub SidebarButton_MouseLeave(sender As Object, e As EventArgs) Handles _
     Button1.MouseLeave, Button2.MouseLeave, Button3.MouseLeave, Button4.MouseLeave, Button5.MouseLeave, Button6.MouseLeave, Button7.MouseLeave, Button8.MouseLeave, Button9.MouseLeave
         If sender IsNot activeButton Then
-            sender.BackColor = Color.FromArgb(30, 42, 56)
+            sender.BackColor = Color.FromArgb(25, 25, 112)
         End If
     End Sub
 
@@ -97,7 +97,7 @@
 
     Private Sub ButtonLogout_MouseLeave(sender As Object, e As EventArgs) Handles Button10.MouseLeave
         If sender IsNot activeButton Then
-            sender.BackColor = Color.FromArgb(30, 42, 56)
+            sender.BackColor = Color.FromArgb(25, 25, 112)
         End If
     End Sub
 
@@ -118,7 +118,7 @@
         ' Reset semua tombol di panel sidebar
         For Each ctrl As Control In Panel1.Controls
             If TypeOf ctrl Is Button Then
-                ctrl.BackColor = Color.FromArgb(30, 42, 56) ' warna sidebar dasar
+                ctrl.BackColor = Color.FromArgb(25, 25, 112) ' warna sidebar dasar
                 ctrl.ForeColor = Color.FromArgb(224, 230, 237)
             End If
         Next

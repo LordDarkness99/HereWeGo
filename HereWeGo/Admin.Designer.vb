@@ -34,8 +34,8 @@ Partial Class Admin
         Button3 = New Button()
         Button1 = New Button()
         Button2 = New Button()
-        Panel2 = New Panel()
         PictureBox1 = New PictureBox()
+        Panel2 = New Panel()
         Panel1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -43,7 +43,7 @@ Partial Class Admin
         ' Panel1
         ' 
         Panel1.AutoScroll = True
-        Panel1.BackColor = Color.FromArgb(CByte(30), CByte(42), CByte(56))
+        Panel1.BackColor = Color.MidnightBlue
         Panel1.Controls.Add(Button10)
         Panel1.Controls.Add(Button9)
         Panel1.Controls.Add(Button8)
@@ -181,16 +181,6 @@ Partial Class Admin
         Button2.Text = "PENGGUNA"
         Button2.UseVisualStyleBackColor = False
         ' 
-        ' Panel2
-        ' 
-        Panel2.BackColor = Color.FromArgb(CByte(227), CByte(242), CByte(253))
-        Panel2.Dock = DockStyle.Fill
-        Panel2.Location = New Point(273, 0)
-        Panel2.Margin = New Padding(3, 4, 3, 4)
-        Panel2.Name = "Panel2"
-        Panel2.Size = New Size(989, 673)
-        Panel2.TabIndex = 2
-        ' 
         ' PictureBox1
         ' 
         PictureBox1.Dock = DockStyle.Top
@@ -202,6 +192,16 @@ Partial Class Admin
         PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
         PictureBox1.TabIndex = 2
         PictureBox1.TabStop = False
+        ' 
+        ' Panel2
+        ' 
+        Panel2.BackColor = Color.FromArgb(CByte(227), CByte(242), CByte(253))
+        Panel2.Dock = DockStyle.Fill
+        Panel2.Location = New Point(273, 0)
+        Panel2.Margin = New Padding(3, 4, 3, 4)
+        Panel2.Name = "Panel2"
+        Panel2.Size = New Size(989, 673)
+        Panel2.TabIndex = 2
         ' 
         ' Admin
         ' 
