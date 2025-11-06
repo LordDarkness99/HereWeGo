@@ -23,11 +23,6 @@ Partial Class Pengguna
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         DataGridView1 = New DataGridView()
-        id_user = New DataGridViewTextBoxColumn()
-        email = New DataGridViewTextBoxColumn()
-        password = New DataGridViewTextBoxColumn()
-        role = New DataGridViewTextBoxColumn()
-        status = New DataGridViewTextBoxColumn()
         TextBox2 = New TextBox()
         Label3 = New Label()
         Button4 = New Button()
@@ -35,6 +30,11 @@ Partial Class Pengguna
         Button2 = New Button()
         Button1 = New Button()
         Lanjut = New Button()
+        id_user = New DataGridViewTextBoxColumn()
+        email = New DataGridViewTextBoxColumn()
+        password = New DataGridViewTextBoxColumn()
+        role = New DataGridViewTextBoxColumn()
+        status = New DataGridViewTextBoxColumn()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -49,50 +49,12 @@ Partial Class Pengguna
         DataGridView1.Margin = New Padding(3, 4, 3, 4)
         DataGridView1.Name = "DataGridView1"
         DataGridView1.ReadOnly = True
+        DataGridView1.RowHeadersVisible = False
         DataGridView1.RowHeadersWidth = 51
         DataGridView1.RowTemplate.Height = 24
+        DataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect
         DataGridView1.Size = New Size(930, 481)
         DataGridView1.TabIndex = 30
-        ' 
-        ' id_user
-        ' 
-        id_user.HeaderText = "Id User"
-        id_user.MinimumWidth = 6
-        id_user.Name = "id_user"
-        id_user.ReadOnly = True
-        id_user.Width = 165
-        ' 
-        ' email
-        ' 
-        email.HeaderText = "Email"
-        email.MinimumWidth = 6
-        email.Name = "email"
-        email.ReadOnly = True
-        email.Width = 205
-        ' 
-        ' password
-        ' 
-        password.HeaderText = "Password"
-        password.MinimumWidth = 6
-        password.Name = "password"
-        password.ReadOnly = True
-        password.Width = 165
-        ' 
-        ' role
-        ' 
-        role.HeaderText = "Role"
-        role.MinimumWidth = 6
-        role.Name = "role"
-        role.ReadOnly = True
-        role.Width = 165
-        ' 
-        ' status
-        ' 
-        status.HeaderText = "Status"
-        status.MinimumWidth = 6
-        status.Name = "status"
-        status.ReadOnly = True
-        status.Width = 165
         ' 
         ' TextBox2
         ' 
@@ -168,6 +130,46 @@ Partial Class Pengguna
         Lanjut.TabIndex = 35
         Lanjut.Text = "Lanjut"
         Lanjut.UseVisualStyleBackColor = True
+        ' 
+        ' id_user
+        ' 
+        id_user.HeaderText = "Id User"
+        id_user.MinimumWidth = 6
+        id_user.Name = "id_user"
+        id_user.ReadOnly = True
+        id_user.Width = 186
+        ' 
+        ' email
+        ' 
+        email.HeaderText = "Email"
+        email.MinimumWidth = 6
+        email.Name = "email"
+        email.ReadOnly = True
+        email.Width = 186
+        ' 
+        ' password
+        ' 
+        password.HeaderText = "Password"
+        password.MinimumWidth = 6
+        password.Name = "password"
+        password.ReadOnly = True
+        password.Width = 186
+        ' 
+        ' role
+        ' 
+        role.HeaderText = "Role"
+        role.MinimumWidth = 6
+        role.Name = "role"
+        role.ReadOnly = True
+        role.Width = 186
+        ' 
+        ' status
+        ' 
+        status.HeaderText = "Status"
+        status.MinimumWidth = 6
+        status.Name = "status"
+        status.ReadOnly = True
+        status.Width = 186
         ' 
         ' Pengguna
         ' 

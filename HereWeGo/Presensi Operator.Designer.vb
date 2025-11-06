@@ -28,11 +28,11 @@ Partial Class Presensi_Operator
         ComboBox1 = New ComboBox()
         ComboBox2 = New ComboBox()
         DataGridView1 = New DataGridView()
+        Button2 = New Button()
+        Button3 = New Button()
         NIS = New DataGridViewTextBoxColumn()
         nama_siswa = New DataGridViewTextBoxColumn()
         status_kehadiran = New DataGridViewTextBoxColumn()
-        Button2 = New Button()
-        Button3 = New Button()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -94,34 +94,12 @@ Partial Class Presensi_Operator
         DataGridView1.Margin = New Padding(3, 4, 3, 4)
         DataGridView1.Name = "DataGridView1"
         DataGridView1.ReadOnly = True
+        DataGridView1.RowHeadersVisible = False
         DataGridView1.RowHeadersWidth = 51
         DataGridView1.RowTemplate.Height = 24
+        DataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect
         DataGridView1.Size = New Size(930, 479)
         DataGridView1.TabIndex = 39
-        ' 
-        ' NIS
-        ' 
-        NIS.HeaderText = "NIS"
-        NIS.MinimumWidth = 6
-        NIS.Name = "NIS"
-        NIS.ReadOnly = True
-        NIS.Width = 155
-        ' 
-        ' nama_siswa
-        ' 
-        nama_siswa.HeaderText = "Nama Siswa"
-        nama_siswa.MinimumWidth = 6
-        nama_siswa.Name = "nama_siswa"
-        nama_siswa.ReadOnly = True
-        nama_siswa.Width = 170
-        ' 
-        ' status_kehadiran
-        ' 
-        status_kehadiran.HeaderText = "Status Kehadiran"
-        status_kehadiran.MinimumWidth = 6
-        status_kehadiran.Name = "status_kehadiran"
-        status_kehadiran.ReadOnly = True
-        status_kehadiran.Width = 170
         ' 
         ' Button2
         ' 
@@ -144,6 +122,30 @@ Partial Class Presensi_Operator
         Button3.TabIndex = 49
         Button3.Text = "Ubah Status"
         Button3.UseVisualStyleBackColor = True
+        ' 
+        ' NIS
+        ' 
+        NIS.HeaderText = "NIS"
+        NIS.MinimumWidth = 6
+        NIS.Name = "NIS"
+        NIS.ReadOnly = True
+        NIS.Width = 310
+        ' 
+        ' nama_siswa
+        ' 
+        nama_siswa.HeaderText = "Nama Siswa"
+        nama_siswa.MinimumWidth = 6
+        nama_siswa.Name = "nama_siswa"
+        nama_siswa.ReadOnly = True
+        nama_siswa.Width = 310
+        ' 
+        ' status_kehadiran
+        ' 
+        status_kehadiran.HeaderText = "Status Kehadiran"
+        status_kehadiran.MinimumWidth = 6
+        status_kehadiran.Name = "status_kehadiran"
+        status_kehadiran.ReadOnly = True
+        status_kehadiran.Width = 310
         ' 
         ' Presensi_Operator
         ' 

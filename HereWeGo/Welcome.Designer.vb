@@ -25,8 +25,6 @@ Partial Class Welcome
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Welcome))
         GroupBox1 = New GroupBox()
         PictureBox1 = New PictureBox()
-        Label6 = New Label()
-        Label5 = New Label()
         Label3 = New Label()
         TextBox2 = New TextBox()
         Label4 = New Label()
@@ -40,8 +38,6 @@ Partial Class Welcome
         ' GroupBox1
         ' 
         GroupBox1.Controls.Add(PictureBox1)
-        GroupBox1.Controls.Add(Label6)
-        GroupBox1.Controls.Add(Label5)
         GroupBox1.Controls.Add(Label3)
         GroupBox1.Controls.Add(TextBox2)
         GroupBox1.Controls.Add(Label4)
@@ -64,26 +60,6 @@ Partial Class Welcome
         PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
         PictureBox1.TabIndex = 9
         PictureBox1.TabStop = False
-        ' 
-        ' Label6
-        ' 
-        Label6.AutoSize = True
-        Label6.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label6.Location = New Point(114, 453)
-        Label6.Name = "Label6"
-        Label6.Size = New Size(20, 29)
-        Label6.TabIndex = 15
-        Label6.Text = ":"
-        ' 
-        ' Label5
-        ' 
-        Label5.AutoSize = True
-        Label5.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label5.Location = New Point(114, 397)
-        Label5.Name = "Label5"
-        Label5.Size = New Size(20, 29)
-        Label5.TabIndex = 14
-        Label5.Text = ":"
         ' 
         ' Label3
         ' 
@@ -168,8 +144,6 @@ Partial Class Welcome
 
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label5 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label4 As Label

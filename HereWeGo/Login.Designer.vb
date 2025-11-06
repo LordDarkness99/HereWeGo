@@ -23,6 +23,7 @@ Partial Class Login
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Panel1 = New Panel()
+        Button2 = New Button()
         Button1 = New Button()
         TextBox2 = New TextBox()
         TextBox1 = New TextBox()
@@ -38,6 +39,7 @@ Partial Class Login
         ' Panel1
         ' 
         Panel1.BackColor = Color.White
+        Panel1.Controls.Add(Button2)
         Panel1.Controls.Add(Button1)
         Panel1.Controls.Add(TextBox2)
         Panel1.Controls.Add(TextBox1)
@@ -51,12 +53,24 @@ Partial Class Login
         Panel1.Size = New Size(400, 597)
         Panel1.TabIndex = 0
         ' 
+        ' Button2
+        ' 
+        Button2.BackColor = Color.Red
+        Button2.Font = New Font("Showcard Gothic", 12F)
+        Button2.ForeColor = Color.White
+        Button2.Location = New Point(62, 385)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(95, 50)
+        Button2.TabIndex = 6
+        Button2.Text = "Back"
+        Button2.UseVisualStyleBackColor = False
+        ' 
         ' Button1
         ' 
         Button1.BackColor = Color.MediumBlue
         Button1.Font = New Font("Showcard Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button1.ForeColor = Color.White
-        Button1.Location = New Point(62, 386)
+        Button1.Location = New Point(246, 385)
         Button1.Margin = New Padding(3, 4, 3, 4)
         Button1.Name = "Button1"
         Button1.Size = New Size(95, 50)
@@ -162,4 +176,5 @@ Partial Class Login
     Friend WithEvents Label1 As Label
     Friend WithEvents Panel2 As Panel
     Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents Button2 As Button
 End Class

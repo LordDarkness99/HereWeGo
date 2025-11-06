@@ -23,6 +23,9 @@ Partial Class Kelas
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         DataGridView1 = New DataGridView()
+        id_kelas = New DataGridViewTextBoxColumn()
+        nama_kelas = New DataGridViewTextBoxColumn()
+        status = New DataGridViewTextBoxColumn()
         Button4 = New Button()
         Button3 = New Button()
         Button2 = New Button()
@@ -30,9 +33,6 @@ Partial Class Kelas
         Lanjut = New Button()
         TextBox2 = New TextBox()
         Label3 = New Label()
-        id_kelas = New DataGridViewTextBoxColumn()
-        nama_kelas = New DataGridViewTextBoxColumn()
-        status = New DataGridViewTextBoxColumn()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -47,10 +47,36 @@ Partial Class Kelas
         DataGridView1.Margin = New Padding(3, 4, 3, 4)
         DataGridView1.Name = "DataGridView1"
         DataGridView1.ReadOnly = True
+        DataGridView1.RowHeadersVisible = False
         DataGridView1.RowHeadersWidth = 51
         DataGridView1.RowTemplate.Height = 24
+        DataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect
         DataGridView1.Size = New Size(930, 481)
         DataGridView1.TabIndex = 35
+        ' 
+        ' id_kelas
+        ' 
+        id_kelas.HeaderText = "Id Kelas"
+        id_kelas.MinimumWidth = 6
+        id_kelas.Name = "id_kelas"
+        id_kelas.ReadOnly = True
+        id_kelas.Width = 310
+        ' 
+        ' nama_kelas
+        ' 
+        nama_kelas.HeaderText = "Nama Kelas"
+        nama_kelas.MinimumWidth = 6
+        nama_kelas.Name = "nama_kelas"
+        nama_kelas.ReadOnly = True
+        nama_kelas.Width = 310
+        ' 
+        ' status
+        ' 
+        status.HeaderText = "Status"
+        status.MinimumWidth = 6
+        status.Name = "status"
+        status.ReadOnly = True
+        status.Width = 310
         ' 
         ' Button4
         ' 
@@ -126,30 +152,6 @@ Partial Class Kelas
         Label3.Size = New Size(48, 25)
         Label3.TabIndex = 36
         Label3.Text = "Cari"
-        ' 
-        ' id_kelas
-        ' 
-        id_kelas.HeaderText = "Id Kelas"
-        id_kelas.MinimumWidth = 6
-        id_kelas.Name = "id_kelas"
-        id_kelas.ReadOnly = True
-        id_kelas.Width = 310
-        ' 
-        ' nama_kelas
-        ' 
-        nama_kelas.HeaderText = "Nama Kelas"
-        nama_kelas.MinimumWidth = 6
-        nama_kelas.Name = "nama_kelas"
-        nama_kelas.ReadOnly = True
-        nama_kelas.Width = 310
-        ' 
-        ' status
-        ' 
-        status.HeaderText = "Status"
-        status.MinimumWidth = 6
-        status.Name = "status"
-        status.ReadOnly = True
-        status.Width = 310
         ' 
         ' Kelas
         ' 

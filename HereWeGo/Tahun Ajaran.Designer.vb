@@ -28,12 +28,12 @@ Partial Class Tahun_Ajaran
         Button1 = New Button()
         Lanjut = New Button()
         DataGridView1 = New DataGridView()
-        TextBox2 = New TextBox()
-        Label3 = New Label()
         id_tahun = New DataGridViewTextBoxColumn()
         ajaran = New DataGridViewTextBoxColumn()
         Semester = New DataGridViewTextBoxColumn()
         status = New DataGridViewTextBoxColumn()
+        TextBox2 = New TextBox()
+        Label3 = New Label()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -103,30 +103,12 @@ Partial Class Tahun_Ajaran
         DataGridView1.Margin = New Padding(3, 4, 3, 4)
         DataGridView1.Name = "DataGridView1"
         DataGridView1.ReadOnly = True
+        DataGridView1.RowHeadersVisible = False
         DataGridView1.RowHeadersWidth = 51
         DataGridView1.RowTemplate.Height = 24
+        DataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect
         DataGridView1.Size = New Size(930, 481)
         DataGridView1.TabIndex = 51
-        ' 
-        ' TextBox2
-        ' 
-        TextBox2.BackColor = Color.LightGray
-        TextBox2.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox2.Location = New Point(752, 15)
-        TextBox2.Margin = New Padding(3, 4, 3, 4)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(198, 36)
-        TextBox2.TabIndex = 53
-        ' 
-        ' Label3
-        ' 
-        Label3.AutoSize = True
-        Label3.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label3.Location = New Point(698, 23)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(48, 25)
-        Label3.TabIndex = 52
-        Label3.Text = "Cari"
         ' 
         ' id_tahun
         ' 
@@ -159,6 +141,26 @@ Partial Class Tahun_Ajaran
         status.Name = "status"
         status.ReadOnly = True
         status.Width = 232
+        ' 
+        ' TextBox2
+        ' 
+        TextBox2.BackColor = Color.LightGray
+        TextBox2.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        TextBox2.Location = New Point(752, 15)
+        TextBox2.Margin = New Padding(3, 4, 3, 4)
+        TextBox2.Name = "TextBox2"
+        TextBox2.Size = New Size(198, 36)
+        TextBox2.TabIndex = 53
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label3.Location = New Point(698, 23)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(48, 25)
+        Label3.TabIndex = 52
+        Label3.Text = "Cari"
         ' 
         ' Tahun_Ajaran
         ' 

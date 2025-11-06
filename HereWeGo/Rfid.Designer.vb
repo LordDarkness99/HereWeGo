@@ -23,15 +23,15 @@ Partial Class Rfid
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         DataGridView1 = New DataGridView()
-        card_id = New DataGridViewTextBoxColumn()
-        nis = New DataGridViewTextBoxColumn()
-        status = New DataGridViewTextBoxColumn()
         Button4 = New Button()
         Button3 = New Button()
         Button1 = New Button()
         Lanjut = New Button()
         TextBox2 = New TextBox()
         Label3 = New Label()
+        card_id = New DataGridViewTextBoxColumn()
+        nis = New DataGridViewTextBoxColumn()
+        status = New DataGridViewTextBoxColumn()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -46,34 +46,12 @@ Partial Class Rfid
         DataGridView1.Margin = New Padding(3, 4, 3, 4)
         DataGridView1.Name = "DataGridView1"
         DataGridView1.ReadOnly = True
+        DataGridView1.RowHeadersVisible = False
         DataGridView1.RowHeadersWidth = 51
         DataGridView1.RowTemplate.Height = 24
+        DataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect
         DataGridView1.Size = New Size(930, 478)
         DataGridView1.TabIndex = 43
-        ' 
-        ' card_id
-        ' 
-        card_id.HeaderText = "Card ID"
-        card_id.MinimumWidth = 6
-        card_id.Name = "card_id"
-        card_id.ReadOnly = True
-        card_id.Width = 210
-        ' 
-        ' nis
-        ' 
-        nis.HeaderText = "NIS"
-        nis.MinimumWidth = 6
-        nis.Name = "nis"
-        nis.ReadOnly = True
-        nis.Width = 215
-        ' 
-        ' status
-        ' 
-        status.HeaderText = "Status"
-        status.MinimumWidth = 6
-        status.Name = "status"
-        status.ReadOnly = True
-        status.Width = 210
         ' 
         ' Button4
         ' 
@@ -138,6 +116,30 @@ Partial Class Rfid
         Label3.Size = New Size(48, 25)
         Label3.TabIndex = 44
         Label3.Text = "Cari"
+        ' 
+        ' card_id
+        ' 
+        card_id.HeaderText = "Card ID"
+        card_id.MinimumWidth = 6
+        card_id.Name = "card_id"
+        card_id.ReadOnly = True
+        card_id.Width = 310
+        ' 
+        ' nis
+        ' 
+        nis.HeaderText = "NIS"
+        nis.MinimumWidth = 6
+        nis.Name = "nis"
+        nis.ReadOnly = True
+        nis.Width = 310
+        ' 
+        ' status
+        ' 
+        status.HeaderText = "Status"
+        status.MinimumWidth = 6
+        status.Name = "status"
+        status.ReadOnly = True
+        status.Width = 310
         ' 
         ' Rfid
         ' 

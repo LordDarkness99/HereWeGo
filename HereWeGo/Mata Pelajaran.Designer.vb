@@ -23,6 +23,10 @@ Partial Class Mata_Pelajaran
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         DataGridView1 = New DataGridView()
+        id_mapel = New DataGridViewTextBoxColumn()
+        nama_mapel = New DataGridViewTextBoxColumn()
+        id_guru = New DataGridViewTextBoxColumn()
+        status = New DataGridViewTextBoxColumn()
         Button4 = New Button()
         Button3 = New Button()
         Button2 = New Button()
@@ -30,10 +34,6 @@ Partial Class Mata_Pelajaran
         Lanjut = New Button()
         TextBox2 = New TextBox()
         Label3 = New Label()
-        id_mapel = New DataGridViewTextBoxColumn()
-        nama_mapel = New DataGridViewTextBoxColumn()
-        id_guru = New DataGridViewTextBoxColumn()
-        status = New DataGridViewTextBoxColumn()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -48,10 +48,44 @@ Partial Class Mata_Pelajaran
         DataGridView1.Margin = New Padding(3, 4, 3, 4)
         DataGridView1.Name = "DataGridView1"
         DataGridView1.ReadOnly = True
+        DataGridView1.RowHeadersVisible = False
         DataGridView1.RowHeadersWidth = 51
         DataGridView1.RowTemplate.Height = 24
+        DataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect
         DataGridView1.Size = New Size(930, 481)
         DataGridView1.TabIndex = 35
+        ' 
+        ' id_mapel
+        ' 
+        id_mapel.HeaderText = "Id Mapel"
+        id_mapel.MinimumWidth = 6
+        id_mapel.Name = "id_mapel"
+        id_mapel.ReadOnly = True
+        id_mapel.Width = 232
+        ' 
+        ' nama_mapel
+        ' 
+        nama_mapel.HeaderText = "Nama Mapel"
+        nama_mapel.MinimumWidth = 6
+        nama_mapel.Name = "nama_mapel"
+        nama_mapel.ReadOnly = True
+        nama_mapel.Width = 232
+        ' 
+        ' id_guru
+        ' 
+        id_guru.HeaderText = "Id Guru"
+        id_guru.MinimumWidth = 6
+        id_guru.Name = "id_guru"
+        id_guru.ReadOnly = True
+        id_guru.Width = 232
+        ' 
+        ' status
+        ' 
+        status.HeaderText = "Status"
+        status.MinimumWidth = 6
+        status.Name = "status"
+        status.ReadOnly = True
+        status.Width = 232
         ' 
         ' Button4
         ' 
@@ -127,38 +161,6 @@ Partial Class Mata_Pelajaran
         Label3.Size = New Size(48, 25)
         Label3.TabIndex = 36
         Label3.Text = "Cari"
-        ' 
-        ' id_mapel
-        ' 
-        id_mapel.HeaderText = "Id Mapel"
-        id_mapel.MinimumWidth = 6
-        id_mapel.Name = "id_mapel"
-        id_mapel.ReadOnly = True
-        id_mapel.Width = 232
-        ' 
-        ' nama_mapel
-        ' 
-        nama_mapel.HeaderText = "Nama Mapel"
-        nama_mapel.MinimumWidth = 6
-        nama_mapel.Name = "nama_mapel"
-        nama_mapel.ReadOnly = True
-        nama_mapel.Width = 232
-        ' 
-        ' id_guru
-        ' 
-        id_guru.HeaderText = "Id Guru"
-        id_guru.MinimumWidth = 6
-        id_guru.Name = "id_guru"
-        id_guru.ReadOnly = True
-        id_guru.Width = 232
-        ' 
-        ' status
-        ' 
-        status.HeaderText = "Status"
-        status.MinimumWidth = 6
-        status.Name = "status"
-        status.ReadOnly = True
-        status.Width = 232
         ' 
         ' Mata_Pelajaran
         ' 

@@ -23,6 +23,10 @@ Partial Class Guru
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         DataGridView1 = New DataGridView()
+        nip = New DataGridViewTextBoxColumn()
+        nama = New DataGridViewTextBoxColumn()
+        id_user = New DataGridViewTextBoxColumn()
+        status = New DataGridViewTextBoxColumn()
         Button4 = New Button()
         Button3 = New Button()
         Button2 = New Button()
@@ -30,10 +34,6 @@ Partial Class Guru
         Lanjut = New Button()
         TextBox2 = New TextBox()
         Label3 = New Label()
-        nip = New DataGridViewTextBoxColumn()
-        nama = New DataGridViewTextBoxColumn()
-        id_user = New DataGridViewTextBoxColumn()
-        status = New DataGridViewTextBoxColumn()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -48,10 +48,44 @@ Partial Class Guru
         DataGridView1.Margin = New Padding(3, 4, 3, 4)
         DataGridView1.Name = "DataGridView1"
         DataGridView1.ReadOnly = True
+        DataGridView1.RowHeadersVisible = False
         DataGridView1.RowHeadersWidth = 51
         DataGridView1.RowTemplate.Height = 24
+        DataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect
         DataGridView1.Size = New Size(930, 478)
         DataGridView1.TabIndex = 35
+        ' 
+        ' nip
+        ' 
+        nip.HeaderText = "NIP"
+        nip.MinimumWidth = 6
+        nip.Name = "nip"
+        nip.ReadOnly = True
+        nip.Width = 232
+        ' 
+        ' nama
+        ' 
+        nama.HeaderText = "Nama"
+        nama.MinimumWidth = 6
+        nama.Name = "nama"
+        nama.ReadOnly = True
+        nama.Width = 232
+        ' 
+        ' id_user
+        ' 
+        id_user.HeaderText = "Id User"
+        id_user.MinimumWidth = 6
+        id_user.Name = "id_user"
+        id_user.ReadOnly = True
+        id_user.Width = 232
+        ' 
+        ' status
+        ' 
+        status.HeaderText = "Status"
+        status.MinimumWidth = 6
+        status.Name = "status"
+        status.ReadOnly = True
+        status.Width = 232
         ' 
         ' Button4
         ' 
@@ -127,38 +161,6 @@ Partial Class Guru
         Label3.Size = New Size(48, 25)
         Label3.TabIndex = 36
         Label3.Text = "Cari"
-        ' 
-        ' nip
-        ' 
-        nip.HeaderText = "NIP"
-        nip.MinimumWidth = 6
-        nip.Name = "nip"
-        nip.ReadOnly = True
-        nip.Width = 232
-        ' 
-        ' nama
-        ' 
-        nama.HeaderText = "Nama"
-        nama.MinimumWidth = 6
-        nama.Name = "nama"
-        nama.ReadOnly = True
-        nama.Width = 232
-        ' 
-        ' id_user
-        ' 
-        id_user.HeaderText = "Id User"
-        id_user.MinimumWidth = 6
-        id_user.Name = "id_user"
-        id_user.ReadOnly = True
-        id_user.Width = 232
-        ' 
-        ' status
-        ' 
-        status.HeaderText = "Status"
-        status.MinimumWidth = 6
-        status.Name = "status"
-        status.ReadOnly = True
-        status.Width = 232
         ' 
         ' Guru
         ' 

@@ -75,4 +75,21 @@ Public Class Login
             Button1.PerformClick()
         End If
     End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        ' Tampilkan kembali form Welcome
+        Dim frmWelcome As New Welcome()
+        frmWelcome.Show()
+
+        ' Tutup atau sembunyikan form login
+        Me.Close()
+    End Sub
+
+    Private Sub TextBox1_KeyDown(sender As Object, e As KeyEventArgs) Handles TextBox1.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            e.SuppressKeyPress = True
+            TextBox2.Focus()
+        End If
+    End Sub
+
 End Class
