@@ -36,8 +36,11 @@ Partial Class Admin
         Button2 = New Button()
         PictureBox1 = New PictureBox()
         Panel2 = New Panel()
+        PictureBox2 = New PictureBox()
         Panel1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        Panel2.SuspendLayout()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Panel1
@@ -196,12 +199,24 @@ Partial Class Admin
         ' Panel2
         ' 
         Panel2.BackColor = Color.FromArgb(CByte(227), CByte(242), CByte(253))
+        Panel2.Controls.Add(PictureBox2)
         Panel2.Dock = DockStyle.Fill
         Panel2.Location = New Point(273, 0)
         Panel2.Margin = New Padding(3, 4, 3, 4)
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(989, 673)
         Panel2.TabIndex = 2
+        ' 
+        ' PictureBox2
+        ' 
+        PictureBox2.Dock = DockStyle.Right
+        PictureBox2.Image = My.Resources.Resources.HerWeGo51
+        PictureBox2.Location = New Point(0, 0)
+        PictureBox2.Name = "PictureBox2"
+        PictureBox2.Size = New Size(989, 673)
+        PictureBox2.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox2.TabIndex = 0
+        PictureBox2.TabStop = False
         ' 
         ' Admin
         ' 
@@ -216,6 +231,8 @@ Partial Class Admin
         Text = "Admin"
         Panel1.ResumeLayout(False)
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        Panel2.ResumeLayout(False)
+        CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
 
     End Sub
@@ -233,4 +250,5 @@ Partial Class Admin
     Friend WithEvents Button8 As Button
     Friend WithEvents Button10 As Button
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents PictureBox2 As PictureBox
 End Class
