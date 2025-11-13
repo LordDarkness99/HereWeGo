@@ -1,16 +1,13 @@
 ﻿Imports System.Threading.Tasks
 
-Public Class Mata_Pelajaran
+Public Class Jadwal_Mapel
     Private parentForm As Admin
-    Private repo As New MataPelajaranRepository()
-    Private selectedId As String
-    Private selectedNama As String
-
-    ' Pagination dan kontrol
+    Private repo As New JadwalMapelRepository()
     Private currentPage As Integer = 0
     Private pageSize As Integer = 15
     Private totalData As Integer = 0
     Private currentKeyword As String = ""
+    Private selectedId As String = Nothing
     Private isLoading As Boolean = False
 
     Public Sub New(parent As Admin)
@@ -18,45 +15,30 @@ Public Class Mata_Pelajaran
         parentForm = parent
     End Sub
 
-    Private Async Sub Mata_Pelajaran_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Async Sub Jadwal_Mapel_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Await LoadTotalDataAsync()
         Await LoadDataAsync()
     End Sub
 
     Private Async Function LoadTotalDataAsync() As Task
-        totalData = If(String.IsNullOrWhiteSpace(currentKeyword),
-                       Await repo.GetCountAsync(),
-                       Await repo.GetSearchCountAsync(currentKeyword))
+        totalData = Await repo.GetCountAsync()
     End Function
 
     Private Async Function LoadDataAsync() As Task
         If isLoading Then Return
         isLoading = True
-
         Try
             DataGridView1.Rows.Clear()
             Dim offset = currentPage * pageSize
+            Dim list = Await repo.GetPagedAsync(pageSize, offset)
 
-            Dim list = If(String.IsNullOrWhiteSpace(currentKeyword),
-                          Await repo.GetPagedAsync(pageSize, offset),
-                          Await repo.SearchPagedAsync(currentKeyword, pageSize, offset))
-
-            ' urutkan agar aktif di atas
-            Dim sortedList = list.OrderByDescending(Function(m) m.status).ToList()
-
-            For Each m In sortedList
-                DataGridView1.Rows.Add(
-                    m.id_mapel,
-                    m.nama_mapel,
-                    m.id_guru,
-                    If(m.status, "Aktif", "Nonaktif")
-                )
+            For Each j In list
+                DataGridView1.Rows.Add(j.id_jadwal, j.id_kelas, j.id_mapel, j.nip, j.hari, j.jam_mulai, j.jam_selesai, If(j.status, "Aktif", "Nonaktif"))
             Next
 
-            Await LoadTotalDataAsync()
             UpdateNavigationButtons()
         Catch ex As Exception
-            MessageBox.Show("Gagal memuat data mata pelajaran: " & ex.Message)
+            MessageBox.Show("Gagal memuat data jadwal: " & ex.Message)
         Finally
             isLoading = False
         End Try
@@ -81,54 +63,59 @@ Public Class Mata_Pelajaran
         End If
     End Sub
 
-    ' ✅ Revisi utama di sini
     Private Async Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles TextBox2.TextChanged
         currentKeyword = TextBox2.Text.Trim()
         currentPage = 0
 
-        ' kalau textbox kosong, tampilkan semua data lagi
         If String.IsNullOrWhiteSpace(currentKeyword) Then
-            currentKeyword = ""
             Await LoadTotalDataAsync()
             Await LoadDataAsync()
         Else
-            Await LoadDataAsync()
+            Await LoadSearchAsync(currentKeyword)
         End If
     End Sub
+
+    Private Async Function LoadSearchAsync(keyword As String) As Task
+        DataGridView1.Rows.Clear()
+        Dim offset = currentPage * pageSize
+        Dim list = Await repo.SearchPagedAsync(keyword, pageSize, offset)
+        totalData = Await repo.GetSearchCountAsync(keyword)
+
+        For Each j In list
+            DataGridView1.Rows.Add(j.id_jadwal, j.id_kelas, j.id_mapel, j.nip, j.hari, j.jam_mulai, j.jam_selesai, If(j.status, "Aktif", "Nonaktif"))
+        Next
+
+        UpdateNavigationButtons()
+    End Function
 
     Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
         If e.RowIndex >= 0 Then
             selectedId = DataGridView1.Rows(e.RowIndex).Cells(0).Value.ToString()
-            selectedNama = DataGridView1.Rows(e.RowIndex).Cells(1).Value.ToString()
         End If
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        parentForm.ShowFormInPanel(New Tambah_Mata_Pelajaran(parentForm))
+        parentForm.ShowFormInPanel(New Tambah_Jadwal_Mapel(parentForm))
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        If String.IsNullOrEmpty(selectedId) Then
-            MessageBox.Show("Pilih mata pelajaran terlebih dahulu.")
+        If selectedId Is Nothing Then
+            MessageBox.Show("Pilih jadwal terlebih dahulu.")
             Return
         End If
-
-        Dim formUbah As New Ubah_Mata_Pelajaran(parentForm)
-        formUbah.LoadMapelData(selectedId, selectedNama)
+        Dim formUbah As New Ubah_Jadwal_Mapel(parentForm)
+        formUbah.LoadJadwalData(selectedId)
         parentForm.ShowFormInPanel(formUbah)
     End Sub
 
     Private Async Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        If String.IsNullOrEmpty(selectedId) Then
-            MessageBox.Show("Silakan pilih mata pelajaran terlebih dahulu.")
-            Return
+        If selectedId IsNot Nothing Then
+            Await repo.DeactivateAsync(selectedId)
+            MessageBox.Show("Jadwal berhasil dinonaktifkan.")
+            Await LoadDataAsync()
+        Else
+            MessageBox.Show("Silakan pilih jadwal terlebih dahulu.")
         End If
-
-        Dim success = Await repo.DeactivateAsync(selectedId)
-        MessageBox.Show(If(success, "Mata pelajaran berhasil dinonaktifkan.", "Gagal menonaktifkan mata pelajaran."))
-
-        Await LoadTotalDataAsync()
-        Await LoadDataAsync()
     End Sub
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick

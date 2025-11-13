@@ -12,38 +12,46 @@ Public Class PresensiRepository
 
     ' 🔹 Ambil presensi berdasarkan kelas & mapel
     Public Async Function GetByFilterAsync(idKelas As String, idMapel As String) As Task(Of List(Of PresensiModel))
-        Dim query = $"{TableName}?select=nis,status,id_kelas,id_mapel,siswa(nama_siswa)&id_kelas=eq.{idKelas}&id_mapel=eq.{idMapel}"
+        ' Gunakan embedding agar nama_siswa ikut ditarik dari tabel siswa
+        Dim today As String = DateTime.Now.ToString("yyyy-MM-dd")
+        Dim query = $"{TableName}?select=id_presensi,nis,status,jadwal_mapel(id_kelas,id_mapel),siswa(nama_siswa)" &
+            $"&jadwal_mapel.id_kelas=eq.{idKelas}" &
+            $"&jadwal_mapel.id_mapel=eq.{idMapel}" &
+            $"&tanggal=eq.{today}"
+
+
         Dim json = Await _client.GetAsync(query)
+        If String.IsNullOrWhiteSpace(json) Then
+            Return New List(Of PresensiModel)
+        End If
 
-        ' Bentuk hasil nested (siswa.nama_siswa)
-        Dim rawList = JsonConvert.DeserializeObject(Of List(Of JObject))(json)
         Dim result As New List(Of PresensiModel)
+        Try
+            Dim rawList As List(Of JObject) = JsonConvert.DeserializeObject(Of List(Of JObject))(json)
 
-        For Each item In rawList
-            Dim p As New PresensiModel()
-            p.nis = item.Value(Of String)("nis")
-            p.status = item.Value(Of String)("status")
-            p.id_kelas = item.Value(Of String)("id_kelas")
-            p.id_mapel = item.Value(Of String)("id_mapel")
+            For Each item In rawList
+                Dim p As New PresensiModel()
+                p.id_presensi = item.Value(Of String)("id_presensi")
+                p.nis = item.Value(Of String)("nis")
+                p.status = item.Value(Of String)("status")
+                p.id_kelas = item.Value(Of String)("id_kelas")
+                p.id_mapel = item.Value(Of String)("id_mapel")
 
-            ' ambil nama dari nested object siswa
-            Dim siswaObj = item("siswa")
-            If siswaObj IsNot Nothing Then
-                p.nama_siswa = siswaObj.Value(Of String)("nama_siswa")
-            Else
-                p.nama_siswa = "(Tidak ditemukan)"
-            End If
+                ' Ambil nama siswa dari tabel siswa
+                Dim siswaObj = TryCast(item("siswa"), JObject)
+                If siswaObj IsNot Nothing Then
+                    p.nama_siswa = siswaObj.Value(Of String)("nama_siswa")
+                Else
+                    p.nama_siswa = "(Tidak ditemukan)"
+                End If
 
-            result.Add(p)
-        Next
+                result.Add(p)
+            Next
+
+        Catch ex As Exception
+            MessageBox.Show("Gagal parsing data presensi: " & ex.Message)
+        End Try
 
         Return result
-    End Function
-
-
-    ' 🔹 Ubah status presensi siswa
-    Public Async Function UpdateStatusAsync(nis As String, statusBaru As String) As Task
-        Dim jsonBody = JsonConvert.SerializeObject(New With {.status = statusBaru})
-        Await _client.PatchAsync($"{TableName}?nis=eq.{nis}", jsonBody)
     End Function
 End Class

@@ -53,6 +53,11 @@
     Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
         SetActiveButton(Button9)
     End Sub
+    Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
+        SetActiveButton(Button6)
+        ShowFormInPanel(New Jadwal_Mapel(Me))
+    End Sub
+
     Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
         SetActiveButton(Button10)
 
@@ -66,6 +71,7 @@
         End If
     End Sub
 
+
     Sub StyleSidebarButton(btn As Button)
         btn.FlatStyle = FlatStyle.Flat
         btn.FlatAppearance.BorderSize = 0
@@ -75,15 +81,13 @@
         btn.TextAlign = ContentAlignment.MiddleLeft
     End Sub
 
-    Private Sub SidebarButton_MouseEnter(sender As Object, e As EventArgs) Handles _
-    Button1.MouseEnter, Button2.MouseEnter, Button3.MouseEnter, Button4.MouseEnter, Button5.MouseEnter, Button6.MouseEnter, Button7.MouseEnter, Button8.MouseEnter, Button9.MouseEnter
+    Private Sub SidebarButton_MouseEnter(sender As Object, e As EventArgs) Handles Button1.MouseEnter, Button2.MouseEnter, Button3.MouseEnter, Button4.MouseEnter, Button5.MouseEnter, Button6.MouseEnter, Button7.MouseEnter, Button8.MouseEnter, Button9.MouseEnter
         If sender IsNot activeButton Then
             sender.BackColor = Color.FromArgb(41, 121, 255)
         End If
     End Sub
 
-    Private Sub SidebarButton_MouseLeave(sender As Object, e As EventArgs) Handles _
-    Button1.MouseLeave, Button2.MouseLeave, Button3.MouseLeave, Button4.MouseLeave, Button5.MouseLeave, Button6.MouseLeave, Button7.MouseLeave, Button8.MouseLeave, Button9.MouseLeave
+    Private Sub SidebarButton_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave, Button2.MouseLeave, Button3.MouseLeave, Button4.MouseLeave, Button5.MouseLeave, Button6.MouseLeave, Button7.MouseLeave, Button8.MouseLeave, Button9.MouseLeave
         If sender IsNot activeButton Then
             sender.BackColor = Color.FromArgb(25, 25, 112)
         End If

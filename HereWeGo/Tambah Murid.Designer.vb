@@ -27,13 +27,13 @@ Partial Class Tambah_Murid
         Label4 = New Label()
         Label3 = New Label()
         GroupBox1 = New GroupBox()
+        TextBox1 = New TextBox()
+        Label5 = New Label()
         ComboBox1 = New ComboBox()
         TextBox3 = New TextBox()
         TextBox2 = New TextBox()
         Button2 = New Button()
         Button1 = New Button()
-        Label5 = New Label()
-        TextBox1 = New TextBox()
         GroupBox1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -53,9 +53,9 @@ Partial Class Tambah_Murid
         Label2.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label2.Location = New Point(6, 74)
         Label2.Name = "Label2"
-        Label2.Size = New Size(83, 25)
+        Label2.Size = New Size(62, 25)
         Label2.TabIndex = 1
-        Label2.Text = "Id Kelas"
+        Label2.Text = "Kelas"
         ' 
         ' Label4
         ' 
@@ -94,6 +94,25 @@ Partial Class Tambah_Murid
         GroupBox1.Size = New Size(624, 201)
         GroupBox1.TabIndex = 31
         GroupBox1.TabStop = False
+        ' 
+        ' TextBox1
+        ' 
+        TextBox1.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        TextBox1.Location = New Point(203, 155)
+        TextBox1.Margin = New Padding(3, 4, 3, 4)
+        TextBox1.Name = "TextBox1"
+        TextBox1.Size = New Size(399, 30)
+        TextBox1.TabIndex = 10
+        ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label5.Location = New Point(6, 163)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(92, 25)
+        Label5.TabIndex = 9
+        Label5.Text = "Link Foto"
         ' 
         ' ComboBox1
         ' 
@@ -142,25 +161,6 @@ Partial Class Tambah_Murid
         Button1.TabIndex = 32
         Button1.Text = "Simpan"
         Button1.UseVisualStyleBackColor = True
-        ' 
-        ' Label5
-        ' 
-        Label5.AutoSize = True
-        Label5.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label5.Location = New Point(6, 163)
-        Label5.Name = "Label5"
-        Label5.Size = New Size(92, 25)
-        Label5.TabIndex = 9
-        Label5.Text = "Link Foto"
-        ' 
-        ' TextBox1
-        ' 
-        TextBox1.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox1.Location = New Point(203, 155)
-        TextBox1.Margin = New Padding(3, 4, 3, 4)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(399, 30)
-        TextBox1.TabIndex = 10
         ' 
         ' Tambah_Murid
         ' 

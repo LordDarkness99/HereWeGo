@@ -22,80 +22,43 @@ Partial Class Presensi
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Button4 = New Button()
         Button3 = New Button()
         Button2 = New Button()
-        Button1 = New Button()
-        Lanjut = New Button()
         DataGridView1 = New DataGridView()
-        id_presensi = New DataGridViewTextBoxColumn()
-        id_siswa = New DataGridViewTextBoxColumn()
-        id_mapel = New DataGridViewTextBoxColumn()
-        id_kelas = New DataGridViewTextBoxColumn()
-        id_guru = New DataGridViewTextBoxColumn()
-        id_tahun = New DataGridViewTextBoxColumn()
-        tanggal = New DataGridViewTextBoxColumn()
-        status = New DataGridViewTextBoxColumn()
-        catatan = New DataGridViewTextBoxColumn()
-        TextBox2 = New TextBox()
-        Label3 = New Label()
+        NIS = New DataGridViewTextBoxColumn()
+        nama_siswa = New DataGridViewTextBoxColumn()
+        status_kehadiran = New DataGridViewTextBoxColumn()
+        ComboBox2 = New ComboBox()
+        ComboBox1 = New ComboBox()
+        Label2 = New Label()
+        Label4 = New Label()
+        Button1 = New Button()
+        Button4 = New Button()
+        Button5 = New Button()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
-        ' 
-        ' Button4
-        ' 
-        Button4.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Button4.Location = New Point(20, 561)
-        Button4.Margin = New Padding(3, 4, 3, 4)
-        Button4.Name = "Button4"
-        Button4.Size = New Size(136, 52)
-        Button4.TabIndex = 58
-        Button4.Text = "Hapus"
-        Button4.UseVisualStyleBackColor = True
         ' 
         ' Button3
         ' 
         Button3.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Button3.Location = New Point(171, 561)
+        Button3.Location = New Point(20, 562)
         Button3.Margin = New Padding(3, 4, 3, 4)
         Button3.Name = "Button3"
-        Button3.Size = New Size(136, 52)
+        Button3.Size = New Size(190, 52)
         Button3.TabIndex = 57
-        Button3.Text = "Ubah"
+        Button3.Text = "Ubah Status"
         Button3.UseVisualStyleBackColor = True
         ' 
         ' Button2
         ' 
         Button2.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Button2.Location = New Point(271, 11)
+        Button2.Location = New Point(814, 562)
         Button2.Margin = New Padding(3, 4, 3, 4)
         Button2.Name = "Button2"
-        Button2.Size = New Size(126, 41)
+        Button2.Size = New Size(136, 52)
         Button2.TabIndex = 56
-        Button2.Text = "Tambah"
+        Button2.Text = "Simpan"
         Button2.UseVisualStyleBackColor = True
-        ' 
-        ' Button1
-        ' 
-        Button1.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Button1.Location = New Point(672, 561)
-        Button1.Margin = New Padding(3, 4, 3, 4)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(136, 52)
-        Button1.TabIndex = 55
-        Button1.Text = "Sebelum"
-        Button1.UseVisualStyleBackColor = True
-        ' 
-        ' Lanjut
-        ' 
-        Lanjut.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Lanjut.Location = New Point(814, 561)
-        Lanjut.Margin = New Padding(3, 4, 3, 4)
-        Lanjut.Name = "Lanjut"
-        Lanjut.Size = New Size(136, 52)
-        Lanjut.TabIndex = 54
-        Lanjut.Text = "Lanjut"
-        Lanjut.UseVisualStyleBackColor = True
         ' 
         ' DataGridView1
         ' 
@@ -103,8 +66,8 @@ Partial Class Presensi
         DataGridView1.AllowUserToDeleteRows = False
         DataGridView1.BackgroundColor = Color.White
         DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Columns.AddRange(New DataGridViewColumn() {id_presensi, id_siswa, id_mapel, id_kelas, id_guru, id_tahun, tanggal, status, catatan})
-        DataGridView1.Location = New Point(20, 72)
+        DataGridView1.Columns.AddRange(New DataGridViewColumn() {NIS, nama_siswa, status_kehadiran})
+        DataGridView1.Location = New Point(20, 75)
         DataGridView1.Margin = New Padding(3, 4, 3, 4)
         DataGridView1.Name = "DataGridView1"
         DataGridView1.ReadOnly = True
@@ -112,114 +75,117 @@ Partial Class Presensi
         DataGridView1.RowHeadersWidth = 51
         DataGridView1.RowTemplate.Height = 24
         DataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect
-        DataGridView1.Size = New Size(930, 481)
-        DataGridView1.TabIndex = 51
+        DataGridView1.Size = New Size(930, 479)
+        DataGridView1.TabIndex = 55
         ' 
-        ' id_presensi
+        ' NIS
         ' 
-        id_presensi.HeaderText = "Id Presensi"
-        id_presensi.MinimumWidth = 6
-        id_presensi.Name = "id_presensi"
-        id_presensi.ReadOnly = True
-        id_presensi.Width = 103
+        NIS.HeaderText = "NIS"
+        NIS.MinimumWidth = 6
+        NIS.Name = "NIS"
+        NIS.ReadOnly = True
+        NIS.Width = 310
         ' 
-        ' id_siswa
+        ' nama_siswa
         ' 
-        id_siswa.HeaderText = "Id Siswa"
-        id_siswa.MinimumWidth = 6
-        id_siswa.Name = "id_siswa"
-        id_siswa.ReadOnly = True
-        id_siswa.Width = 103
+        nama_siswa.HeaderText = "Nama Siswa"
+        nama_siswa.MinimumWidth = 6
+        nama_siswa.Name = "nama_siswa"
+        nama_siswa.ReadOnly = True
+        nama_siswa.Width = 310
         ' 
-        ' id_mapel
+        ' status_kehadiran
         ' 
-        id_mapel.HeaderText = "Id Mapel"
-        id_mapel.MinimumWidth = 6
-        id_mapel.Name = "id_mapel"
-        id_mapel.ReadOnly = True
-        id_mapel.Width = 103
+        status_kehadiran.HeaderText = "Status Kehadiran"
+        status_kehadiran.MinimumWidth = 6
+        status_kehadiran.Name = "status_kehadiran"
+        status_kehadiran.ReadOnly = True
+        status_kehadiran.Width = 310
         ' 
-        ' id_kelas
+        ' ComboBox2
         ' 
-        id_kelas.HeaderText = "Id Kelas"
-        id_kelas.MinimumWidth = 6
-        id_kelas.Name = "id_kelas"
-        id_kelas.ReadOnly = True
-        id_kelas.Width = 103
+        ComboBox2.FormattingEnabled = True
+        ComboBox2.Location = New Point(468, 20)
+        ComboBox2.Name = "ComboBox2"
+        ComboBox2.Size = New Size(202, 28)
+        ComboBox2.TabIndex = 54
         ' 
-        ' id_guru
+        ' ComboBox1
         ' 
-        id_guru.HeaderText = "Id Guru"
-        id_guru.MinimumWidth = 6
-        id_guru.Name = "id_guru"
-        id_guru.ReadOnly = True
-        id_guru.Width = 103
+        ComboBox1.FormattingEnabled = True
+        ComboBox1.Location = New Point(131, 20)
+        ComboBox1.Name = "ComboBox1"
+        ComboBox1.Size = New Size(202, 28)
+        ComboBox1.TabIndex = 53
         ' 
-        ' id_tahun
+        ' Label2
         ' 
-        id_tahun.HeaderText = "Id Tahun"
-        id_tahun.MinimumWidth = 6
-        id_tahun.Name = "id_tahun"
-        id_tahun.ReadOnly = True
-        id_tahun.Width = 103
+        Label2.AutoSize = True
+        Label2.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label2.Location = New Point(357, 22)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(107, 25)
+        Label2.TabIndex = 50
+        Label2.Text = "Pilih Mapel"
         ' 
-        ' tanggal
+        ' Label4
         ' 
-        tanggal.HeaderText = "Tanggal"
-        tanggal.MinimumWidth = 6
-        tanggal.Name = "tanggal"
-        tanggal.ReadOnly = True
-        tanggal.Width = 103
+        Label4.AutoSize = True
+        Label4.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label4.Location = New Point(24, 22)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(103, 25)
+        Label4.TabIndex = 51
+        Label4.Text = "Pilih Kelas"
         ' 
-        ' status
+        ' Button1
         ' 
-        status.HeaderText = "Status"
-        status.MinimumWidth = 6
-        status.Name = "status"
-        status.ReadOnly = True
-        status.Width = 103
+        Button1.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button1.Location = New Point(710, 12)
+        Button1.Margin = New Padding(3, 4, 3, 4)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(215, 45)
+        Button1.TabIndex = 52
+        Button1.Text = "Tampilkan Siswa"
+        Button1.UseVisualStyleBackColor = True
         ' 
-        ' catatan
+        ' Button4
         ' 
-        catatan.HeaderText = "Catatan"
-        catatan.MinimumWidth = 6
-        catatan.Name = "catatan"
-        catatan.ReadOnly = True
-        catatan.Width = 103
+        Button4.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button4.Location = New Point(216, 562)
+        Button4.Margin = New Padding(3, 4, 3, 4)
+        Button4.Name = "Button4"
+        Button4.Size = New Size(190, 52)
+        Button4.TabIndex = 58
+        Button4.Text = "Ubah Status"
+        Button4.UseVisualStyleBackColor = True
         ' 
-        ' TextBox2
+        ' Button5
         ' 
-        TextBox2.BackColor = Color.LightGray
-        TextBox2.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox2.Location = New Point(752, 16)
-        TextBox2.Margin = New Padding(3, 4, 3, 4)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(198, 36)
-        TextBox2.TabIndex = 53
-        ' 
-        ' Label3
-        ' 
-        Label3.AutoSize = True
-        Label3.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label3.Location = New Point(698, 24)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(48, 25)
-        Label3.TabIndex = 52
-        Label3.Text = "Cari"
+        Button5.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button5.Location = New Point(412, 561)
+        Button5.Margin = New Padding(3, 4, 3, 4)
+        Button5.Name = "Button5"
+        Button5.Size = New Size(190, 52)
+        Button5.TabIndex = 59
+        Button5.Text = "Ubah Status"
+        Button5.UseVisualStyleBackColor = True
         ' 
         ' Presensi
         ' 
         AutoScaleMode = AutoScaleMode.None
         BackColor = Color.FromArgb(CByte(227), CByte(242), CByte(253))
         ClientSize = New Size(971, 626)
+        Controls.Add(Button5)
         Controls.Add(Button4)
         Controls.Add(Button3)
         Controls.Add(Button2)
-        Controls.Add(Button1)
-        Controls.Add(Lanjut)
         Controls.Add(DataGridView1)
-        Controls.Add(TextBox2)
-        Controls.Add(Label3)
+        Controls.Add(ComboBox2)
+        Controls.Add(ComboBox1)
+        Controls.Add(Label2)
+        Controls.Add(Label4)
+        Controls.Add(Button1)
         FormBorderStyle = FormBorderStyle.FixedSingle
         Margin = New Padding(3, 4, 3, 4)
         Name = "Presensi"
@@ -230,21 +196,17 @@ Partial Class Presensi
 
     End Sub
 
-    Friend WithEvents Button4 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Lanjut As Button
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents Label3 As Label
-    Friend WithEvents id_presensi As DataGridViewTextBoxColumn
-    Friend WithEvents id_siswa As DataGridViewTextBoxColumn
-    Friend WithEvents id_mapel As DataGridViewTextBoxColumn
-    Friend WithEvents id_kelas As DataGridViewTextBoxColumn
-    Friend WithEvents id_guru As DataGridViewTextBoxColumn
-    Friend WithEvents id_tahun As DataGridViewTextBoxColumn
-    Friend WithEvents tanggal As DataGridViewTextBoxColumn
-    Friend WithEvents status As DataGridViewTextBoxColumn
-    Friend WithEvents catatan As DataGridViewTextBoxColumn
+    Friend WithEvents NIS As DataGridViewTextBoxColumn
+    Friend WithEvents nama_siswa As DataGridViewTextBoxColumn
+    Friend WithEvents status_kehadiran As DataGridViewTextBoxColumn
+    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button4 As Button
+    Friend WithEvents Button5 As Button
 End Class

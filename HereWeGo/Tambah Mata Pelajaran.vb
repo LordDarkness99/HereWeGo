@@ -15,16 +15,25 @@ Public Class Tambah_Mata_Pelajaran
     End Sub
 
     Private Async Function LoadGuruAktifAsync() As Task
-        ComboBox1.Items.Clear()
-        Dim guruList = Await guruRepo.GetAllAsync()
+        Try
+            Dim guruList = Await guruRepo.GetAllAsync()
+            Dim guruAktif = guruList.Where(Function(g) g.status).ToList()
 
-        ' 🔹 Hanya tampilkan guru yang masih aktif
-        For Each g In guruList
-            If g.status Then
-                ComboBox1.Items.Add(g.nip)
-            End If
-        Next
+            ' ✅ Gabungkan NIP dan nama guru untuk tampilan
+            Dim displayList = guruAktif.Select(Function(g) New With {
+            .DisplayText = $"{g.nip} ({g.nama})",
+            .Value = g.nip
+        }).ToList()
+
+            ComboBox1.DataSource = displayList
+            ComboBox1.DisplayMember = "DisplayText"
+            ComboBox1.ValueMember = "Value"
+            ComboBox1.SelectedIndex = -1
+        Catch ex As Exception
+            MessageBox.Show("Gagal memuat data guru: " & ex.Message)
+        End Try
     End Function
+
 
     Private Async Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Try
@@ -37,7 +46,7 @@ Public Class Tambah_Mata_Pelajaran
             ' 🔹 Tambahkan mapel baru dan otomatis aktif
             Dim mapel As New MataPelajaranModel With {
                 .nama_mapel = TextBox1.Text.Trim(),
-                .id_guru = ComboBox1.SelectedItem.ToString(),
+                .id_guru = ComboBox1.SelectedValue.ToString(),
                 .status = True
             }
 

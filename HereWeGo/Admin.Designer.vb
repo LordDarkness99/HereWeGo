@@ -36,6 +36,7 @@ Partial Class Admin
         Button2 = New Button()
         PictureBox1 = New PictureBox()
         Panel2 = New Panel()
+        Button11 = New Button()
         Panel1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -44,6 +45,7 @@ Partial Class Admin
         ' 
         Panel1.AutoScroll = True
         Panel1.BackColor = Color.MidnightBlue
+        Panel1.Controls.Add(Button11)
         Panel1.Controls.Add(Button10)
         Panel1.Controls.Add(Button9)
         Panel1.Controls.Add(Button8)
@@ -65,7 +67,7 @@ Partial Class Admin
         ' Button10
         ' 
         Button10.Font = New Font("Segoe UI", 10F)
-        Button10.Location = New Point(1, 705)
+        Button10.Location = New Point(1, 744)
         Button10.Name = "Button10"
         Button10.Size = New Size(250, 50)
         Button10.TabIndex = 11
@@ -75,7 +77,7 @@ Partial Class Admin
         ' Button9
         ' 
         Button9.Font = New Font("Segoe UI", 10F)
-        Button9.Location = New Point(1, 649)
+        Button9.Location = New Point(1, 689)
         Button9.Name = "Button9"
         Button9.Size = New Size(250, 50)
         Button9.TabIndex = 10
@@ -85,7 +87,7 @@ Partial Class Admin
         ' Button8
         ' 
         Button8.Font = New Font("Segoe UI", 10F)
-        Button8.Location = New Point(1, 588)
+        Button8.Location = New Point(1, 633)
         Button8.Name = "Button8"
         Button8.Size = New Size(250, 50)
         Button8.TabIndex = 9
@@ -97,7 +99,7 @@ Partial Class Admin
         Button7.BackColor = Color.White
         Button7.Font = New Font("Segoe UI", 10F)
         Button7.ForeColor = Color.Black
-        Button7.Location = New Point(1, 527)
+        Button7.Location = New Point(1, 577)
         Button7.Name = "Button7"
         Button7.Size = New Size(250, 50)
         Button7.TabIndex = 8
@@ -203,6 +205,18 @@ Partial Class Admin
         Panel2.Size = New Size(989, 673)
         Panel2.TabIndex = 2
         ' 
+        ' Button11
+        ' 
+        Button11.BackColor = Color.White
+        Button11.Font = New Font("Segoe UI", 10F)
+        Button11.ForeColor = Color.Black
+        Button11.Location = New Point(0, 521)
+        Button11.Name = "Button11"
+        Button11.Size = New Size(250, 50)
+        Button11.TabIndex = 12
+        Button11.Text = "JADWAL"
+        Button11.UseVisualStyleBackColor = False
+        ' 
         ' Admin
         ' 
         AutoScaleMode = AutoScaleMode.None
@@ -233,4 +247,5 @@ Partial Class Admin
     Friend WithEvents Button8 As Button
     Friend WithEvents Button10 As Button
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Button11 As Button
 End Class

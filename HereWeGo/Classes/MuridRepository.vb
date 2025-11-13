@@ -23,6 +23,7 @@ Public Class MuridRepository
             .nama_siswa = data.nama_siswa,
             .id_kelas = data.id_kelas,
             .alamat = data.alamat,
+            .link_foto = data.link_foto,
             .status = data.status
         })
 
@@ -34,7 +35,8 @@ Public Class MuridRepository
         Dim jsonBody = JsonConvert.SerializeObject(New With {
             .nama_siswa = data.nama_siswa,
             .id_kelas = data.id_kelas,
-            .alamat = data.alamat
+            .alamat = data.alamat,
+            .link_foto = data.link_foto
         })
         Await _client.PatchAsync($"{TableName}?nis=eq.{nis}", jsonBody)
     End Function

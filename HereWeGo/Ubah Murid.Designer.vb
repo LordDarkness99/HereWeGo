@@ -27,6 +27,8 @@ Partial Class Ubah_Murid
         Label4 = New Label()
         Label3 = New Label()
         GroupBox1 = New GroupBox()
+        TextBox4 = New TextBox()
+        Label5 = New Label()
         ComboBox1 = New ComboBox()
         TextBox1 = New TextBox()
         Label6 = New Label()
@@ -34,8 +36,6 @@ Partial Class Ubah_Murid
         TextBox2 = New TextBox()
         Button2 = New Button()
         Button1 = New Button()
-        Label5 = New Label()
-        TextBox4 = New TextBox()
         GroupBox1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -55,9 +55,9 @@ Partial Class Ubah_Murid
         Label2.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label2.Location = New Point(6, 122)
         Label2.Name = "Label2"
-        Label2.Size = New Size(83, 25)
+        Label2.Size = New Size(62, 25)
         Label2.TabIndex = 1
-        Label2.Text = "Id Kelas"
+        Label2.Text = "Kelas"
         ' 
         ' Label4
         ' 
@@ -98,6 +98,25 @@ Partial Class Ubah_Murid
         GroupBox1.Size = New Size(624, 247)
         GroupBox1.TabIndex = 35
         GroupBox1.TabStop = False
+        ' 
+        ' TextBox4
+        ' 
+        TextBox4.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        TextBox4.Location = New Point(203, 206)
+        TextBox4.Margin = New Padding(3, 4, 3, 4)
+        TextBox4.Name = "TextBox4"
+        TextBox4.Size = New Size(399, 30)
+        TextBox4.TabIndex = 20
+        ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label5.Location = New Point(6, 206)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(98, 25)
+        Label5.TabIndex = 19
+        Label5.Text = "Link_Foto"
         ' 
         ' ComboBox1
         ' 
@@ -166,25 +185,6 @@ Partial Class Ubah_Murid
         Button1.TabIndex = 36
         Button1.Text = "Simpan"
         Button1.UseVisualStyleBackColor = True
-        ' 
-        ' Label5
-        ' 
-        Label5.AutoSize = True
-        Label5.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label5.Location = New Point(6, 206)
-        Label5.Name = "Label5"
-        Label5.Size = New Size(98, 25)
-        Label5.TabIndex = 19
-        Label5.Text = "Link_Foto"
-        ' 
-        ' TextBox4
-        ' 
-        TextBox4.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox4.Location = New Point(203, 206)
-        TextBox4.Margin = New Padding(3, 4, 3, 4)
-        TextBox4.Name = "TextBox4"
-        TextBox4.Size = New Size(399, 30)
-        TextBox4.TabIndex = 20
         ' 
         ' Ubah_Murid
         ' 

@@ -28,11 +28,11 @@ Partial Class Presensi_Operator
         ComboBox1 = New ComboBox()
         ComboBox2 = New ComboBox()
         DataGridView1 = New DataGridView()
-        Button2 = New Button()
-        Button3 = New Button()
         NIS = New DataGridViewTextBoxColumn()
         nama_siswa = New DataGridViewTextBoxColumn()
         status_kehadiran = New DataGridViewTextBoxColumn()
+        Button2 = New Button()
+        Button3 = New Button()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -90,7 +90,7 @@ Partial Class Presensi_Operator
         DataGridView1.BackgroundColor = Color.White
         DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridView1.Columns.AddRange(New DataGridViewColumn() {NIS, nama_siswa, status_kehadiran})
-        DataGridView1.Location = New Point(22, 82)
+        DataGridView1.Location = New Point(12, 82)
         DataGridView1.Margin = New Padding(3, 4, 3, 4)
         DataGridView1.Name = "DataGridView1"
         DataGridView1.ReadOnly = True
@@ -100,28 +100,6 @@ Partial Class Presensi_Operator
         DataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect
         DataGridView1.Size = New Size(930, 479)
         DataGridView1.TabIndex = 39
-        ' 
-        ' Button2
-        ' 
-        Button2.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Button2.Location = New Point(816, 569)
-        Button2.Margin = New Padding(3, 4, 3, 4)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(136, 52)
-        Button2.TabIndex = 48
-        Button2.Text = "Simpan"
-        Button2.UseVisualStyleBackColor = True
-        ' 
-        ' Button3
-        ' 
-        Button3.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Button3.Location = New Point(22, 569)
-        Button3.Margin = New Padding(3, 4, 3, 4)
-        Button3.Name = "Button3"
-        Button3.Size = New Size(190, 52)
-        Button3.TabIndex = 49
-        Button3.Text = "Ubah Status"
-        Button3.UseVisualStyleBackColor = True
         ' 
         ' NIS
         ' 
@@ -146,6 +124,28 @@ Partial Class Presensi_Operator
         status_kehadiran.Name = "status_kehadiran"
         status_kehadiran.ReadOnly = True
         status_kehadiran.Width = 310
+        ' 
+        ' Button2
+        ' 
+        Button2.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button2.Location = New Point(816, 569)
+        Button2.Margin = New Padding(3, 4, 3, 4)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(136, 52)
+        Button2.TabIndex = 48
+        Button2.Text = "Simpan"
+        Button2.UseVisualStyleBackColor = True
+        ' 
+        ' Button3
+        ' 
+        Button3.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button3.Location = New Point(22, 569)
+        Button3.Margin = New Padding(3, 4, 3, 4)
+        Button3.Name = "Button3"
+        Button3.Size = New Size(190, 52)
+        Button3.TabIndex = 49
+        Button3.Text = "Ubah Status"
+        Button3.UseVisualStyleBackColor = True
         ' 
         ' Presensi_Operator
         ' 

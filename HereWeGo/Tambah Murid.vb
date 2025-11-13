@@ -17,13 +17,18 @@ Public Class Tambah_Murid
     Private Async Function LoadKelasAktifAsync() As Task
         Try
             ComboBox1.Items.Clear()
+
             Dim listKelas = Await kelasRepo.GetAllAsync()
 
-            For Each kls In listKelas
-                If kls.status Then
-                    ComboBox1.Items.Add(kls.id_kelas)
-                End If
-            Next
+            ' Filter hanya kelas aktif
+            Dim kelasAktif = listKelas.Where(Function(k) k.status).ToList()
+
+            ' Hubungkan ComboBox dengan data kelas
+            ComboBox1.DataSource = kelasAktif
+            ComboBox1.DisplayMember = "nama_kelas"  ' tampil nama
+            ComboBox1.ValueMember = "id_kelas"      ' simpan id
+            ComboBox1.SelectedIndex = -1            ' kosongkan pilihan awal
+
         Catch ex As Exception
             MessageBox.Show("Gagal memuat data kelas: " & ex.Message)
         End Try
@@ -61,7 +66,4 @@ Public Class Tambah_Murid
         End Try
     End Sub
 
-    ' TextBox1 = Link Foto GDrive
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
-    End Sub
 End Class
