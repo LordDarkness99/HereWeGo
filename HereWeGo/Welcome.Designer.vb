@@ -25,11 +25,11 @@ Partial Class Welcome
         Button1 = New Button()
         PictureBox2 = New PictureBox()
         Panel1 = New Panel()
-        PictureBox1 = New PictureBox()
         Label3 = New Label()
         TextBox1 = New TextBox()
         TextBox2 = New TextBox()
         Label4 = New Label()
+        PictureBox1 = New PictureBox()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
@@ -70,17 +70,6 @@ Partial Class Welcome
         Panel1.Size = New Size(368, 505)
         Panel1.TabIndex = 16
         ' 
-        ' PictureBox1
-        ' 
-        PictureBox1.Image = My.Resources.Resources.formal_biru
-        PictureBox1.Location = New Point(90, 24)
-        PictureBox1.Margin = New Padding(3, 4, 3, 4)
-        PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(236, 354)
-        PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
-        PictureBox1.TabIndex = 14
-        PictureBox1.TabStop = False
-        ' 
         ' Label3
         ' 
         Label3.AutoSize = True
@@ -119,6 +108,17 @@ Partial Class Welcome
         Label4.TabIndex = 16
         Label4.Text = "NISN"
         ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Image = My.Resources.Resources.formal_biru
+        PictureBox1.Location = New Point(66, 21)
+        PictureBox1.Margin = New Padding(3, 4, 3, 4)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(236, 354)
+        PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox1.TabIndex = 19
+        PictureBox1.TabStop = False
+        ' 
         ' Welcome
         ' 
         AutoScaleMode = AutoScaleMode.None
@@ -141,9 +141,9 @@ Partial Class Welcome
     Friend WithEvents Button1 As Button
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label3 As Label
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label4 As Label
+    Friend WithEvents PictureBox1 As PictureBox
 End Class
