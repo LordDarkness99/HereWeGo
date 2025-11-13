@@ -84,4 +84,5 @@ Public Class Welcome
         formLogin.Show()
         Me.Hide()
     End Sub
+
 End Class

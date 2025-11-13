@@ -29,8 +29,11 @@ Partial Class GuruAsOperator
         Button1 = New Button()
         Button2 = New Button()
         Panel2 = New Panel()
+        PictureBox2 = New PictureBox()
         Panel1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        Panel2.SuspendLayout()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Panel1
@@ -94,12 +97,24 @@ Partial Class GuruAsOperator
         ' 
         ' Panel2
         ' 
+        Panel2.Controls.Add(PictureBox2)
         Panel2.Dock = DockStyle.Right
         Panel2.Location = New Point(273, 0)
         Panel2.Margin = New Padding(3, 4, 3, 4)
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(989, 673)
         Panel2.TabIndex = 4
+        ' 
+        ' PictureBox2
+        ' 
+        PictureBox2.Dock = DockStyle.Right
+        PictureBox2.Image = My.Resources.Resources.HerWeGo51
+        PictureBox2.Location = New Point(0, 0)
+        PictureBox2.Name = "PictureBox2"
+        PictureBox2.Size = New Size(989, 673)
+        PictureBox2.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox2.TabIndex = 1
+        PictureBox2.TabStop = False
         ' 
         ' GuruAsOperator
         ' 
@@ -113,6 +128,8 @@ Partial Class GuruAsOperator
         Text = "GuruAsOperator"
         Panel1.ResumeLayout(False)
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        Panel2.ResumeLayout(False)
+        CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
@@ -122,4 +139,5 @@ Partial Class GuruAsOperator
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Button10 As Button
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents PictureBox2 As PictureBox
 End Class
