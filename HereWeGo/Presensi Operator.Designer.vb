@@ -32,13 +32,14 @@ Partial Class Presensi_Operator
         nama_siswa = New DataGridViewTextBoxColumn()
         status_kehadiran = New DataGridViewTextBoxColumn()
         Button2 = New Button()
+        Button3 = New Button()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label2.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label2.Location = New Point(359, 29)
         Label2.Name = "Label2"
         Label2.Size = New Size(107, 25)
@@ -48,7 +49,7 @@ Partial Class Presensi_Operator
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label4.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label4.Location = New Point(26, 29)
         Label4.Name = "Label4"
         Label4.Size = New Size(103, 25)
@@ -57,7 +58,7 @@ Partial Class Presensi_Operator
         ' 
         ' Button1
         ' 
-        Button1.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Button1.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button1.Location = New Point(712, 19)
         Button1.Margin = New Padding(3, 4, 3, 4)
         Button1.Name = "Button1"
@@ -126,7 +127,7 @@ Partial Class Presensi_Operator
         ' 
         ' Button2
         ' 
-        Button2.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Button2.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button2.Location = New Point(816, 569)
         Button2.Margin = New Padding(3, 4, 3, 4)
         Button2.Name = "Button2"
@@ -135,11 +136,23 @@ Partial Class Presensi_Operator
         Button2.Text = "Simpan"
         Button2.UseVisualStyleBackColor = True
         ' 
+        ' Button3
+        ' 
+        Button3.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button3.Location = New Point(12, 569)
+        Button3.Margin = New Padding(3, 4, 3, 4)
+        Button3.Name = "Button3"
+        Button3.Size = New Size(136, 52)
+        Button3.TabIndex = 49
+        Button3.Text = "Cetak"
+        Button3.UseVisualStyleBackColor = True
+        ' 
         ' Presensi_Operator
         ' 
         AutoScaleMode = AutoScaleMode.None
-        BackColor = Color.FromArgb(227, 242, 253)
+        BackColor = Color.FromArgb(CByte(227), CByte(242), CByte(253))
         ClientSize = New Size(971, 626)
+        Controls.Add(Button3)
         Controls.Add(Button2)
         Controls.Add(DataGridView1)
         Controls.Add(ComboBox2)
@@ -164,4 +177,5 @@ Partial Class Presensi_Operator
     Friend WithEvents NIS As DataGridViewTextBoxColumn
     Friend WithEvents nama_siswa As DataGridViewTextBoxColumn
     Friend WithEvents status_kehadiran As DataGridViewTextBoxColumn
+    Friend WithEvents Button3 As Button
 End Class

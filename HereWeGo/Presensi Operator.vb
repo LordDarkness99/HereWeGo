@@ -1,18 +1,30 @@
-﻿Imports System.Threading.Tasks
-Imports Newtonsoft.Json
+﻿Imports System.Drawing
+Imports System.Drawing.Printing
+Imports System.Threading.Tasks
 Imports System.Windows.Forms
+Imports Newtonsoft.Json
 
 Public Class Presensi_Operator
     Private parentForm As GuruAsOperator
     Private presensiRepo As New PresensiRepository()
     Private kelasRepo As New KelasRepository()
     Private mapelRepo As New MataPelajaranRepository()
+    ' 🔹 Variabel untuk cetak
+    Private WithEvents printDocument As New PrintDocument()
+    Private WithEvents printPreview As New PrintPreviewDialog()
+    Private currentRow As Integer = 0
+    Private pageNumber As Integer = 1
+
 
     Public Sub New(parent As GuruAsOperator)
         InitializeComponent()
         parentForm = parent
+        AddHandler printDocument.PrintPage, AddressOf printDocument_PrintPage
+        AddHandler Button3.Click, AddressOf Button3_Click ' kalau Handles bermasalah
     End Sub
-
+    Public Sub New()
+        InitializeComponent()
+    End Sub
     Private Async Sub Presensi_Operator_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Await LoadKelasAsync()
         Await LoadMapelAsync()
@@ -150,13 +162,13 @@ Public Class Presensi_Operator
             Return
         End If
 
-        Dim sukses As Integer = 0
-        Dim gagal As Integer = 0
+        Dim sukses = 0
+        Dim gagal = 0
 
         For Each row As DataGridViewRow In DataGridView1.Rows
             Try
-                Dim idPresensi As String = If(row.Cells("id_presensi").Value, "").ToString()
-                Dim status As String = If(row.Cells("status").Value, "").ToString()
+                Dim idPresensi = If(row.Cells("id_presensi").Value, "").ToString
+                Dim status = If(row.Cells("status").Value, "").ToString
 
                 If String.IsNullOrWhiteSpace(idPresensi) OrElse String.IsNullOrWhiteSpace(status) Then
                     Continue For
@@ -175,5 +187,112 @@ Public Class Presensi_Operator
         Next
 
         MessageBox.Show($"✅ {sukses} data berhasil disimpan, ❌ {gagal} gagal.", "Simpan Presensi", MessageBoxButtons.OK, MessageBoxIcon.Information)
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click 'cdtak
+        If DataGridView1.Rows.Count = 0 Then
+            MessageBox.Show("Tidak ada data untuk dicetak.", "Cetak Presensi", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Return
+        End If
+
+        printPreview.Document = printDocument
+        printPreview.Width = 1000
+        printPreview.Height = 700
+        printPreview.ShowDialog()
+    End Sub
+    Private Sub printDocument_PrintPage(sender As Object, e As PrintPageEventArgs) Handles printDocument.PrintPage
+        ' ==== Font dan Layout ====
+        Dim fontJudul As New Font("Segoe UI", 14, FontStyle.Bold)
+        Dim fontSubJudul As New Font("Segoe UI", 10, FontStyle.Regular)
+        Dim fontHeader As New Font("Segoe UI", 10, FontStyle.Bold)
+        Dim fontIsi As New Font("Segoe UI", 10, FontStyle.Regular)
+        Dim brush As New SolidBrush(Color.Black)
+
+        Dim marginLeft As Integer = e.MarginBounds.Left
+        Dim marginTop As Integer = e.MarginBounds.Top
+        Dim y As Integer = marginTop
+
+        ' ==== Header Sekolah ====
+        e.Graphics.DrawString("SMA NEGERI 1 CONTOH KOTA", New Font("Segoe UI", 14, FontStyle.Bold), brush, marginLeft + 150, y)
+        y += 25
+        e.Graphics.DrawString("Jl. Pendidikan No. 123, Contoh Kota", fontSubJudul, brush, marginLeft + 180, y)
+        y += 25
+        e.Graphics.DrawLine(Pens.Black, marginLeft, y, e.MarginBounds.Right, y)
+        y += 20
+
+        ' ==== Judul Laporan ====
+        e.Graphics.DrawString("LAPORAN PRESENSI SISWA", fontJudul, brush, marginLeft + 200, y)
+        y += 40
+
+        ' ==== Info Tambahan ====
+        Dim kelas As String = If(ComboBox1.Text, "-")
+        Dim mapel As String = If(ComboBox2.Text, "-")
+        e.Graphics.DrawString($"Kelas               : {kelas}", fontSubJudul, brush, marginLeft, y)
+        y += 20
+        e.Graphics.DrawString($"Mata Pelajaran      : {mapel}", fontSubJudul, brush, marginLeft, y)
+        y += 30
+
+        ' ==== Header Tabel ====
+        Dim colNisWidth = 120
+        Dim colNamaWidth = 250
+        Dim colStatusWidth = 120
+
+        e.Graphics.FillRectangle(New SolidBrush(Color.LightGray), marginLeft, y, colNisWidth + colNamaWidth + colStatusWidth, 25)
+        e.Graphics.DrawRectangle(Pens.Black, marginLeft, y, colNisWidth, 25)
+        e.Graphics.DrawRectangle(Pens.Black, marginLeft + colNisWidth, y, colNamaWidth, 25)
+        e.Graphics.DrawRectangle(Pens.Black, marginLeft + colNisWidth + colNamaWidth, y, colStatusWidth, 25)
+
+        e.Graphics.DrawString("NIS", fontHeader, brush, marginLeft + 5, y + 5)
+        e.Graphics.DrawString("Nama Siswa", fontHeader, brush, marginLeft + colNisWidth + 5, y + 5)
+        e.Graphics.DrawString("Status", fontHeader, brush, marginLeft + colNisWidth + colNamaWidth + 5, y + 5)
+        y += 25
+
+        ' ==== Isi Tabel ====
+        Dim rowHeight = 25
+        While currentRow < DataGridView1.Rows.Count
+            Dim row = DataGridView1.Rows(currentRow)
+            If row.IsNewRow Then
+                currentRow += 1
+                Continue While
+            End If
+
+            Dim nis = If(row.Cells("nis").Value, "").ToString()
+            Dim nama = If(row.Cells("nama_siswa").Value, "").ToString()
+            Dim status = If(row.Cells("status").Value, "").ToString()
+
+            e.Graphics.DrawRectangle(Pens.Black, marginLeft, y, colNisWidth, rowHeight)
+            e.Graphics.DrawRectangle(Pens.Black, marginLeft + colNisWidth, y, colNamaWidth, rowHeight)
+            e.Graphics.DrawRectangle(Pens.Black, marginLeft + colNisWidth + colNamaWidth, y, colStatusWidth, rowHeight)
+
+            e.Graphics.DrawString(nis, fontIsi, brush, marginLeft + 5, y + 5)
+            e.Graphics.DrawString(nama, fontIsi, brush, marginLeft + colNisWidth + 5, y + 5)
+            e.Graphics.DrawString(status, fontIsi, brush, marginLeft + colNisWidth + colNamaWidth + 5, y + 5)
+
+            y += rowHeight
+            currentRow += 1
+
+            ' Halaman baru jika tabel melewati batas bawah
+            If y + rowHeight > e.MarginBounds.Bottom Then
+                e.HasMorePages = True
+                pageNumber += 1
+                Return
+            End If
+        End While
+
+        ' ==== Footer ====
+        y += 40
+        e.Graphics.DrawString("Dicetak pada: " & DateTime.Now.ToString("dd MMMM yyyy HH:mm"), fontSubJudul, brush, marginLeft, y)
+        y += 40
+        e.Graphics.DrawString("Guru / Wali Kelas,", fontSubJudul, brush, marginLeft + 400, y)
+        y += 60
+        e.Graphics.DrawString("(_______________________)", fontSubJudul, brush, marginLeft + 400, y)
+
+        ' Reset variabel untuk halaman berikutnya
+        currentRow = 0
+        pageNumber = 1
+    End Sub
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
     End Sub
 End Class

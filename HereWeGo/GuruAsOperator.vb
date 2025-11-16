@@ -30,6 +30,7 @@
     End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         SetActiveButton(Button1)
+        ShowFormInPanel(New Laporan_Operator(Me))
     End Sub
 
     Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click

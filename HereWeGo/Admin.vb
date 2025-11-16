@@ -1,4 +1,7 @@
-﻿Public Class Admin
+﻿Imports Newtonsoft.Json
+Imports Npgsql
+
+Public Class Admin
     ' Method umum untuk menampilkan form di dalam Panel2
     ' Simpan tombol yang sedang aktif
     Private activeButton As Button = Nothing
@@ -49,9 +52,11 @@
 
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
         SetActiveButton(Button8)
+        ShowFormInPanel(New Presensi_Operator())
     End Sub
     Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
         SetActiveButton(Button9)
+        ShowFormInPanel(New Laporan_Operator())
     End Sub
     Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
         SetActiveButton(Button6)
@@ -139,6 +144,30 @@
         activeButton = btn
         btn.BackColor = Color.FromArgb(41, 121, 255)
         btn.ForeColor = Color.White
+    End Sub
+
+    Private ReadOnly supabase As New SupabaseClient()
+    Private ReadOnly utilRepo As New UtilityRepository()
+
+    Private Async Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
+        Dim ask As DialogResult = MessageBox.Show(
+        "Generate presensi harian akan membuat presensi Alfa otomatis untuk semua siswa hari ini." &
+        vbCrLf & "Lanjutkan?",
+        "Konfirmasi",
+        MessageBoxButtons.YesNo,
+        MessageBoxIcon.Question
+    )
+
+        If ask = DialogResult.No Then Exit Sub
+
+        Dim success = Await utilRepo.GeneratePresensiHarianAsync()
+
+        If success Then
+            MessageBox.Show("Generate presensi harian BERHASIL dijalankan!",
+                        "Sukses",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information)
+        End If
     End Sub
 
 End Class
