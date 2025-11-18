@@ -2,8 +2,7 @@
 Imports Npgsql
 
 Public Class Admin
-    ' Method umum untuk menampilkan form di dalam Panel2
-    ' Simpan tombol yang sedang aktif
+    Private isAktifkanOn As Boolean = False
     Private activeButton As Button = Nothing
     Public Sub ShowFormInPanel(frm As Form)
         Panel2.Controls.Clear()
@@ -59,7 +58,7 @@ Public Class Admin
         ShowFormInPanel(New Laporan_Operator())
     End Sub
     Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
-        SetActiveButton(Button6)
+        SetActiveButton(Button11)
         ShowFormInPanel(New Jadwal_Mapel(Me))
     End Sub
 
@@ -86,13 +85,13 @@ Public Class Admin
         btn.TextAlign = ContentAlignment.MiddleLeft
     End Sub
 
-    Private Sub SidebarButton_MouseEnter(sender As Object, e As EventArgs) Handles Button1.MouseEnter, Button2.MouseEnter, Button3.MouseEnter, Button4.MouseEnter, Button5.MouseEnter, Button6.MouseEnter, Button7.MouseEnter, Button8.MouseEnter, Button9.MouseEnter
+    Private Sub SidebarButton_MouseEnter(sender As Object, e As EventArgs) Handles Button1.MouseEnter, Button2.MouseEnter, Button3.MouseEnter, Button4.MouseEnter, Button5.MouseEnter, Button6.MouseEnter, Button7.MouseEnter, Button8.MouseEnter, Button9.MouseEnter, Button11.MouseEnter
         If sender IsNot activeButton Then
             sender.BackColor = Color.FromArgb(41, 121, 255)
         End If
     End Sub
 
-    Private Sub SidebarButton_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave, Button2.MouseLeave, Button3.MouseLeave, Button4.MouseLeave, Button5.MouseLeave, Button6.MouseLeave, Button7.MouseLeave, Button8.MouseLeave, Button9.MouseLeave
+    Private Sub SidebarButton_MouseLeave(sender As Object, e As EventArgs) Handles Button1.MouseLeave, Button2.MouseLeave, Button3.MouseLeave, Button4.MouseLeave, Button5.MouseLeave, Button6.MouseLeave, Button7.MouseLeave, Button8.MouseLeave, Button9.MouseLeave, Button11.MouseLeave
         If sender IsNot activeButton Then
             sender.BackColor = Color.FromArgb(25, 25, 112)
         End If
@@ -121,12 +120,20 @@ Public Class Admin
         StyleSidebarButton(Button8)
         StyleSidebarButton(Button9)
         StyleSidebarButton(Button10)
+        StyleSidebarButton(Button11)
+        StyleSidebarButton(Button12)
     End Sub
 
     Private Sub SetActiveButton(btn As Button)
         ' Reset semua tombol di panel sidebar
         For Each ctrl As Control In Panel1.Controls
             If TypeOf ctrl Is Button Then
+
+                ' JANGAN reset Button12 jika sedang ON
+                If ctrl Is Button12 AndAlso isAktifkanOn Then
+                    Continue For
+                End If
+
                 ctrl.BackColor = Color.FromArgb(25, 25, 112) ' warna sidebar dasar
                 ctrl.ForeColor = Color.FromArgb(224, 230, 237)
             End If
@@ -134,22 +141,37 @@ Public Class Admin
 
         ' Jika tombol logout ditekan, warnanya tetap merah
         If btn Is Button10 Then
-            btn.BackColor = Color.FromArgb(255, 82, 82) ' merah
+            btn.BackColor = Color.FromArgb(255, 82, 82)
             btn.ForeColor = Color.White
             activeButton = btn
             Exit Sub
         End If
 
-        ' Tombol lain tetap biru saat aktif
-        activeButton = btn
-        btn.BackColor = Color.FromArgb(41, 121, 255)
-        btn.ForeColor = Color.White
+        ' Untuk tombol lain (kecuali aktifkan), tetap biru aktif
+        If btn IsNot Button12 Then
+            activeButton = btn
+            btn.BackColor = Color.FromArgb(41, 121, 255)
+            btn.ForeColor = Color.White
+        End If
     End Sub
 
     Private ReadOnly supabase As New SupabaseClient()
     Private ReadOnly utilRepo As New UtilityRepository()
 
     Private Async Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
+
+        ' Toggle state
+        isAktifkanOn = Not isAktifkanOn
+
+        If isAktifkanOn Then
+            Button12.BackColor = Color.FromArgb(46, 204, 113) ' Hijau ON
+            Button12.ForeColor = Color.White
+        Else
+            Button12.BackColor = Color.FromArgb(25, 25, 112) ' OFF
+            Button12.ForeColor = Color.FromArgb(224, 230, 237)
+        End If
+
+        ' --- Fungsi aslinya tetap jalan ---
         Dim ask As DialogResult = MessageBox.Show(
         "Generate presensi harian akan membuat presensi Alfa otomatis untuk semua siswa hari ini." &
         vbCrLf & "Lanjutkan?",
@@ -167,6 +189,18 @@ Public Class Admin
                         "Sukses",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Information)
+        End If
+    End Sub
+
+    Private Sub Button12_MouseEnter(sender As Object, e As EventArgs) Handles Button12.MouseEnter
+        If Not isAktifkanOn Then
+            Button12.BackColor = Color.FromArgb(41, 121, 255)
+        End If
+    End Sub
+
+    Private Sub Button12_MouseLeave(sender As Object, e As EventArgs) Handles Button12.MouseLeave
+        If Not isAktifkanOn Then
+            Button12.BackColor = Color.FromArgb(25, 25, 112)
         End If
     End Sub
 

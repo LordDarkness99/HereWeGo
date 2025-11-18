@@ -33,7 +33,9 @@ Partial Class Presensi_Operator
         status_kehadiran = New DataGridViewTextBoxColumn()
         Button2 = New Button()
         Button3 = New Button()
+        PictureBox1 = New PictureBox()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Label2
@@ -147,6 +149,17 @@ Partial Class Presensi_Operator
         Button3.Text = "Cetak"
         Button3.UseVisualStyleBackColor = True
         ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Dock = DockStyle.Fill
+        PictureBox1.Image = My.Resources.Resources.Copy_of_Blue_and_White_Modern_Welcome_Banner__1280_x_720_px___989_x_673_px_
+        PictureBox1.Location = New Point(0, 0)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(971, 626)
+        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox1.TabIndex = 50
+        PictureBox1.TabStop = False
+        ' 
         ' Presensi_Operator
         ' 
         AutoScaleMode = AutoScaleMode.None
@@ -160,10 +173,12 @@ Partial Class Presensi_Operator
         Controls.Add(Label2)
         Controls.Add(Label4)
         Controls.Add(Button1)
+        Controls.Add(PictureBox1)
         FormBorderStyle = FormBorderStyle.FixedSingle
         Name = "Presensi_Operator"
         Text = "Presensi Operator"
         CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -178,4 +193,5 @@ Partial Class Presensi_Operator
     Friend WithEvents nama_siswa As DataGridViewTextBoxColumn
     Friend WithEvents status_kehadiran As DataGridViewTextBoxColumn
     Friend WithEvents Button3 As Button
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

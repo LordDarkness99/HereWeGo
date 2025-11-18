@@ -108,7 +108,7 @@ Partial Class GuruAsOperator
         ' PictureBox2
         ' 
         PictureBox2.Dock = DockStyle.Right
-        PictureBox2.Image = My.Resources.Resources.HerWeGo51
+        PictureBox2.Image = My.Resources.Resources.Copy_of_Blue_and_White_Modern_Welcome_Banner__1280_x_720_px___989_x_673_px__1_
         PictureBox2.Location = New Point(0, 0)
         PictureBox2.Name = "PictureBox2"
         PictureBox2.Size = New Size(989, 673)

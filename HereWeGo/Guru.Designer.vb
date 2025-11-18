@@ -34,7 +34,9 @@ Partial Class Guru
         Lanjut = New Button()
         TextBox2 = New TextBox()
         Label3 = New Label()
+        PictureBox1 = New PictureBox()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' DataGridView1
@@ -144,7 +146,7 @@ Partial Class Guru
         ' 
         ' TextBox2
         ' 
-        TextBox2.BackColor = Color.LightGray
+        TextBox2.BackColor = Color.White
         TextBox2.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         TextBox2.Location = New Point(752, 19)
         TextBox2.Margin = New Padding(3, 4, 3, 4)
@@ -162,6 +164,17 @@ Partial Class Guru
         Label3.TabIndex = 36
         Label3.Text = "Cari"
         ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Dock = DockStyle.Fill
+        PictureBox1.Image = My.Resources.Resources.Copy_of_Blue_and_White_Modern_Welcome_Banner__1280_x_720_px___989_x_673_px_
+        PictureBox1.Location = New Point(0, 0)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(971, 626)
+        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox1.TabIndex = 43
+        PictureBox1.TabStop = False
+        ' 
         ' Guru
         ' 
         AutoScaleMode = AutoScaleMode.None
@@ -175,11 +188,13 @@ Partial Class Guru
         Controls.Add(Lanjut)
         Controls.Add(TextBox2)
         Controls.Add(Label3)
+        Controls.Add(PictureBox1)
         FormBorderStyle = FormBorderStyle.FixedSingle
         Margin = New Padding(3, 4, 3, 4)
         Name = "Guru"
         Text = "Guru"
         CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
 
@@ -197,4 +212,5 @@ Partial Class Guru
     Friend WithEvents nama As DataGridViewTextBoxColumn
     Friend WithEvents id_user As DataGridViewTextBoxColumn
     Friend WithEvents status As DataGridViewTextBoxColumn
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

@@ -30,7 +30,9 @@ Partial Class Tambah_Guru
         Label1 = New Label()
         Button2 = New Button()
         Button1 = New Button()
+        PictureBox1 = New PictureBox()
         GroupBox1.SuspendLayout()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Label3
@@ -114,6 +116,17 @@ Partial Class Tambah_Guru
         Button1.Text = "Simpan"
         Button1.UseVisualStyleBackColor = True
         ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Dock = DockStyle.Fill
+        PictureBox1.Image = My.Resources.Resources.Copy_of_Blue_and_White_Modern_Welcome_Banner__1280_x_720_px___989_x_673_px_
+        PictureBox1.Location = New Point(0, 0)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(971, 626)
+        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox1.TabIndex = 44
+        PictureBox1.TabStop = False
+        ' 
         ' Tambah_Guru
         ' 
         AutoScaleMode = AutoScaleMode.None
@@ -123,12 +136,14 @@ Partial Class Tambah_Guru
         Controls.Add(Label1)
         Controls.Add(Button2)
         Controls.Add(Button1)
+        Controls.Add(PictureBox1)
         FormBorderStyle = FormBorderStyle.FixedSingle
         Margin = New Padding(3, 4, 3, 4)
         Name = "Tambah_Guru"
         Text = "Tambah_Guru"
         GroupBox1.ResumeLayout(False)
         GroupBox1.PerformLayout()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
 
@@ -141,4 +156,5 @@ Partial Class Tambah_Guru
     Friend WithEvents Button1 As Button
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

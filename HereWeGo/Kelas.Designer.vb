@@ -33,7 +33,9 @@ Partial Class Kelas
         Lanjut = New Button()
         TextBox2 = New TextBox()
         Label3 = New Label()
+        PictureBox1 = New PictureBox()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' DataGridView1
@@ -135,7 +137,7 @@ Partial Class Kelas
         ' 
         ' TextBox2
         ' 
-        TextBox2.BackColor = Color.LightGray
+        TextBox2.BackColor = Color.White
         TextBox2.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         TextBox2.Location = New Point(752, 15)
         TextBox2.Margin = New Padding(3, 4, 3, 4)
@@ -153,6 +155,17 @@ Partial Class Kelas
         Label3.TabIndex = 36
         Label3.Text = "Cari"
         ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Dock = DockStyle.Fill
+        PictureBox1.Image = My.Resources.Resources.Copy_of_Blue_and_White_Modern_Welcome_Banner__1280_x_720_px___989_x_673_px_
+        PictureBox1.Location = New Point(0, 0)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(971, 626)
+        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox1.TabIndex = 44
+        PictureBox1.TabStop = False
+        ' 
         ' Kelas
         ' 
         AutoScaleMode = AutoScaleMode.None
@@ -166,11 +179,13 @@ Partial Class Kelas
         Controls.Add(Lanjut)
         Controls.Add(TextBox2)
         Controls.Add(Label3)
+        Controls.Add(PictureBox1)
         FormBorderStyle = FormBorderStyle.FixedSingle
         Margin = New Padding(3, 4, 3, 4)
         Name = "Kelas"
         Text = "Kelas"
         CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
 
@@ -187,4 +202,5 @@ Partial Class Kelas
     Friend WithEvents id_kelas As DataGridViewTextBoxColumn
     Friend WithEvents nama_kelas As DataGridViewTextBoxColumn
     Friend WithEvents status As DataGridViewTextBoxColumn
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

@@ -35,7 +35,9 @@ Partial Class Presensi
         Button1 = New Button()
         Button4 = New Button()
         Button5 = New Button()
+        PictureBox1 = New PictureBox()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Button3
@@ -171,6 +173,17 @@ Partial Class Presensi
         Button5.Text = "Ubah Status"
         Button5.UseVisualStyleBackColor = True
         ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Dock = DockStyle.Fill
+        PictureBox1.Image = My.Resources.Resources.Copy_of_Blue_and_White_Modern_Welcome_Banner__1280_x_720_px___989_x_673_px_
+        PictureBox1.Location = New Point(0, 0)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(971, 626)
+        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox1.TabIndex = 60
+        PictureBox1.TabStop = False
+        ' 
         ' Presensi
         ' 
         AutoScaleMode = AutoScaleMode.None
@@ -186,11 +199,13 @@ Partial Class Presensi
         Controls.Add(Label2)
         Controls.Add(Label4)
         Controls.Add(Button1)
+        Controls.Add(PictureBox1)
         FormBorderStyle = FormBorderStyle.FixedSingle
         Margin = New Padding(3, 4, 3, 4)
         Name = "Presensi"
         Text = "Presensi"
         CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
 
@@ -209,4 +224,5 @@ Partial Class Presensi
     Friend WithEvents Button1 As Button
     Friend WithEvents Button4 As Button
     Friend WithEvents Button5 As Button
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

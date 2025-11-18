@@ -127,11 +127,17 @@
   <data name="Blue and White Modern Welcome Banner (1280 x 720 px)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Blue and White Modern Welcome Banner (1280 x 720 px).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="HerWeGo51" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HerWeGo51.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="profile" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\profile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Twibbon Peserta Cabang Lomba BPC" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Twibbon Peserta Cabang Lomba BPC.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Copy of Blue and White Modern Welcome Banner (1280 x 720 px) (989 x 673 px)(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Copy of Blue and White Modern Welcome Banner (1280 x 720 px) (989 x 673 px)(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Blue and White Modern Welcome Banner (1280 x 720 px)(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Blue and White Modern Welcome Banner (1280 x 720 px)(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -142,7 +148,7 @@
   <data name="HerWeGo4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HerWeGo4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="HerWeGo51" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HerWeGo51.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Copy of Blue and White Modern Welcome Banner (1280 x 720 px) (989 x 673 px)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Copy of Blue and White Modern Welcome Banner (1280 x 720 px) (989 x 673 px).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

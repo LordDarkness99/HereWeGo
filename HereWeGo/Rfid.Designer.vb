@@ -23,16 +23,17 @@ Partial Class Rfid
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         DataGridView1 = New DataGridView()
+        card_id = New DataGridViewTextBoxColumn()
+        nis = New DataGridViewTextBoxColumn()
+        status = New DataGridViewTextBoxColumn()
         Button4 = New Button()
-        Button3 = New Button()
         Button1 = New Button()
         Lanjut = New Button()
         TextBox2 = New TextBox()
         Label3 = New Label()
-        card_id = New DataGridViewTextBoxColumn()
-        nis = New DataGridViewTextBoxColumn()
-        status = New DataGridViewTextBoxColumn()
+        PictureBox1 = New PictureBox()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' DataGridView1
@@ -52,70 +53,6 @@ Partial Class Rfid
         DataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect
         DataGridView1.Size = New Size(930, 478)
         DataGridView1.TabIndex = 43
-        ' 
-        ' Button4
-        ' 
-        Button4.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Button4.Location = New Point(162, 561)
-        Button4.Margin = New Padding(3, 4, 3, 4)
-        Button4.Name = "Button4"
-        Button4.Size = New Size(136, 52)
-        Button4.TabIndex = 50
-        Button4.Text = "Hapus"
-        Button4.UseVisualStyleBackColor = True
-        ' 
-        ' Button3
-        ' 
-        Button3.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Button3.Location = New Point(20, 561)
-        Button3.Margin = New Padding(3, 4, 3, 4)
-        Button3.Name = "Button3"
-        Button3.Size = New Size(136, 52)
-        Button3.TabIndex = 49
-        Button3.Text = "Ubah"
-        Button3.UseVisualStyleBackColor = True
-        ' 
-        ' Button1
-        ' 
-        Button1.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Button1.Location = New Point(672, 558)
-        Button1.Margin = New Padding(3, 4, 3, 4)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(136, 52)
-        Button1.TabIndex = 47
-        Button1.Text = "Sebelum"
-        Button1.UseVisualStyleBackColor = True
-        ' 
-        ' Lanjut
-        ' 
-        Lanjut.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Lanjut.Location = New Point(814, 558)
-        Lanjut.Margin = New Padding(3, 4, 3, 4)
-        Lanjut.Name = "Lanjut"
-        Lanjut.Size = New Size(136, 52)
-        Lanjut.TabIndex = 46
-        Lanjut.Text = "Lanjut"
-        Lanjut.UseVisualStyleBackColor = True
-        ' 
-        ' TextBox2
-        ' 
-        TextBox2.BackColor = Color.LightGray
-        TextBox2.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox2.Location = New Point(752, 16)
-        TextBox2.Margin = New Padding(3, 4, 3, 4)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(198, 36)
-        TextBox2.TabIndex = 45
-        ' 
-        ' Label3
-        ' 
-        Label3.AutoSize = True
-        Label3.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label3.Location = New Point(698, 24)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(48, 25)
-        Label3.TabIndex = 44
-        Label3.Text = "Cari"
         ' 
         ' card_id
         ' 
@@ -141,6 +78,70 @@ Partial Class Rfid
         status.ReadOnly = True
         status.Width = 310
         ' 
+        ' Button4
+        ' 
+        Button4.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button4.Location = New Point(20, 558)
+        Button4.Margin = New Padding(3, 4, 3, 4)
+        Button4.Name = "Button4"
+        Button4.Size = New Size(136, 52)
+        Button4.TabIndex = 50
+        Button4.Text = "Hapus"
+        Button4.UseVisualStyleBackColor = True
+        ' 
+        ' Button1
+        ' 
+        Button1.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button1.Location = New Point(672, 558)
+        Button1.Margin = New Padding(3, 4, 3, 4)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(136, 52)
+        Button1.TabIndex = 47
+        Button1.Text = "Sebelum"
+        Button1.UseVisualStyleBackColor = True
+        ' 
+        ' Lanjut
+        ' 
+        Lanjut.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Lanjut.Location = New Point(814, 558)
+        Lanjut.Margin = New Padding(3, 4, 3, 4)
+        Lanjut.Name = "Lanjut"
+        Lanjut.Size = New Size(136, 52)
+        Lanjut.TabIndex = 46
+        Lanjut.Text = "Lanjut"
+        Lanjut.UseVisualStyleBackColor = True
+        ' 
+        ' TextBox2
+        ' 
+        TextBox2.BackColor = Color.White
+        TextBox2.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        TextBox2.Location = New Point(752, 16)
+        TextBox2.Margin = New Padding(3, 4, 3, 4)
+        TextBox2.Name = "TextBox2"
+        TextBox2.Size = New Size(198, 36)
+        TextBox2.TabIndex = 45
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label3.Location = New Point(698, 24)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(48, 25)
+        Label3.TabIndex = 44
+        Label3.Text = "Cari"
+        ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Dock = DockStyle.Fill
+        PictureBox1.Image = My.Resources.Resources.Copy_of_Blue_and_White_Modern_Welcome_Banner__1280_x_720_px___989_x_673_px_
+        PictureBox1.Location = New Point(0, 0)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(971, 626)
+        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox1.TabIndex = 51
+        PictureBox1.TabStop = False
+        ' 
         ' Rfid
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -149,21 +150,21 @@ Partial Class Rfid
         ClientSize = New Size(971, 626)
         Controls.Add(DataGridView1)
         Controls.Add(Button4)
-        Controls.Add(Button3)
         Controls.Add(Button1)
         Controls.Add(Lanjut)
         Controls.Add(TextBox2)
         Controls.Add(Label3)
+        Controls.Add(PictureBox1)
         Name = "Rfid"
         Text = "Rfid"
         CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
 
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Button4 As Button
-    Friend WithEvents Button3 As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents Lanjut As Button
     Friend WithEvents TextBox2 As TextBox
@@ -171,4 +172,5 @@ Partial Class Rfid
     Friend WithEvents card_id As DataGridViewTextBoxColumn
     Friend WithEvents nis As DataGridViewTextBoxColumn
     Friend WithEvents status As DataGridViewTextBoxColumn
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

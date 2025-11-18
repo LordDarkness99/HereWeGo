@@ -32,7 +32,9 @@ Partial Class Ubah_Tahun_Ajaran
         TextBox3 = New TextBox()
         Button2 = New Button()
         Button1 = New Button()
+        PictureBox1 = New PictureBox()
         GroupBox1.SuspendLayout()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Label1
@@ -92,6 +94,7 @@ Partial Class Ubah_Tahun_Ajaran
         ' 
         ' TextBox1
         ' 
+        TextBox1.BackColor = Color.White
         TextBox1.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         TextBox1.Location = New Point(203, 26)
         TextBox1.Margin = New Padding(3, 4, 3, 4)
@@ -141,6 +144,17 @@ Partial Class Ubah_Tahun_Ajaran
         Button1.Text = "Simpan"
         Button1.UseVisualStyleBackColor = True
         ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Dock = DockStyle.Fill
+        PictureBox1.Image = My.Resources.Resources.Copy_of_Blue_and_White_Modern_Welcome_Banner__1280_x_720_px___989_x_673_px_
+        PictureBox1.Location = New Point(0, 0)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(971, 626)
+        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox1.TabIndex = 45
+        PictureBox1.TabStop = False
+        ' 
         ' Ubah_Tahun_Ajaran
         ' 
         AutoScaleMode = AutoScaleMode.None
@@ -150,12 +164,14 @@ Partial Class Ubah_Tahun_Ajaran
         Controls.Add(GroupBox1)
         Controls.Add(Button2)
         Controls.Add(Button1)
+        Controls.Add(PictureBox1)
         FormBorderStyle = FormBorderStyle.FixedSingle
         Margin = New Padding(3, 4, 3, 4)
         Name = "Ubah_Tahun_Ajaran"
         Text = "Ubah_Tahun_Ajaran"
         GroupBox1.ResumeLayout(False)
         GroupBox1.PerformLayout()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
 
@@ -171,4 +187,5 @@ Partial Class Ubah_Tahun_Ajaran
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

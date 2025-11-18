@@ -23,6 +23,11 @@ Partial Class Pengguna
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         DataGridView1 = New DataGridView()
+        id_user = New DataGridViewTextBoxColumn()
+        email = New DataGridViewTextBoxColumn()
+        password = New DataGridViewTextBoxColumn()
+        role = New DataGridViewTextBoxColumn()
+        status = New DataGridViewTextBoxColumn()
         TextBox2 = New TextBox()
         Label3 = New Label()
         Button4 = New Button()
@@ -30,12 +35,9 @@ Partial Class Pengguna
         Button2 = New Button()
         Button1 = New Button()
         Lanjut = New Button()
-        id_user = New DataGridViewTextBoxColumn()
-        email = New DataGridViewTextBoxColumn()
-        password = New DataGridViewTextBoxColumn()
-        role = New DataGridViewTextBoxColumn()
-        status = New DataGridViewTextBoxColumn()
+        PictureBox1 = New PictureBox()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' DataGridView1
@@ -56,9 +58,49 @@ Partial Class Pengguna
         DataGridView1.Size = New Size(930, 481)
         DataGridView1.TabIndex = 30
         ' 
+        ' id_user
+        ' 
+        id_user.HeaderText = "Id User"
+        id_user.MinimumWidth = 6
+        id_user.Name = "id_user"
+        id_user.ReadOnly = True
+        id_user.Width = 186
+        ' 
+        ' email
+        ' 
+        email.HeaderText = "Email"
+        email.MinimumWidth = 6
+        email.Name = "email"
+        email.ReadOnly = True
+        email.Width = 186
+        ' 
+        ' password
+        ' 
+        password.HeaderText = "Password"
+        password.MinimumWidth = 6
+        password.Name = "password"
+        password.ReadOnly = True
+        password.Width = 186
+        ' 
+        ' role
+        ' 
+        role.HeaderText = "Role"
+        role.MinimumWidth = 6
+        role.Name = "role"
+        role.ReadOnly = True
+        role.Width = 186
+        ' 
+        ' status
+        ' 
+        status.HeaderText = "Status"
+        status.MinimumWidth = 6
+        status.Name = "status"
+        status.ReadOnly = True
+        status.Width = 186
+        ' 
         ' TextBox2
         ' 
-        TextBox2.BackColor = Color.LightGray
+        TextBox2.BackColor = Color.White
         TextBox2.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         TextBox2.Location = New Point(752, 15)
         TextBox2.Margin = New Padding(3, 4, 3, 4)
@@ -131,45 +173,16 @@ Partial Class Pengguna
         Lanjut.Text = "Lanjut"
         Lanjut.UseVisualStyleBackColor = True
         ' 
-        ' id_user
+        ' PictureBox1
         ' 
-        id_user.HeaderText = "Id User"
-        id_user.MinimumWidth = 6
-        id_user.Name = "id_user"
-        id_user.ReadOnly = True
-        id_user.Width = 186
-        ' 
-        ' email
-        ' 
-        email.HeaderText = "Email"
-        email.MinimumWidth = 6
-        email.Name = "email"
-        email.ReadOnly = True
-        email.Width = 186
-        ' 
-        ' password
-        ' 
-        password.HeaderText = "Password"
-        password.MinimumWidth = 6
-        password.Name = "password"
-        password.ReadOnly = True
-        password.Width = 186
-        ' 
-        ' role
-        ' 
-        role.HeaderText = "Role"
-        role.MinimumWidth = 6
-        role.Name = "role"
-        role.ReadOnly = True
-        role.Width = 186
-        ' 
-        ' status
-        ' 
-        status.HeaderText = "Status"
-        status.MinimumWidth = 6
-        status.Name = "status"
-        status.ReadOnly = True
-        status.Width = 186
+        PictureBox1.Dock = DockStyle.Fill
+        PictureBox1.Image = My.Resources.Resources.Copy_of_Blue_and_White_Modern_Welcome_Banner__1280_x_720_px___989_x_673_px_
+        PictureBox1.Location = New Point(0, 0)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(971, 626)
+        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox1.TabIndex = 44
+        PictureBox1.TabStop = False
         ' 
         ' Pengguna
         ' 
@@ -184,11 +197,13 @@ Partial Class Pengguna
         Controls.Add(DataGridView1)
         Controls.Add(TextBox2)
         Controls.Add(Label3)
+        Controls.Add(PictureBox1)
         FormBorderStyle = FormBorderStyle.FixedSingle
         Margin = New Padding(3, 4, 3, 4)
         Name = "Pengguna"
         Text = "Pengguna"
         CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
 
@@ -207,4 +222,5 @@ Partial Class Pengguna
     Friend WithEvents password As DataGridViewTextBoxColumn
     Friend WithEvents role As DataGridViewTextBoxColumn
     Friend WithEvents status As DataGridViewTextBoxColumn
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

@@ -27,6 +27,8 @@ Partial Class Ubah_Pengguna
         Label4 = New Label()
         Label3 = New Label()
         GroupBox1 = New GroupBox()
+        TextBox1 = New TextBox()
+        Label7 = New Label()
         Label6 = New Label()
         ComboBox1 = New ComboBox()
         TextBox4 = New TextBox()
@@ -35,9 +37,9 @@ Partial Class Ubah_Pengguna
         Label5 = New Label()
         Button2 = New Button()
         Button1 = New Button()
-        Label7 = New Label()
-        TextBox1 = New TextBox()
+        PictureBox1 = New PictureBox()
         GroupBox1.SuspendLayout()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Label1
@@ -100,6 +102,25 @@ Partial Class Ubah_Pengguna
         GroupBox1.Size = New Size(624, 232)
         GroupBox1.TabIndex = 27
         GroupBox1.TabStop = False
+        ' 
+        ' TextBox1
+        ' 
+        TextBox1.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        TextBox1.Location = New Point(206, 19)
+        TextBox1.Margin = New Padding(3, 4, 3, 4)
+        TextBox1.Name = "TextBox1"
+        TextBox1.Size = New Size(399, 30)
+        TextBox1.TabIndex = 18
+        ' 
+        ' Label7
+        ' 
+        Label7.AutoSize = True
+        Label7.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label7.Location = New Point(9, 24)
+        Label7.Name = "Label7"
+        Label7.Size = New Size(77, 25)
+        Label7.TabIndex = 17
+        Label7.Text = "ID User"
         ' 
         ' Label6
         ' 
@@ -180,24 +201,16 @@ Partial Class Ubah_Pengguna
         Button1.Text = "Simpan"
         Button1.UseVisualStyleBackColor = True
         ' 
-        ' Label7
+        ' PictureBox1
         ' 
-        Label7.AutoSize = True
-        Label7.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label7.Location = New Point(9, 24)
-        Label7.Name = "Label7"
-        Label7.Size = New Size(77, 25)
-        Label7.TabIndex = 17
-        Label7.Text = "ID User"
-        ' 
-        ' TextBox1
-        ' 
-        TextBox1.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox1.Location = New Point(206, 19)
-        TextBox1.Margin = New Padding(3, 4, 3, 4)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(399, 30)
-        TextBox1.TabIndex = 18
+        PictureBox1.Dock = DockStyle.Fill
+        PictureBox1.Image = My.Resources.Resources.Copy_of_Blue_and_White_Modern_Welcome_Banner__1280_x_720_px___989_x_673_px_
+        PictureBox1.Location = New Point(0, 0)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(971, 626)
+        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox1.TabIndex = 44
+        PictureBox1.TabStop = False
         ' 
         ' Ubah_Pengguna
         ' 
@@ -208,12 +221,14 @@ Partial Class Ubah_Pengguna
         Controls.Add(GroupBox1)
         Controls.Add(Button2)
         Controls.Add(Button1)
+        Controls.Add(PictureBox1)
         FormBorderStyle = FormBorderStyle.FixedSingle
         Margin = New Padding(3, 4, 3, 4)
         Name = "Ubah_Pengguna"
         Text = "Ubah_Pengguna"
         GroupBox1.ResumeLayout(False)
         GroupBox1.PerformLayout()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
 
@@ -234,4 +249,5 @@ Partial Class Ubah_Pengguna
     Friend WithEvents Button1 As Button
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label7 As Label
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

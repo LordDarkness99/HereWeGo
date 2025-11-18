@@ -122,7 +122,7 @@ Public Class Rfid
         End If
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click 'ubah
+    Private Sub Button3_Click(sender As Object, e As EventArgs) 'ubah
         If selectedRfidId Is Nothing Then
             MessageBox.Show("Pilih kartu terlebih dahulu.")
             Return

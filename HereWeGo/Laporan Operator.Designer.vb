@@ -40,12 +40,14 @@ Partial Class Laporan_Operator
         Label3 = New Label()
         DateTimePicker1 = New DateTimePicker()
         DateTimePicker2 = New DateTimePicker()
+        PictureBox1 = New PictureBox()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Button3
         ' 
-        Button3.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Button3.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button3.Location = New Point(42, 580)
         Button3.Margin = New Padding(3, 4, 3, 4)
         Button3.Name = "Button3"
@@ -147,7 +149,7 @@ Partial Class Laporan_Operator
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label2.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label2.Location = New Point(25, 57)
         Label2.Name = "Label2"
         Label2.Size = New Size(66, 25)
@@ -157,7 +159,7 @@ Partial Class Laporan_Operator
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label4.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label4.Location = New Point(25, 23)
         Label4.Name = "Label4"
         Label4.Size = New Size(62, 25)
@@ -166,7 +168,7 @@ Partial Class Laporan_Operator
         ' 
         ' Button1
         ' 
-        Button1.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Button1.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button1.Location = New Point(740, 23)
         Button1.Margin = New Padding(3, 4, 3, 4)
         Button1.Name = "Button1"
@@ -178,7 +180,7 @@ Partial Class Laporan_Operator
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label1.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.Location = New Point(328, 23)
         Label1.Name = "Label1"
         Label1.Size = New Size(132, 25)
@@ -188,7 +190,7 @@ Partial Class Laporan_Operator
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0)
+        Label3.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label3.Location = New Point(328, 57)
         Label3.Name = "Label3"
         Label3.Size = New Size(134, 25)
@@ -209,10 +211,21 @@ Partial Class Laporan_Operator
         DateTimePicker2.Size = New Size(250, 27)
         DateTimePicker2.TabIndex = 61
         ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Dock = DockStyle.Fill
+        PictureBox1.Image = My.Resources.Resources.Copy_of_Blue_and_White_Modern_Welcome_Banner__1280_x_720_px___989_x_673_px_
+        PictureBox1.Location = New Point(0, 0)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(971, 626)
+        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox1.TabIndex = 62
+        PictureBox1.TabStop = False
+        ' 
         ' Laporan_Operator
         ' 
         AutoScaleMode = AutoScaleMode.None
-        BackColor = Color.FromArgb(227, 242, 253)
+        BackColor = Color.FromArgb(CByte(227), CByte(242), CByte(253))
         ClientSize = New Size(971, 626)
         Controls.Add(DateTimePicker2)
         Controls.Add(DateTimePicker1)
@@ -225,10 +238,12 @@ Partial Class Laporan_Operator
         Controls.Add(Label2)
         Controls.Add(Label4)
         Controls.Add(Button1)
+        Controls.Add(PictureBox1)
         FormBorderStyle = FormBorderStyle.FixedSingle
         Name = "Laporan_Operator"
         Text = "Laporan_Operator"
         CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -251,4 +266,5 @@ Partial Class Laporan_Operator
     Friend WithEvents sakit As DataGridViewTextBoxColumn
     Friend WithEvents tidak_hadir As DataGridViewTextBoxColumn
     Friend WithEvents presentase As DataGridViewTextBoxColumn
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

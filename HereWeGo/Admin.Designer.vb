@@ -20,6 +20,7 @@ Partial Class Admin
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Admin))
         Panel1 = New Panel()
+        Button12 = New Button()
         Button11 = New Button()
         Button10 = New Button()
         Button9 = New Button()
@@ -34,7 +35,6 @@ Partial Class Admin
         PictureBox1 = New PictureBox()
         Panel2 = New Panel()
         PictureBox2 = New PictureBox()
-        Button12 = New Button()
         Panel1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
@@ -63,6 +63,18 @@ Partial Class Admin
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(273, 673)
         Panel1.TabIndex = 1
+        ' 
+        ' Button12
+        ' 
+        Button12.BackColor = Color.White
+        Button12.Font = New Font("Segoe UI", 10F)
+        Button12.ForeColor = Color.Black
+        Button12.Location = New Point(1, 150)
+        Button12.Name = "Button12"
+        Button12.Size = New Size(250, 50)
+        Button12.TabIndex = 13
+        Button12.Text = "AKTIFKAN"
+        Button12.UseVisualStyleBackColor = False
         ' 
         ' Button11
         ' 
@@ -183,7 +195,7 @@ Partial Class Admin
         Button2.BackColor = Color.White
         Button2.Font = New Font("Segoe UI", 10F)
         Button2.ForeColor = Color.Black
-        Button2.Location = New Point(1, 206)
+        Button2.Location = New Point(1, 208)
         Button2.Name = "Button2"
         Button2.Size = New Size(250, 50)
         Button2.TabIndex = 1
@@ -214,25 +226,13 @@ Partial Class Admin
         ' PictureBox2
         ' 
         PictureBox2.Dock = DockStyle.Fill
-        PictureBox2.Image = My.Resources.Resources.HerWeGo51
+        PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
         PictureBox2.Location = New Point(0, 0)
         PictureBox2.Name = "PictureBox2"
         PictureBox2.Size = New Size(989, 673)
         PictureBox2.SizeMode = PictureBoxSizeMode.Zoom
         PictureBox2.TabIndex = 0
         PictureBox2.TabStop = False
-        ' 
-        ' Button12
-        ' 
-        Button12.BackColor = Color.White
-        Button12.Font = New Font("Segoe UI", 10F)
-        Button12.ForeColor = Color.Black
-        Button12.Location = New Point(2, 150)
-        Button12.Name = "Button12"
-        Button12.Size = New Size(250, 50)
-        Button12.TabIndex = 13
-        Button12.Text = "AKTIFKAN"
-        Button12.UseVisualStyleBackColor = False
         ' 
         ' Admin
         ' 

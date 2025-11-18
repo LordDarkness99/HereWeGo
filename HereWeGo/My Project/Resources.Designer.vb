@@ -83,6 +83,26 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property Copy_of_Blue_and_White_Modern_Welcome_Banner__1280_x_720_px___989_x_673_px_() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Copy of Blue and White Modern Welcome Banner (1280 x 720 px) (989 x 673 px)", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property Copy_of_Blue_and_White_Modern_Welcome_Banner__1280_x_720_px___989_x_673_px__1_() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Copy of Blue and White Modern Welcome Banner (1280 x 720 px) (989 x 673 px)(1)", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property formal_biru() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("formal biru", resourceCulture)
