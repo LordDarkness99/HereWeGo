@@ -147,9 +147,9 @@ Public Class Laporan_Operator
         ' ===========================================
         ' 1. HEADER SEKOLAH (CENTER)
         ' ===========================================
-        Dim title1 = "SMA NEGERI 1 CONTOH KOTA"
-        Dim title2 = "Jl. Pendidikan No. 123, Contoh Kota"
-        Dim title3 = "Website : www.sekolahcontoh.sch.id | Telp : (0333) 123456"
+        Dim title1 = "SMK NEGERI 1 MOJOKERTO"
+        Dim title2 = "Jl. Raya Kedung Sari, Magersari, Kota Mojokerto, Jawa Timur"
+        Dim title3 = "Website : http://smkn1mojokerto.sch.id | Telp : (0321) 381959"
 
         e.Graphics.DrawString(title1, fontJudul, Brushes.Black,
                           marginLeft + (pageWidth - e.Graphics.MeasureString(title1, fontJudul).Width) \ 2, y)

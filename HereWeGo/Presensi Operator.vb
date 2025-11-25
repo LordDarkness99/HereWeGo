@@ -213,9 +213,9 @@ Public Class Presensi_Operator
         Dim y As Integer = marginTop
 
         ' ==== Header Sekolah ====
-        e.Graphics.DrawString("SMA NEGERI 1 CONTOH KOTA", New Font("Segoe UI", 14, FontStyle.Bold), brush, marginLeft + 150, y)
+        e.Graphics.DrawString("SMK NEGERI 1 MOJOKERTO", New Font("Segoe UI", 14, FontStyle.Bold), brush, marginLeft + 200, y)
         y += 25
-        e.Graphics.DrawString("Jl. Pendidikan No. 123, Contoh Kota", fontSubJudul, brush, marginLeft + 180, y)
+        e.Graphics.DrawString("Jl. Raya Kedung Sari, Magersari, Kota Mojokerto, Jawa Timur", fontSubJudul, brush, marginLeft + 180, y)
         y += 25
         e.Graphics.DrawLine(Pens.Black, marginLeft, y, e.MarginBounds.Right, y)
         y += 20
